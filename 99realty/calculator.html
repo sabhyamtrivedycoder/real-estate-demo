@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Schedule &amp; EMI Calculator | 99Realty Giridih</title>
+  <meta name="description" content="Calculate your down payment and monthly home loan EMI for 99Exotica apartments and 99 Tower commercial units in Giridih. SBI & HDFC pre-approved banking.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span class="top-bar-item">
+          <span class="icon icon-stroke"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span>
+          Giridih Branch: 1st Floor, Sampat Bazar, Bada Chowk, Giridih, Jharkhand 815301
+        </span>
+      </div>
+      <div class="top-bar-right">
+        <span class="top-bar-item">
+          Regulatory Status: <strong>JHARERA Registered Developer</strong>
+        </span>
+        <span class="top-bar-item">
+          <span class="icon icon-stroke"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
+          Direct Inquiries: <strong>+91 72800 00199</strong>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Header -->
+  <header class="main-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link">
+        <div class="brand-monogram">99</div>
+        <div class="brand-title-wrap">
+          <span class="brand-title">99Realty</span>
+          <span class="brand-subtitle">Ninety Nine Builders &amp; Developers</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="projects.html" class="nav-link">Flagship Projects</a></li>
+          <li><a href="calculator.html" class="nav-link active">EMI &amp; Pricing</a></li>
+          <li><a href="about.html" class="nav-link">About The Group</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Branch</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:+917280000199" class="btn-header-call">
+          <span class="icon icon-stroke"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
+          072800 00199
+        </a>
+        <a href="https://wa.me/917280000199?text=Hello%2099Realty%2C%20I%20want%20to%20discuss%20payment%20plans%20and%20loans." target="_blank" rel="noopener" class="btn-header-whatsapp">
+          WhatsApp Desk
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Intro Header -->
+  <section class="page-intro-header">
+    <div class="container">
+      <div class="page-intro-eyebrow">Financial Planning</div>
+      <h1 class="page-intro-title">EMI &amp; Payment Schedule Calculator</h1>
+      <p class="page-intro-desc">
+        Calculate your unit purchase budget, required down payment, and monthly loan amortization for 99Exotica apartments and 99 Tower commercial units.
+      </p>
+      <div class="breadcrumb-nav">
+        <a href="index.html">Home</a>
+        <span>&rsaquo;</span>
+        <strong>EMI &amp; Pricing</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calculator Component -->
+  <section class="section">
+    <div class="container">
+      <div style="background: #ffffff; border: 1px solid var(--color-border); border-radius: var(--radius-sm); display: grid; grid-template-columns: 1.4fr 1fr; overflow: hidden; box-shadow: var(--shadow-sm);">
+        
+        <!-- Controls -->
+        <div style="padding: 36px;">
+          <div class="section-head" style="margin-bottom: 24px;">
+            <div class="section-eyebrow">Custom Simulation</div>
+            <h2 style="font-family: var(--font-serif); font-size: 24px; color: var(--color-primary);">Apartment Budget Setup</h2>
+          </div>
+
+          <!-- Slider 1: Unit Cost -->
+          <div style="margin-bottom: 24px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px;">
+              <label for="unitCost" style="font-size: 14px; font-weight: 600; color: var(--color-text-title);">Total Unit Agreement Value</label>
+              <span id="unitCostVal" style="font-size: 16px; font-weight: 700; color: var(--color-primary);">&#8377;45,00,000</span>
+            </div>
+            <input type="range" id="unitCost" style="width: 100%; height: 6px; background: #e2e8f0; border-radius: 3px; outline: none;" min="2500000" max="12000000" step="100000" value="4500000">
+            <div style="display: flex; justify-content: space-between; font-size: 11.5px; color: var(--color-text-muted); margin-top: 4px;">
+              <span>&#8377;25 Lakhs (2 BHK Base)</span>
+              <span>&#8377;1.20 Crores (Penthouse/Tower)</span>
+            </div>
+          </div>
+
+          <!-- Slider 2: Down Payment -->
+          <div style="margin-bottom: 24px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px;">
+              <label for="dpPercent" style="font-size: 14px; font-weight: 600; color: var(--color-text-title);">Down Payment Contribution</label>
+              <span id="dpPercentVal" style="font-size: 16px; font-weight: 700; color: var(--color-accent);">20% (&#8377;9,00,000)</span>
+            </div>
+            <input type="range" id="dpPercent" style="width: 100%; height: 6px; background: #e2e8f0; border-radius: 3px; outline: none;" min="10" max="40" step="5" value="20">
+            <div style="display: flex; justify-content: space-between; font-size: 11.5px; color: var(--color-text-muted); margin-top: 4px;">
+              <span>10% (Min RERA CLP)</span>
+              <span>40%</span>
+            </div>
+          </div>
+
+          <!-- Slider 3: Interest Rate -->
+          <div style="margin-bottom: 24px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px;">
+              <label for="loanRate" style="font-size: 14px; font-weight: 600; color: var(--color-text-title);">Home Loan Interest Rate (% p.a.)</label>
+              <span id="loanRateVal" style="font-size: 16px; font-weight: 700; color: var(--color-primary);">8.5%</span>
+            </div>
+            <input type="range" id="loanRate" style="width: 100%; height: 6px; background: #e2e8f0; border-radius: 3px; outline: none;" min="7.5" max="12.0" step="0.1" value="8.5">
+            <div style="display: flex; justify-content: space-between; font-size: 11.5px; color: var(--color-text-muted); margin-top: 4px;">
+              <span>7.5% (Subsidized)</span>
+              <span>12.0%</span>
+            </div>
+          </div>
+
+          <!-- Slider 4: Tenure -->
+          <div style="margin-bottom: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px;">
+              <label for="loanTenure" style="font-size: 14px; font-weight: 600; color: var(--color-text-title);">Repayment Tenure</label>
+              <span id="loanTenureVal" style="font-size: 16px; font-weight: 700; color: var(--color-primary);">20 Years</span>
+            </div>
+            <input type="range" id="loanTenure" style="width: 100%; height: 6px; background: #e2e8f0; border-radius: 3px; outline: none;" min="5" max="30" step="1" value="20">
+            <div style="display: flex; justify-content: space-between; font-size: 11.5px; color: var(--color-text-muted); margin-top: 4px;">
+              <span>5 Years</span>
+              <span>30 Years</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Output Summary -->
+        <div style="background: var(--color-primary); color: #ffffff; padding: 36px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #94a3b8; margin-bottom: 6px;">
+              Estimated Monthly Repayment
+            </div>
+            <div id="emiOutput" style="font-family: var(--font-serif); font-size: 34px; font-weight: 700; color: #ffffff; margin-bottom: 24px; border-bottom: 1px solid rgba(255, 255, 255, 0.12); padding-bottom: 16px;">
+              &#8377;31,242
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; font-size: 13.5px; color: #cbd5e1;">
+              <div style="display: flex; justify-content: space-between;">
+                <span>Required Down Payment:</span>
+                <strong id="dpOutput" style="color: #ffffff;">&#8377;9,00,000</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between;">
+                <span>Financed Loan Amount:</span>
+                <strong id="loanOutput" style="color: #ffffff;">&#8377;36,00,000</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between;">
+                <span>Total Interest Payable:</span>
+                <strong id="interestOutput" style="color: #ffffff;">&#8377;38,97,992</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; border-top: 1px solid rgba(255, 255, 255, 0.12); padding-top: 10px;">
+                <span>Total Outflow (Principal + Int):</span>
+                <strong id="totalPayOutput" style="color: #ffffff;">&#8377;74,97,992</strong>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <a id="calcWhatsappLink" href="https://wa.me/917280000199?text=Hello%2099Realty%2C%20I%20am%20interested%20in%20an%20apartment%20costing%2045%20Lakhs%20with%20bank%20loan%20assistance." target="_blank" rel="noopener" class="btn btn-accent btn-full">
+              Connect With 99Realty Banking Helpdesk
+            </a>
+            <div style="font-size: 11.5px; color: #94a3b8; text-align: center; margin-top: 10px;">
+              Official assistance with SBI Court Road &amp; HDFC Makatpur branches.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Banking Pre-Approval Desk -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head text-center" style="text-align: center; max-width: 650px; margin: 0 auto 36px;">
+        <div class="section-eyebrow">Financial Partners</div>
+        <h2 class="section-title">Pre-Approved Project Status</h2>
+        <p class="section-desc" style="margin: 0 auto;">Our projects have undergone institutional legal, title, and technical vetting by leading banks in Giridih.</p>
+      </div>
+
+      <div class="grid-3-col">
+        <div style="background: #ffffff; border: 1px solid var(--color-border); border-radius: var(--radius-sm); padding: 24px;">
+          <h4 style="font-family: var(--font-serif); font-size: 18px; color: var(--color-primary); margin-bottom: 8px;">State Bank of India (SBI)</h4>
+          <p style="font-size: 13.5px; color: var(--color-text-muted); margin-bottom: 12px;">Branch: Court Road &amp; Bada Chowk, Giridih</p>
+          <div style="font-size: 13px; color: var(--color-text-body); line-height: 1.5;">
+            Pre-approved project title. Sanction available up to 80% to 85% with zero legal search delay.
+          </div>
+        </div>
+
+        <div style="background: #ffffff; border: 1px solid var(--color-border); border-radius: var(--radius-sm); padding: 24px;">
+          <h4 style="font-family: var(--font-serif); font-size: 18px; color: var(--color-primary); margin-bottom: 8px;">HDFC Bank</h4>
+          <p style="font-size: 13.5px; color: var(--color-text-muted); margin-bottom: 12px;">Branch: Makatpur Main Branch, Giridih</p>
+          <div style="font-size: 13px; color: var(--color-text-body); line-height: 1.5;">
+            Dedicated relationship officer for 99Exotica buyers with doorstep documentation pickup.
+          </div>
+        </div>
+
+        <div style="background: #ffffff; border: 1px solid var(--color-border); border-radius: var(--radius-sm); padding: 24px;">
+          <h4 style="font-family: var(--font-serif); font-size: 18px; color: var(--color-primary); margin-bottom: 8px;">Bank of India (BOI)</h4>
+          <p style="font-size: 13.5px; color: var(--color-text-muted); margin-bottom: 12px;">Branch: Shastri Nagar Branch, Giridih</p>
+          <div style="font-size: 13px; color: var(--color-text-body); line-height: 1.5;">
+            Special schemes for business professionals, doctors, and MSME proprietors purchasing commercial units.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div style="font-family: var(--font-serif); font-size: 20px; font-weight: 700; color: #ffffff; margin-bottom: 8px;">
+            99Realty &mdash; Ninety Nine Builders
+          </div>
+          <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.8px; color: var(--color-accent); font-weight: 600; margin-bottom: 14px;">
+            Certified Real Estate Development &amp; Advisory
+          </div>
+          <p style="font-size: 13.5px; color: #94a3b8; line-height: 1.6; margin-bottom: 16px;">
+            Creators of landmark architectural developments across Jharkhand. Developers of 99Exotica (Babhantoli) and 99 Tower (Bada Chowk) in Giridih.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Flagship Developments</a></li>
+            <li><a href="calculator.html">Home Loan &amp; EMI Tool</a></li>
+            <li><a href="about.html">About Ninety Nine Builders</a></li>
+            <li><a href="contact.html">Bada Chowk Branch Office</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Giridih Projects</h4>
+          <ul class="footer-links">
+            <li><a href="projects.html#exotica">99Exotica (Babhantoli)</a></li>
+            <li><a href="projects.html#tower">99 Tower (Bada Chowk)</a></li>
+            <li><a href="projects.html#meadows">99 Green Meadows Plots</a></li>
+            <li><a href="calculator.html">Payment Schedule Breakdown</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Giridih Branch Desk</h4>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <span class="icon icon-stroke" style="margin-top: 3px;"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span>
+              <div>
+                <strong>Branch Office:</strong><br>
+                1st Floor, Sampat Bazar, Bada Chowk, Giridih, Jharkhand 815301
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <span class="icon icon-stroke" style="margin-top: 3px;"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
+              <div>
+                <strong>Direct Phone:</strong><br>
+                +91 72800 00199
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <span class="icon icon-stroke" style="margin-top: 3px;"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></span>
+              <div>
+                <strong>Office Hours:</strong><br>
+                Monday to Sunday: 9:30 AM &ndash; 8:00 PM
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 99Realty &bull; Ninety Nine Builders &amp; Developers. All Rights Reserved.
+        </div>
+        <div>
+          Giridih Branch &bull; JHARERA Certified Projects
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Calculator Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const unitCostSlider = document.getElementById('unitCost');
+      const dpSlider = document.getElementById('dpPercent');
+      const rateSlider = document.getElementById('loanRate');
+      const tenureSlider = document.getElementById('loanTenure');
+
+      const unitCostVal = document.getElementById('unitCostVal');
+      const dpPercentVal = document.getElementById('dpPercentVal');
+      const loanRateVal = document.getElementById('loanRateVal');
+      const loanTenureVal = document.getElementById('loanTenureVal');
+
+      const emiOutput = document.getElementById('emiOutput');
+      const dpOutput = document.getElementById('dpOutput');
+      const loanOutput = document.getElementById('loanOutput');
+      const interestOutput = document.getElementById('interestOutput');
+      const totalPayOutput = document.getElementById('totalPayOutput');
+      const calcWhatsappLink = document.getElementById('calcWhatsappLink');
+
+      function formatINR(num) {
+        return '₹' + Math.round(num).toLocaleString('en-IN');
+      }
+
+      function updateCalculation() {
+        const totalCost = parseFloat(unitCostSlider.value);
+        const dpPercent = parseFloat(dpSlider.value);
+        const annualRate = parseFloat(rateSlider.value);
+        const tenureYears = parseInt(tenureSlider.value, 10);
+
+        const downPayment = totalCost * (dpPercent / 100);
+        const principal = totalCost - downPayment;
+
+        unitCostVal.textContent = formatINR(totalCost);
+        dpPercentVal.textContent = `${dpPercent}% (${formatINR(downPayment)})`;
+        loanRateVal.textContent = annualRate.toFixed(1) + '%';
+        loanTenureVal.textContent = tenureYears + (tenureYears === 1 ? ' Year' : ' Years');
+
+        const r = (annualRate / 12) / 100;
+        const n = tenureYears * 12;
+
+        let emi = 0;
+        if (r === 0) {
+          emi = principal / n;
+        } else {
+          emi = (principal * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+        }
+
+        const totalPay = emi * n;
+        const totalInt = totalPay - principal;
+
+        emiOutput.textContent = formatINR(emi);
+        dpOutput.textContent = formatINR(downPayment);
+        loanOutput.textContent = formatINR(principal);
+        interestOutput.textContent = formatINR(totalInt);
+        totalPayOutput.textContent = formatINR(totalPay);
+
+        const costLakhs = (totalCost / 100000).toFixed(0);
+        calcWhatsappLink.href = `https://wa.me/917280000199?text=Hello%2099Realty%2C%20I%20am%20interested%20in%20an%20apartment%20costing%20${costLakhs}%20Lakhs%20with%20down%20payment%20of%20${Math.round(downPayment/100000)}%20Lakhs%20and%20EMI%20approx%20${Math.round(emi)}.`;
+      }
+
+      unitCostSlider.addEventListener('input', updateCalculation);
+      dpSlider.addEventListener('input', updateCalculation);
+      rateSlider.addEventListener('input', updateCalculation);
+      tenureSlider.addEventListener('input', updateCalculation);
+
+      updateCalculation();
+    });
+  </script>
+
+</body>
+</html>
