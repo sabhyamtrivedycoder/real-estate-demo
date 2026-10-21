@@ -653,3 +653,43 @@ img {
   flex-wrap: wrap;
   gap: 12px;
 }
+
+/* ==========================================================================
+   Media Queries (Placed at end of stylesheet)
+   ========================================================================== */
+@media (max-width: 992px) {
+  .grid-2-col {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .grid-3-col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-4-col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .top-bar {
+    display: none;
+  }
+  .nav-menu {
+    display: none;
+  }
+  .grid-2-col,
+  .grid-3-col,
+  .grid-4-col {
+    grid-template-columns: 1fr;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 28px;
+  }
+  .header-actions .btn-header-call {
+    display: none;
+  }
+}
