@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PrimeLand Realty & Developers | Best Real Estate & Properties in Jharkhand</title>
+  <meta name="description" content="Verified residential plots, luxury 2/3 BHK flats, and commercial properties in Giridih and Jharkhand. 100% legal verification, free site visits, and instant home loan assistance.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f766e;
+      --primary-dark: #115e59;
+      --primary-light: #ccfbf1;
+      --accent: #d97706;
+      --dark: #0f172a;
+      --slate: #1e293b;
+      --text: #334155;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --card-bg: #ffffff;
+      --light-bg: #f8fafc;
+      --radius: 16px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--light-bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4, .font-heading { font-family: 'Outfit', sans-serif; }
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      width: 90%;
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    /* Top Bar */
+    .top-bar {
+      background: var(--dark);
+      color: #94a3b8;
+      font-size: 0.85rem;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .top-bar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar-inner span strong { color: #f8fafc; }
+
+    /* Navbar */
+    .navbar {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    }
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-icon {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--primary), #0284c7);
+      color: white;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+    .brand-text h1 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--dark);
+      line-height: 1.2;
+    }
+    .brand-text p {
+      font-size: 0.72rem;
+      color: var(--primary);
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .btn-call {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #f1f5f9;
+      color: var(--dark);
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+    .btn-call:hover { background: #e2e8f0; }
+    .btn-whatsapp {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #25d366;
+      color: #ffffff;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+      transition: all 0.2s;
+    }
+    .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4); }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      padding: 90px 0 110px;
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.95) 100%),
+                  url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      color: white;
+      text-align: center;
+    }
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(15, 118, 110, 0.3);
+      border: 1px solid rgba(45, 212, 191, 0.4);
+      color: #2dd4bf;
+      padding: 6px 18px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 25px;
+    }
+    .hero h1 {
+      font-size: 3.4rem;
+      font-weight: 800;
+      line-height: 1.2;
+      max-width: 900px;
+      margin: 0 auto 20px;
+      letter-spacing: -0.5px;
+    }
+    .hero h1 span {
+      background: linear-gradient(135deg, #2dd4bf, #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      font-size: 1.15rem;
+      color: #94a3b8;
+      max-width: 700px;
+      margin: 0 auto 40px;
+    }
+
+    /* Search Filter Box */
+    .search-box {
+      background: white;
+      border-radius: 18px;
+      padding: 20px 30px;
+      max-width: 960px;
+      margin: 0 auto;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr) 1.2fr;
+      gap: 18px;
+      align-items: center;
+      text-align: left;
+    }
+    .search-field label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+    .search-field select, .search-field input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--dark);
+      background: #f8fafc;
+      outline: none;
+    }
+    .btn-search {
+      background: var(--primary);
+      color: white;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 14px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s;
+      height: 100%;
+      margin-top: 18px;
+    }
+    .btn-search:hover { background: var(--primary-dark); }
+
+    /* Stats Row */
+    .stats-section {
+      margin-top: -40px;
+      position: relative;
+      z-index: 10;
+    }
+    .stats-card {
+      background: white;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      text-align: center;
+    }
+    .stat-item h3 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 2px;
+    }
+    .stat-item p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* Section Styling */
+    .section {
+      padding: 90px 0;
+    }
+    .section-header {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 50px;
+    }
+    .section-pill {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+    .section-header h2 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    /* Properties Grid */
+    .properties-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+    .property-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+      transition: all 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+    .property-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      border-color: var(--primary);
+    }
+    .prop-img-box {
+      width: 100%;
+      height: 240px;
+      position: relative;
+      overflow: hidden;
+    }
+    .prop-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+    .property-card:hover .prop-img-box img {
+      transform: scale(1.06);
+    }
+    .prop-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: var(--dark);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 6px;
+      letter-spacing: 0.5px;
+    }
+    .prop-status {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: #16a34a;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 6px;
+    }
+    .prop-price {
+      position: absolute;
+      bottom: 14px;
+      left: 14px;
+      background: rgba(15, 23, 42, 0.9);
+      color: #2dd4bf;
+      font-size: 1.25rem;
+      font-weight: 800;
+      padding: 6px 14px;
+      border-radius: 8px;
+      backdrop-filter: blur(5px);
+    }
+
+    .prop-content {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+    .prop-location {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .prop-content h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+    .prop-specs {
+      display: flex;
+      gap: 15px;
+      padding: 12px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 18px;
+    }
+    .spec-item {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+    .spec-item strong {
+      color: var(--dark);
+    }
+
+    .btn-prop-wa {
+      background: #25d366;
+      color: white;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 12px;
+      border-radius: 10px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+    .btn-prop-wa:hover {
+      background: #1eb956;
+      transform: translateY(-2px);
+    }
+
+    /* Why Choose Us */
+    .why-section {
+      background: white;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+    .why-card {
+      background: var(--light-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 30px 24px;
+      text-align: center;
+    }
+    .why-icon {
+      width: 60px;
+      height: 60px;
+      background: var(--primary-light);
+      color: var(--primary);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      margin: 0 auto 20px;
+    }
+    .why-card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+    .why-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Consultation / Site Visit Banner */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--dark) 0%, var(--primary-dark) 100%);
+      color: white;
+      border-radius: 24px;
+      padding: 60px 50px;
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 40px;
+      align-items: center;
+      margin-top: 40px;
+    }
+    .cta-text h2 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      margin-bottom: 15px;
+    }
+    .cta-text p {
+      color: #94a3b8;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+    .cta-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    /* Footer */
+    footer {
+      background: #030712;
+      color: #64748b;
+      padding: 40px 0;
+      text-align: center;
+      font-size: 0.88rem;
+    }
+    footer strong { color: #f8fafc; }
+
+    /* Floating WhatsApp */
+    .float-wa {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #25d366;
+      color: white;
+      padding: 14px 24px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+      z-index: 1000;
+      transition: all 0.2s;
+    }
+    .float-wa:hover {
+      transform: scale(1.05);
+      color: white;
+    }
+
+    @media (max-width: 900px) {
+      .hero h1 { font-size: 2.3rem; }
+      .search-box { grid-template-columns: 1fr; }
+      .properties-grid, .why-grid, .stats-card, .cta-banner { grid-template-columns: 1fr; }
+      .nav-actions .btn-call { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Info Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div>📍 <strong>Operating Across:</strong> Giridih, Dhanbad, Ranchi & Bokaro, Jharkhand</div>
+      <div>📞 <strong>Property Hotline:</strong> +91 94311 00000 | 100% Verified Registry & Clear Titles</div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <div class="brand">
+        <div class="brand-icon">🏛️</div>
+        <div class="brand-text">
+          <h1>PrimeLand Realty</h1>
+          <p>PROPERTIES & DEVELOPERS • JHARKHAND</p>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <a href="tel:+919431100000" class="btn-call">
+          📞 Call Property Desk
+        </a>
+        <a href="https://wa.me/919431100000?text=Hello%20PrimeLand%20Realty,%20I%20am%20looking%20to%20buy%20a%20property%20in%20Giridih" class="btn-whatsapp" target="_blank">
+          💬 Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-pill">✨ Jharkhand's Trusted Property Network</div>
+      <h1>Find Verified <span>Plots, Luxury Flats</span> & Commercial Real Estate</h1>
+      <p>Zero fake listings. Every property comes with verified land registry papers, government approvals, and complete legal due diligence.</p>
+
+      <!-- Search Filter Mock -->
+      <div class="search-box">
+        <div class="search-field">
+          <label>Property Type</label>
+          <select>
+            <option>All Properties</option>
+            <option>Residential Plots</option>
+            <option>2 / 3 BHK Luxury Flats</option>
+            <option>Commercial Shops</option>
+          </select>
+        </div>
+        <div class="search-field">
+          <label>Location</label>
+          <select>
+            <option>All Locations</option>
+            <option>Makatpur / Barganda, Giridih</option>
+            <option>Station Road, Giridih</option>
+            <option>Bypass / Dhanbad Road</option>
+          </select>
+        </div>
+        <div class="search-field">
+          <label>Budget Range</label>
+          <select>
+            <option>Any Budget</option>
+            <option>₹15L – ₹30L</option>
+            <option>₹30L – ₹60L</option>
+            <option>₹60L+</option>
+          </select>
+        </div>
+        <button class="btn-search">
+          🔍 Search Properties
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <div class="container stats-section">
+    <div class="stats-card">
+      <div class="stat-item">
+        <h3>150+</h3>
+        <p>Verified Properties</p>
+      </div>
+      <div class="stat-item">
+        <h3>1,200+</h3>
+        <p>Families Settled</p>
+      </div>
+      <div class="stat-item">
+        <h3>100%</h3>
+        <p>Legal Clear Titles</p>
+      </div>
+      <div class="stat-item">
+        <h3>₹0</h3>
+        <p>Site Visit Fee</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Featured Properties Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Handpicked Deals</span>
+        <h2>Featured Properties For Sale</h2>
+        <p>Explore our latest prime residential plots, ready-to-move flats, and high-ROI commercial properties.</p>
+      </div>
+
+      <div class="properties-grid">
+        <!-- Property 1 -->
+        <div class="property-card">
+          <div class="prop-img-box">
+            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80" alt="Luxury 3 BHK Flat">
+            <span class="prop-badge">3 BHK Flat</span>
+            <span class="prop-status">Ready to Move</span>
+            <div class="prop-price">₹48.5 Lakhs</div>
+          </div>
+          <div class="prop-content">
+            <div>
+              <div class="prop-location">📍 Main Road, Near Barganda, Giridih</div>
+              <h3>Green Valley Luxury High-Rise Apartments</h3>
+              <div class="prop-specs">
+                <div class="spec-item">🛏️ <strong>3</strong> Beds</div>
+                <div class="spec-item">🚿 <strong>2</strong> Baths</div>
+                <div class="spec-item">📐 <strong>1,650</strong> Sq.Ft</div>
+                <div class="spec-item">🚗 Lift & Parking</div>
+              </div>
+            </div>
+            <a href="https://wa.me/919431100000?text=Hello%20PrimeLand%20Realty,%20I%20am%20interested%20in%20Green%20Valley%203%20BHK%20Flat%20(₹48.5L)" class="btn-prop-wa" target="_blank">
+              💬 Enquire on WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Property 2 -->
+        <div class="property-card">
+          <div class="prop-img-box">
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80" alt="Residential Plots">
+            <span class="prop-badge">Residential Plot</span>
+            <span class="prop-status">Govt Approved</span>
+            <div class="prop-price">₹1,450 / Sq.Ft</div>
+          </div>
+          <div class="prop-content">
+            <div>
+              <div class="prop-location">📍 Tundi Road Bypass, Giridih</div>
+              <h3>Royal Palm Gated Colony Plots</h3>
+              <div class="prop-specs">
+                <div class="spec-item">📐 <strong>1,200 – 3,000</strong> Sq.Ft</div>
+                <div class="spec-item">🛣️ <strong>30 Ft</strong> Road</div>
+                <div class="spec-item">⚡ Water & Electricity</div>
+              </div>
+            </div>
+            <a href="https://wa.me/919431100000?text=Hello%20PrimeLand%20Realty,%20I%20am%20interested%20in%20Royal%20Palm%20Residential%20Plots" class="btn-prop-wa" target="_blank">
+              💬 Enquire on WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Property 3 -->
+        <div class="property-card">
+          <div class="prop-img-box">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="2 BHK Smart Home">
+            <span class="prop-badge">2 BHK Flat</span>
+            <span class="prop-status">Under Construction</span>
+            <div class="prop-price">₹32.0 Lakhs</div>
+          </div>
+          <div class="prop-content">
+            <div>
+              <div class="prop-location">📍 Court Road / New Barganda, Giridih</div>
+              <h3>Metro Residency Modern Smart Homes</h3>
+              <div class="prop-specs">
+                <div class="spec-item">🛏️ <strong>2</strong> Beds</div>
+                <div class="spec-item">🚿 <strong>2</strong> Baths</div>
+                <div class="spec-item">📐 <strong>1,150</strong> Sq.Ft</div>
+                <div class="spec-item">🏊 Gym & Park</div>
+              </div>
+            </div>
+            <a href="https://wa.me/919431100000?text=Hello%20PrimeLand%20Realty,%20I%20am%20interested%20in%20Metro%20Residency%202%20BHK%20Flat%20(₹32L)" class="btn-prop-wa" target="_blank">
+              💬 Enquire on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="section why-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Why Buy With Us</span>
+        <h2>Your Trusted Real Estate Partner</h2>
+        <p>We eliminate middlemen scams and ensure a 100% safe, transparent property buying journey.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">📜</div>
+          <h3>100% Title Verification</h3>
+          <p>Every registry, mutation, and government paper is legally vetted by our legal council before listing.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🚗</div>
+          <h3>Free Site Visit Service</h3>
+          <p>Our executive picks you up and shows you multiple shortlisted plots and flats in our company vehicle for free.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🏦</div>
+          <h3>Instant Home Loan Support</h3>
+          <p>Tie-ups with SBI, HDFC, and ICICI for fast loan processing and low interest rates.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🤝</div>
+          <h3>Zero Hidden Charges</h3>
+          <p>Transparent dealing with direct builder and seller meetings. No inflated prices.</p>
+        </div>
+      </div>
+
+      <!-- Action Banner -->
+      <div class="cta-banner">
+        <div class="cta-text">
+          <h2>Looking to Buy or Sell Property in Jharkhand?</h2>
+          <p>Connect with our senior property advisors. We will help you find the best plots, flats, or commercial spaces within your exact budget.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="https://wa.me/919431100000?text=Hello,%20I%20want%20to%20book%20a%20free%20property%20site%20visit" class="btn-whatsapp" style="padding: 16px 28px; justify-content: center; font-size: 1rem;" target="_blank">
+            💬 Book Free Site Visit on WhatsApp
+          </a>
+          <a href="tel:+919431100000" class="btn-call" style="background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.2); padding: 14px 28px; justify-content: center;">
+            📞 Call: +91 94311 00000
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2026 <strong>PrimeLand Realty & Developers</strong>. Giridih, Dhanbad, Ranchi. All Rights Reserved.</p>
+      <p style="font-size: 0.8rem; margin-top: 6px; color: #64748b;">Residential Plots • Luxury 2/3 BHK Flats • Commercial Showrooms • Clear Titles</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/919431100000?text=Hello%20PrimeLand%20Realty,%20I%20want%20to%20enquire%20about%20properties" class="float-wa" target="_blank">
+    💬 WhatsApp Property Desk
+  </a>
+
+</body>
+</html>
