@@ -3,1378 +3,388 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Giridih Real Estate | Verified Plots, Flats & Commercial Properties</title>
-  <meta name="description" content="Giridih's premier real estate consultancy led by Vikash Kumar Sinha (15+ Years Trust). Verified residential plots, 2/3 BHK flats, and commercial properties with zero brokerage and free site visits.">
+  <title>Giridih Real Estate | Verified Plots, Flats & Commercial Spaces</title>
+  <meta name="description" content="Senior Property Advisory in Giridih led by Vikash Kumar Sinha. 100% verified legal titles, residential plots, ready-to-move apartments in Shastri Nagar, Barmasia, and Makatpur.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --navy: #0c1e33;
-      --navy-light: #162f4d;
-      --navy-deep: #071322;
-      --gold: #b48328;
-      --gold-hover: #9a6f1f;
-      --gold-soft: #fbf5eb;
-      --green: #15803d;
-      --green-light: #f0fdf4;
-      --slate: #475569;
-      --slate-light: #64748b;
-      --bg-page: #f8fafc;
-      --bg-card: #ffffff;
-      --border: #e2e8f0;
-      --border-dark: #cbd5e1;
-      --shadow-sm: 0 2px 8px rgba(12, 30, 51, 0.04);
-      --shadow-md: 0 10px 25px rgba(12, 30, 51, 0.08);
-      --shadow-lg: 0 20px 40px rgba(12, 30, 51, 0.12);
-      --radius: 12px;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      background-color: var(--bg-page);
-      color: var(--slate);
-      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-    h1, h2, h3, .font-serif { font-family: 'Playfair Display', Georgia, serif; }
-    a { text-decoration: none; color: inherit; }
-
-    .container {
-      width: 90%;
-      max-width: 1220px;
-      margin: 0 auto;
-    }
-
-    /* Top Government Compliance / Trust Bar */
-    .top-strip {
-      background: var(--navy-deep);
-      color: #94a3b8;
-      font-size: 0.8rem;
-      padding: 7px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
-    .top-strip-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .top-strip-inner span strong { color: #f8fafc; }
-    .top-strip-links {
-      display: flex;
-      gap: 18px;
-    }
-    .top-strip-links a { color: #cbd5e1; transition: color 0.2s; }
-    .top-strip-links a:hover { color: #ffffff; }
-
-    /* Main Navigation Bar */
-    .navbar {
-      background: #ffffff;
-      border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 15px rgba(0,0,0,0.03);
-    }
-    .nav-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 14px 0;
-    }
-    .brand-wrap {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .brand-emblem {
-      width: 44px;
-      height: 44px;
-      background: var(--navy);
-      color: var(--gold);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      font-weight: 800;
-      border: 1px solid rgba(180, 131, 40, 0.3);
-    }
-    .brand-title h1 {
-      font-size: 1.3rem;
-      font-weight: 800;
-      color: var(--navy);
-      line-height: 1.1;
-      letter-spacing: -0.3px;
-    }
-    .brand-title p {
-      font-size: 0.7rem;
-      color: var(--gold);
-      font-weight: 700;
-      letter-spacing: 1.8px;
-      text-transform: uppercase;
-    }
-    .nav-menu {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      list-style: none;
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--navy);
-    }
-    .nav-menu a { transition: color 0.2s; }
-    .nav-menu a:hover { color: var(--gold); }
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .btn-call-desk {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      background: #f1f5f9;
-      color: var(--navy);
-      padding: 9px 16px;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 0.85rem;
-      border: 1px solid var(--border);
-      transition: all 0.2s;
-    }
-    .btn-call-desk:hover { background: #e2e8f0; }
-    .btn-whatsapp-header {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      background: #25d366;
-      color: #ffffff;
-      padding: 9px 18px;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 0.85rem;
-      box-shadow: 0 2px 10px rgba(37, 211, 102, 0.25);
-      transition: all 0.2s;
-    }
-    .btn-whatsapp-header:hover { background: #1eb956; }
-
-    /* Hero Section: Grounded, Architectural & High-Trust */
-    .hero-section {
-      background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
-      padding: 60px 0 70px;
-      border-bottom: 1px solid var(--border);
-    }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 40px;
-      align-items: center;
-    }
-    .hero-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--gold-soft);
-      border: 1px solid rgba(180, 131, 40, 0.3);
-      color: var(--gold);
-      padding: 5px 14px;
-      border-radius: 50px;
-      font-size: 0.8rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      margin-bottom: 18px;
-    }
-    .hero-title {
-      font-size: 2.9rem;
-      font-weight: 800;
-      color: var(--navy);
-      line-height: 1.18;
-      margin-bottom: 18px;
-      letter-spacing: -0.5px;
-    }
-    .hero-title span {
-      color: var(--gold);
-    }
-    .hero-description {
-      font-size: 1.05rem;
-      color: var(--slate);
-      margin-bottom: 28px;
-      line-height: 1.6;
-    }
-    .hero-stats-banner {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      padding-top: 24px;
-      border-top: 1px solid var(--border);
-    }
-    .stat-box h3 {
-      font-size: 1.6rem;
-      font-weight: 800;
-      color: var(--navy);
-      font-family: 'Plus Jakarta Sans', sans-serif;
-    }
-    .stat-box p {
-      font-size: 0.82rem;
-      color: var(--slate-light);
-      font-weight: 600;
-    }
-
-    /* Founder Credibility Card (Right Column) */
-    .hero-side-card {
-      background: #ffffff;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 28px;
-      box-shadow: var(--shadow-md);
-      position: relative;
-    }
-    .founder-badge {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding-bottom: 18px;
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 18px;
-    }
-    .founder-avatar {
-      width: 58px;
-      height: 58px;
-      background: var(--navy);
-      color: var(--gold);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      font-weight: bold;
-      border: 2px solid var(--gold);
-    }
-    .founder-meta h4 {
-      font-size: 1.1rem;
-      color: var(--navy);
-      font-weight: 800;
-    }
-    .founder-meta p {
-      font-size: 0.82rem;
-      color: var(--slate-light);
-      font-weight: 600;
-    }
-    .card-promises {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-bottom: 22px;
-    }
-    .card-promises li {
-      font-size: 0.88rem;
-      color: var(--slate);
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-    }
-    .check-mark {
-      color: var(--green);
-      font-weight: 800;
-      flex-shrink: 0;
-    }
-    .btn-schedule-cab {
-      background: var(--navy);
-      color: #ffffff;
-      font-weight: 700;
-      font-size: 0.9rem;
-      padding: 12px;
-      border-radius: 8px;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      width: 100%;
-      transition: background 0.2s;
-    }
-    .btn-schedule-cab:hover { background: var(--navy-light); }
-
-    /* Real Practical Property Search Bar */
-    .search-filter-section {
-      background: #ffffff;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 16px 24px;
-      margin-top: -30px;
-      position: relative;
-      z-index: 10;
-      box-shadow: var(--shadow-sm);
-    }
-    .filter-tabs {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 14px;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 10px;
-    }
-    .filter-tab {
-      background: none;
-      border: none;
-      padding: 6px 14px;
-      border-radius: 6px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: var(--slate);
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-    .filter-tab.active {
-      background: var(--navy);
-      color: #ffffff;
-    }
-    .search-controls-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr 1fr 1fr 0.8fr;
-      gap: 14px;
-      align-items: center;
-    }
-    .control-group label {
-      display: block;
-      font-size: 0.72rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: var(--slate-light);
-      margin-bottom: 4px;
-    }
-    .control-group select, .control-group input {
-      width: 100%;
-      padding: 9px 12px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--navy);
-      background: #f8fafc;
-      outline: none;
-    }
-    .control-group select:focus, .control-group input:focus {
-      border-color: var(--navy);
-      background: #ffffff;
-    }
-    .btn-filter-apply {
-      background: var(--gold);
-      color: #ffffff;
-      font-weight: 700;
-      font-size: 0.9rem;
-      padding: 11px;
-      border-radius: 8px;
-      border: none;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      margin-top: 17px;
-      transition: background 0.2s;
-    }
-    .btn-filter-apply:hover { background: var(--gold-hover); }
-
-    /* Section Headers */
-    .section-wrap {
-      padding: 70px 0;
-    }
-    .section-head {
-      margin-bottom: 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-    .head-left span {
-      font-size: 0.8rem;
-      font-weight: 800;
-      color: var(--gold);
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      display: block;
-      margin-bottom: 4px;
-    }
-    .head-left h2 {
-      font-size: 2.1rem;
-      font-weight: 800;
-      color: var(--navy);
-      line-height: 1.2;
-    }
-    .head-right a {
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: var(--navy);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .head-right a:hover { color: var(--gold); }
-
-    /* Authentic Property Cards Grid */
-    .listings-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 26px;
-    }
-    .listing-card {
-      background: #ffffff;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: var(--shadow-sm);
-      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-      display: flex;
-      flex-direction: column;
-    }
-    .listing-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-md);
-      border-color: var(--border-dark);
-    }
-    .listing-img-frame {
-      width: 100%;
-      height: 220px;
-      position: relative;
-      overflow: hidden;
-      background: #e2e8f0;
-    }
-    .listing-img-frame img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.4s ease;
-    }
-    .listing-card:hover .listing-img-frame img {
-      transform: scale(1.04);
-    }
-    .tag-category {
-      position: absolute;
-      top: 12px; left: 12px;
-      background: var(--navy);
-      color: #ffffff;
-      font-size: 0.72rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      padding: 4px 10px;
-      border-radius: 4px;
-    }
-    .tag-status {
-      position: absolute;
-      top: 12px; right: 12px;
-      background: var(--green);
-      color: #ffffff;
-      font-size: 0.72rem;
-      font-weight: 700;
-      padding: 4px 10px;
-      border-radius: 4px;
-    }
-    .price-strip {
-      position: absolute;
-      bottom: 12px; left: 12px;
-      background: rgba(12, 30, 51, 0.92);
-      color: #ffffff;
-      font-size: 1.15rem;
-      font-weight: 800;
-      padding: 4px 12px;
-      border-radius: 6px;
-    }
-    .price-strip span {
-      font-size: 0.78rem;
-      font-weight: 500;
-      color: #cbd5e1;
-    }
-
-    .listing-body {
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-      justify-content: space-between;
-    }
-    .listing-location {
-      font-size: 0.82rem;
-      color: var(--slate-light);
-      margin-bottom: 6px;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-    .listing-body h3 {
-      font-size: 1.18rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 12px;
-      line-height: 1.35;
-    }
-    .listing-specs {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      padding: 10px 0;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 16px;
-      text-align: center;
-    }
-    .spec-point {
-      font-size: 0.8rem;
-      color: var(--slate-light);
-    }
-    .spec-point strong {
-      display: block;
-      color: var(--navy);
-      font-size: 0.88rem;
-    }
-    .listing-rera {
-      font-size: 0.75rem;
-      color: var(--green);
-      font-weight: 700;
-      margin-bottom: 14px;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    .card-action-btns {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-    .btn-card-visit {
-      background: #f1f5f9;
-      color: var(--navy);
-      border: 1px solid var(--border);
-      padding: 10px;
-      border-radius: 6px;
-      font-weight: 700;
-      font-size: 0.82rem;
-      text-align: center;
-      transition: all 0.2s;
-    }
-    .btn-card-visit:hover { background: #e2e8f0; }
-    .btn-card-wa {
-      background: #25d366;
-      color: #ffffff;
-      padding: 10px;
-      border-radius: 6px;
-      font-weight: 700;
-      font-size: 0.82rem;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      transition: all 0.2s;
-    }
-    .btn-card-wa:hover { background: #1eb956; }
-
-    /* Interactive Loan / EMI Calculator (Essential High-Value Tool) */
-    .calculator-section {
-      background: #ffffff;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 60px 0;
-    }
-    .calc-card {
-      background: var(--bg-page);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 35px 40px;
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 50px;
-      align-items: center;
-    }
-    .calc-header h2 {
-      font-size: 1.8rem;
-      color: var(--navy);
-      margin-bottom: 8px;
-    }
-    .calc-header p {
-      font-size: 0.92rem;
-      color: var(--slate-light);
-      margin-bottom: 25px;
-    }
-    .slider-group {
-      margin-bottom: 20px;
-    }
-    .slider-labels {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.88rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 8px;
-    }
-    .slider-labels span:last-child {
-      color: var(--gold);
-    }
-    .range-input {
-      width: 100%;
-      height: 6px;
-      border-radius: 5px;
-      background: var(--border-dark);
-      outline: none;
-      -webkit-appearance: none;
-    }
-    .range-input::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: var(--navy);
-      cursor: pointer;
-      border: 2px solid #ffffff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    }
-
-    .calc-result-box {
-      background: var(--navy);
-      color: #ffffff;
-      border-radius: 14px;
-      padding: 30px;
-      text-align: center;
-    }
-    .calc-result-box p {
-      font-size: 0.85rem;
-      color: #94a3b8;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 6px;
-    }
-    .calc-result-box h3 {
-      font-size: 2.3rem;
-      color: #38bdf8;
-      font-weight: 800;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      margin-bottom: 20px;
-    }
-    .calc-breakdown {
-      display: flex;
-      justify-content: space-between;
-      padding: 12px 0;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      font-size: 0.85rem;
-      color: #cbd5e1;
-    }
-    .calc-breakdown strong { color: #ffffff; }
-    .btn-loan-help {
-      display: block;
-      background: var(--gold);
-      color: #ffffff;
-      font-weight: 700;
-      font-size: 0.88rem;
-      padding: 12px;
-      border-radius: 8px;
-      margin-top: 20px;
-      transition: background 0.2s;
-    }
-    .btn-loan-help:hover { background: var(--gold-hover); }
-
-    /* Giridih Localities Grid */
-    .localities-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-    .locality-box {
-      background: #ffffff;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 20px;
-      transition: all 0.2s;
-    }
-    .locality-box:hover {
-      border-color: var(--navy);
-      box-shadow: var(--shadow-sm);
-    }
-    .locality-box h4 {
-      font-size: 1.05rem;
-      color: var(--navy);
-      margin-bottom: 4px;
-      font-weight: 700;
-    }
-    .locality-box p {
-      font-size: 0.82rem;
-      color: var(--slate-light);
-      margin-bottom: 8px;
-    }
-    .locality-tag {
-      font-size: 0.75rem;
-      color: var(--gold);
-      font-weight: 700;
-    }
-
-    /* Founder & Agency Transparency Section */
-    .trust-pillar-section {
-      background: #ffffff;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 60px 0;
-    }
-    .pillars-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 25px;
-    }
-    .pillar-item {
-      text-align: left;
-    }
-    .pillar-num {
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: var(--gold);
-      font-family: 'Playfair Display', serif;
-      margin-bottom: 8px;
-    }
-    .pillar-item h4 {
-      font-size: 1.05rem;
-      color: var(--navy);
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-    .pillar-item p {
-      font-size: 0.85rem;
-      color: var(--slate-light);
-      line-height: 1.5;
-    }
-
-    /* Professional Footer */
-    footer {
-      background: var(--navy-deep);
-      color: #94a3b8;
-      padding: 50px 0 25px;
-      font-size: 0.88rem;
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
-      gap: 40px;
-      margin-bottom: 40px;
-    }
-    .footer-brand h3 {
-      font-size: 1.25rem;
-      color: #ffffff;
-      margin-bottom: 10px;
-    }
-    .footer-brand p {
-      font-size: 0.85rem;
-      line-height: 1.6;
-    }
-    .footer-col h4 {
-      font-size: 0.95rem;
-      color: #ffffff;
-      margin-bottom: 15px;
-      font-weight: 700;
-    }
-    .footer-col ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    .footer-col a:hover { color: #ffffff; }
-    .footer-bottom {
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      padding-top: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 10px;
-      font-size: 0.8rem;
-    }
-
-    /* Floating WhatsApp */
-    .float-wa-btn {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background: #25d366;
-      color: #ffffff;
-      padding: 12px 20px;
-      border-radius: 50px;
-      font-weight: 700;
-      font-size: 0.9rem;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-      z-index: 1000;
-      transition: transform 0.2s;
-    }
-    .float-wa-btn:hover { transform: scale(1.04); }
-
-    @media (max-width: 900px) {
-      .hero-grid, .calc-card, .footer-grid { grid-template-columns: 1fr; }
-      .search-controls-grid, .listings-grid, .localities-grid, .pillars-grid { grid-template-columns: 1fr; }
-      .hero-title { font-size: 2.2rem; }
-      .nav-menu, .btn-call-desk { display: none; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Top Strip -->
-  <div class="top-strip">
-    <div class="container top-strip-inner">
-      <div>📍 <strong>Giridih Head Office:</strong> Shastri Nagar & Bada Chowk, Giridih, Jharkhand</div>
-      <div class="top-strip-links">
-        <span>Founder: <strong>Vikash Kumar Sinha</strong> (15+ Yrs Experience)</span>
-        <span>•</span>
-        <span>Direct WhatsApp: <strong>+91 62022 53290</strong></span>
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span class="top-bar-item">
+          <span class="icon icon-stroke"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span>
+          Giridih Head Office: Shastri Nagar &amp; Bada Chowk, Giridih, Jharkhand
+        </span>
+      </div>
+      <div class="top-bar-right">
+        <span class="top-bar-item">
+          Senior Consultant: <strong>Vikash Kumar Sinha (15+ Years Advisory)</strong>
+        </span>
+        <span class="top-bar-item">
+          <span class="icon icon-stroke"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
+          Direct Desk: <strong>+91 62022 53290</strong>
+        </span>
       </div>
     </div>
   </div>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="container nav-inner">
-      <div class="brand-wrap">
-        <div class="brand-emblem">G</div>
-        <div class="brand-title">
-          <h1>Giridih Real Estate</h1>
-          <p>PROPERTY CONSULTANCY & DEVELOPERS</p>
+  <!-- Main Header -->
+  <header class="main-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link">
+        <div class="brand-monogram">G</div>
+        <div class="brand-title-wrap">
+          <span class="brand-title">Giridih Real Estate</span>
+          <span class="brand-subtitle">Property Advisory &amp; Development</span>
         </div>
-      </div>
-      <ul class="nav-menu">
-        <li><a href="#properties">Properties for Sale</a></li>
-        <li><a href="#localities">Giridih Locations</a></li>
-        <li><a href="#calculator">EMI Calculator</a></li>
-        <li><a href="#about">About Vikash Sinha</a></li>
-      </ul>
-      <div class="nav-actions">
-        <a href="tel:+916202253290" class="btn-call-desk">
-          📞 062022 53290
-        </a>
-        <a href="https://wa.me/916202253290?text=Namaste%20Vikash%20ji,%20I%20am%20looking%20for%20a%20property%20in%20Giridih" class="btn-whatsapp-header" target="_blank">
-          💬 WhatsApp
-        </a>
-      </div>
-    </div>
-  </nav>
+      </a>
 
-  <!-- Hero Section -->
-  <header class="hero-section">
-    <div class="container hero-grid">
-      <div>
-        <div class="hero-eyebrow">
-          ✦ Direct Developer Partnerships • Zero Brokerage
-        </div>
-        <h1 class="hero-title">
-          Find Verified <span>Plots & Ready Flats</span> Across Giridih
-        </h1>
-        <p class="hero-description">
-          Led by founder <strong>Vikash Kumar Sinha</strong> with over 15 years of on-ground property advisory in Giridih. From prime plots in <strong>Barmasia & Shastri Nagar</strong> to luxury apartments in <strong>Makatpur & Isri</strong>, discover 100% legal, clear-title properties for your family.
-        </p>
-
-        <div class="hero-stats-banner">
-          <div class="stat-box">
-            <h3>15+ Years</h3>
-            <p>On-Ground Trust</p>
-          </div>
-          <div class="stat-box">
-            <h3>Zero</h3>
-            <p>Brokerage on Select Deals</p>
-          </div>
-          <div class="stat-box">
-            <h3>100% Free</h3>
-            <p>Doorstep Site Visits</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Founder & Trust Card -->
-      <div class="hero-side-card">
-        <div class="founder-badge">
-          <div class="founder-avatar">VS</div>
-          <div class="founder-meta">
-            <h4>Vikash Kumar Sinha</h4>
-            <p>Senior Property Consultant & Founder</p>
-          </div>
-        </div>
-        <ul class="card-promises">
-          <li><span class="check-mark">✓</span> <strong>Clear Title Guarantee:</strong> Every plot & flat verified with local registry office papers before listing.</li>
-          <li><span class="check-mark">✓</span> <strong>Direct Seller Meetings:</strong> Deal directly with developers and genuine land owners—no middleman inflation.</li>
-          <li><span class="check-mark">✓</span> <strong>Free Cab Pickup:</strong> We arrange a free site visit vehicle to show you shortlisted properties in Giridih.</li>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="properties.html" class="nav-link">Properties For Sale</a></li>
+          <li><a href="locations.html" class="nav-link">Localities Guide</a></li>
+          <li><a href="emi-calculator.html" class="nav-link">EMI Calculator</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Desk</a></li>
         </ul>
-        <a href="https://wa.me/916202253290?text=Namaste%20Vikash%20ji,%20I%20want%20to%20schedule%20a%20free%20site%20visit" class="btn-schedule-cab" target="_blank">
-          🚗 Schedule Free Site Visit on WhatsApp
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:+916202253290" class="btn-header-call">
+          <span class="icon icon-stroke"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
+          062022 53290
+        </a>
+        <a href="https://wa.me/916202253290?text=Hello%20Vikash%20Sir%2C%20I%20am%20looking%20for%20property%20in%20Giridih." target="_blank" rel="noopener" class="btn-header-whatsapp">
+          WhatsApp Desk
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Filter & Search Bar Container -->
-  <div class="container">
-    <div class="search-filter-section">
-      <div class="filter-tabs">
-        <button class="filter-tab active" onclick="setTab(this, 'all')">All Properties</button>
-        <button class="filter-tab" onclick="setTab(this, 'flat')">Flats & Apartments</button>
-        <button class="filter-tab" onclick="setTab(this, 'plot')">Residential Plots</button>
-        <button class="filter-tab" onclick="setTab(this, 'commercial')">Commercial Spaces</button>
-      </div>
-      <div class="search-controls-grid">
-        <div class="control-group">
-          <label>Locality in Giridih</label>
-          <select id="filterLocality">
-            <option value="all">All Localities</option>
-            <option value="barmasia">Barmasia</option>
-            <option value="shastri">Shastri Nagar</option>
-            <option value="makatpur">Makatpur / Barganda</option>
-            <option value="isri">Isri Dumri Bypass</option>
-          </select>
+  <!-- Hero Section -->
+  <section style="background: #ffffff; border-bottom: 1px solid var(--color-border); padding: 56px 0 48px;">
+    <div class="container" style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px; align-items: center;">
+      <div>
+        <div style="display: inline-block; background: var(--color-bronze-light); color: var(--color-bronze); font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; padding: 4px 10px; border-radius: var(--radius-sm); margin-bottom: 16px;">
+          Direct Landowner &amp; Developer Partnerships
         </div>
-        <div class="control-group">
-          <label>Configuration</label>
-          <select id="filterBhk">
-            <option value="all">Any Configuration</option>
-            <option value="plot">Land / Plot</option>
-            <option value="2bhk">2 BHK Flat</option>
-            <option value="3bhk">3 BHK Flat</option>
-            <option value="comm">Commercial Shop</option>
-          </select>
-        </div>
-        <div class="control-group">
-          <label>Budget Max</label>
-          <select id="filterBudget">
-            <option value="all">No Budget Limit</option>
-            <option value="25">Under ₹25 Lakhs</option>
-            <option value="50">Under ₹50 Lakhs</option>
-            <option value="75">Under ₹75 Lakhs</option>
-          </select>
-        </div>
-        <div class="control-group">
-          <label>Possession</label>
-          <select>
-            <option>Ready to Move</option>
-            <option>Under Construction</option>
-            <option>Immediate Registry</option>
-          </select>
-        </div>
-        <button class="btn-filter-apply" onclick="filterListings()">
-          Search Properties
-        </button>
-      </div>
-    </div>
-  </div>
+        <h1 style="font-family: var(--font-serif); font-size: 40px; line-height: 1.2; color: var(--color-primary); margin-bottom: 16px;">
+          Verified Residential Plots &amp; Ready Flats Across Giridih
+        </h1>
+        <p style="font-size: 16px; color: var(--color-text-body); line-height: 1.6; margin-bottom: 24px;">
+          Supervised by senior property consultant <strong>Vikash Kumar Sinha</strong>. We verify complete land records (Khatian, Registry, and Mutation) before listing. Direct seller meetings with zero middleman inflation.
+        </p>
 
-  <!-- Featured Real Listings Section -->
-  <section class="section-wrap" id="properties">
-    <div class="container">
-      <div class="section-head">
-        <div class="head-left">
-          <span>Handpicked Verified Inventory</span>
-          <h2>Top Giridih Properties For Sale</h2>
+        <!-- Stats Bar -->
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding: 20px 0; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); margin-bottom: 28px;">
+          <div>
+            <div style="font-family: var(--font-serif); font-size: 26px; font-weight: 700; color: var(--color-primary);">15+ Years</div>
+            <div style="font-size: 12.5px; color: var(--color-text-muted);">Local Advisory Experience</div>
+          </div>
+          <div>
+            <div style="font-family: var(--font-serif); font-size: 26px; font-weight: 700; color: var(--color-bronze);">100%</div>
+            <div style="font-size: 12.5px; color: var(--color-text-muted);">Title &amp; Mutation Diligence</div>
+          </div>
+          <div>
+            <div style="font-family: var(--font-serif); font-size: 26px; font-weight: 700; color: var(--color-primary);">Zero</div>
+            <div style="font-size: 12.5px; color: var(--color-text-muted);">Brokerage on Select Projects</div>
+          </div>
         </div>
-        <div class="head-right">
-          <a href="https://wa.me/916202253290?text=Hi%20Vikash%20ji,%20please%20send%20your%20full%20property%20catalog" target="_blank">
-            Request Full Offline Catalog →
-          </a>
+
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href="properties.html" class="btn btn-primary">Browse All Properties</a>
+          <a href="contact.html" class="btn btn-outline">Schedule Free Site Visit</a>
         </div>
       </div>
 
-      <div class="listings-grid">
-        <!-- Property 1: Sanskriti Apartment -->
-        <div class="listing-card" data-type="flat" data-budget="48" data-loc="makatpur">
-          <div class="listing-img-frame">
-            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=700&q=80" alt="Sanskriti Apartment Giridih">
-            <span class="tag-category">Apartment</span>
-            <span class="tag-status">Ready to Move</span>
-            <div class="price-strip">₹46.5 L <span>• 3 BHK Luxury</span></div>
+      <!-- Founder & Trust Card -->
+      <div style="background: var(--color-bg-page); border: 1px solid var(--color-border); border-radius: var(--radius-sm); padding: 28px;">
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid var(--color-border);">
+          <div style="width: 52px; height: 52px; border-radius: 50%; background: var(--color-primary); color: #ffffff; display: flex; align-items: center; justify-content: center; font-family: var(--font-serif); font-size: 20px; font-weight: 700;">
+            VS
           </div>
-          <div class="listing-body">
-            <div>
-              <div class="listing-location">📍 Near Rajgadhia Road, Makatpur / Barganda, Giridih</div>
-              <h3>Sanskriti Apartment — Luxury High-Rise</h3>
-              <div class="listing-specs">
-                <div class="spec-point"><strong>3 BHK</strong>Config</div>
-                <div class="spec-point"><strong>1,620 Sq.Ft</strong>Carpet Area</div>
-                <div class="spec-point"><strong>Lift + Gen</strong>Amenities</div>
-              </div>
-              <div class="listing-rera">✔ Verified Clear Title • Bank Loan Approved (SBI, HDFC)</div>
-            </div>
-            <div class="card-action-btns">
-              <a href="tel:+916202253290" class="btn-card-visit">📞 Call Vikash</a>
-              <a href="https://wa.me/916202253290?text=Namaste%20Vikash%20ji,%20I%20am%20interested%20in%20Sanskriti%20Apartment%20(3%20BHK%20₹46.5L)" class="btn-card-wa" target="_blank">💬 WhatsApp</a>
-            </div>
+          <div>
+            <div style="font-family: var(--font-serif); font-size: 18px; font-weight: 700; color: var(--color-primary);">Vikash Kumar Sinha</div>
+            <div style="font-size: 12.5px; color: var(--color-text-muted);">Founder &amp; Principal Property Consultant</div>
           </div>
         </div>
 
-        <!-- Property 2: Krishna Vihar -->
-        <div class="listing-card" data-type="plot" data-budget="22" data-loc="barmasia">
-          <div class="listing-img-frame">
-            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=700&q=80" alt="Krishna Vihar Enclave Giridih">
-            <span class="tag-category">Residential Plot</span>
-            <span class="tag-status">Immediate Registry</span>
-            <div class="price-strip">₹1,350 <span>/ Sq.Ft</span></div>
+        <div style="display: flex; flex-direction: column; gap: 14px; font-size: 13.5px; margin-bottom: 24px;">
+          <div style="display: flex; gap: 10px;">
+            <span class="icon icon-stroke" style="color: var(--color-whatsapp); margin-top: 2px;"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+            <span><strong>Title Verification:</strong> Thorough cross-check with the Giridih Registry Office and Circle Revenue records.</span>
           </div>
-          <div class="listing-body">
-            <div>
-              <div class="listing-location">📍 Barmasia / Shastri Nagar Extension, Giridih</div>
-              <h3>Krishna Vihar — Gated Residential Colony</h3>
-              <div class="listing-specs">
-                <div class="spec-point"><strong>1200 - 2400</strong>Sq.Ft Plots</div>
-                <div class="spec-point"><strong>30 Ft Wide</strong>Road Access</div>
-                <div class="spec-point"><strong>Electricity</strong>Connected</div>
-              </div>
-              <div class="listing-rera">✔ 100% Mutation & Registry Ready • Direct Owner Deal</div>
-            </div>
-            <div class="card-action-btns">
-              <a href="tel:+916202253290" class="btn-card-visit">📞 Call Vikash</a>
-              <a href="https://wa.me/916202253290?text=Namaste%20Vikash%20ji,%20I%20am%20interested%20in%20Krishna%20Vihar%20Plots" class="btn-card-wa" target="_blank">💬 WhatsApp</a>
-            </div>
+          <div style="display: flex; gap: 10px;">
+            <span class="icon icon-stroke" style="color: var(--color-whatsapp); margin-top: 2px;"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+            <span><strong>Transparent Pricing:</strong> Deals negotiated directly with property developers and authentic land owners.</span>
+          </div>
+          <div style="display: flex; gap: 10px;">
+            <span class="icon icon-stroke" style="color: var(--color-whatsapp); margin-top: 2px;"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+            <span><strong>Complimentary Site Visit:</strong> Dedicated inspection vehicle arranged for registered buyers anywhere in Giridih.</span>
           </div>
         </div>
 
-        <!-- Property 3: Shastri Nagar Budget Flat -->
-        <div class="listing-card" data-type="flat" data-budget="32" data-loc="shastri">
-          <div class="listing-img-frame">
-            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=700&q=80" alt="Shastri Nagar 2 BHK Flat">
-            <span class="tag-category">Apartment</span>
-            <span class="tag-status">Under Construction</span>
-            <div class="price-strip">₹31.5 L <span>• 2 BHK Smart Home</span></div>
-          </div>
-          <div class="listing-body">
-            <div>
-              <div class="listing-location">📍 Near Shastri Nagar Park, Giridih</div>
-              <h3>Shastri Enclave — Modern Family Living</h3>
-              <div class="listing-specs">
-                <div class="spec-point"><strong>2 BHK</strong>Config</div>
-                <div class="spec-point"><strong>1,120 Sq.Ft</strong>Carpet Area</div>
-                <div class="spec-point"><strong>Dec 2026</strong>Possession</div>
-              </div>
-              <div class="listing-rera">✔ Zero Brokerage Direct Booking • 80% Home Loan</div>
-            </div>
-            <div class="card-action-btns">
-              <a href="tel:+916202253290" class="btn-card-visit">📞 Call Vikash</a>
-              <a href="https://wa.me/916202253290?text=Namaste%20Vikash%20ji,%20I%20am%20interested%20in%20Shastri%20Enclave%202%20BHK%20(₹31.5L)" class="btn-card-wa" target="_blank">💬 WhatsApp</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Property 4: Commercial Space Court Road -->
-        <div class="listing-card" data-type="commercial" data-budget="75" data-loc="makatpur">
-          <div class="listing-img-frame">
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=700&q=80" alt="Court Road Commercial Shop">
-            <span class="tag-category">Commercial</span>
-            <span class="tag-status">High Footfall</span>
-            <div class="price-strip">₹65.0 L <span>• 850 Sq.Ft</span></div>
-          </div>
-          <div class="listing-body">
-            <div>
-              <div class="listing-location">📍 Main Court Road / Bada Chowk, Giridih</div>
-              <h3>City Center Plaza — Commercial Showroom</h3>
-              <div class="listing-specs">
-                <div class="spec-point"><strong>Ground Flr</strong>Main Road</div>
-                <div class="spec-point"><strong>850 Sq.Ft</strong>Showroom Area</div>
-                <div class="spec-point"><strong>High Rental</strong>₹45K/Mo Exp.</div>
-              </div>
-              <div class="listing-rera">✔ Commercial Approved • Ready for Retail / Clinic / Bank</div>
-            </div>
-            <div class="card-action-btns">
-              <a href="tel:+916202253290" class="btn-card-visit">📞 Call Vikash</a>
-              <a href="https://wa.me/916202253290?text=Namaste%20Vikash%20ji,%20I%20am%20interested%20in%20Court%20Road%20Commercial%20Shop" class="btn-card-wa" target="_blank">💬 WhatsApp</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Property 5: Isri Dumri Investment Land -->
-        <div class="listing-card" data-type="plot" data-budget="20" data-loc="isri">
-          <div class="listing-img-frame">
-            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=700&q=80" alt="Isri Dumri Highway Land">
-            <span class="tag-category">Highway Plot</span>
-            <span class="tag-status">High Growth</span>
-            <div class="price-strip">₹950 <span>/ Sq.Ft</span></div>
-          </div>
-          <div class="listing-body">
-            <div>
-              <div class="listing-location">📍 Isri Dumri NH-19 Highway Corridor, Giridih</div>
-              <h3>Highway Industrial & Commercial Acreage</h3>
-              <div class="listing-specs">
-                <div class="spec-point"><strong>5 to 20 Katha</strong>Plot Sizes</div>
-                <div class="spec-point"><strong>NH Frontage</strong>Direct Access</div>
-                <div class="spec-point"><strong>Commercial</strong>Potential</div>
-              </div>
-              <div class="listing-rera">✔ Clear Khatiyan & Mutation • Ideal for Warehouse/Hotel</div>
-            </div>
-            <div class="card-action-btns">
-              <a href="tel:+916202253290" class="btn-card-visit">📞 Call Vikash</a>
-              <a href="https://wa.me/916202253290?text=Namaste%20Vikash%20ji,%20I%20am%20interested%20in%20Isri%20Dumri%20Highway%20Land" class="btn-card-wa" target="_blank">💬 WhatsApp</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Property 6: Adarsh Nagar Duplex -->
-        <div class="listing-card" data-type="flat" data-budget="70" data-loc="barmasia">
-          <div class="listing-img-frame">
-            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=700&q=80" alt="Adarsh Nagar Duplex Villa">
-            <span class="tag-category">Villa</span>
-            <span class="tag-status">Ready to Move</span>
-            <div class="price-strip">₹68.0 L <span>• 4 BHK Villa</span></div>
-          </div>
-          <div class="listing-body">
-            <div>
-              <div class="listing-location">📍 Adarsh Nagar Colony, Main Town, Giridih</div>
-              <h3>Royal Enclave 4 BHK Independent Duplex</h3>
-              <div class="listing-specs">
-                <div class="spec-point"><strong>4 BHK</strong>Duplex Villa</div>
-                <div class="spec-point"><strong>2,200 Sq.Ft</strong>Super Builtup</div>
-                <div class="spec-point"><strong>Private Roof</strong>Garden</div>
-              </div>
-              <div class="listing-rera">✔ Gated Community • Covered Car Porch & CCTV</div>
-            </div>
-            <div class="card-action-btns">
-              <a href="tel:+916202253290" class="btn-card-visit">📞 Call Vikash</a>
-              <a href="https://wa.me/916202253290?text=Namaste%20Vikash%20ji,%20I%20am%20interested%20in%20Adarsh%20Nagar%20Duplex%20Villa" class="btn-card-wa" target="_blank">💬 WhatsApp</a>
-            </div>
-          </div>
-        </div>
+        <a href="https://wa.me/916202253290?text=Hello%20Vikash%20Sir%2C%20I%20would%20like%20to%20schedule%20a%20site%20visit." target="_blank" rel="noopener" class="btn btn-whatsapp btn-full">
+          Book Inspection via WhatsApp
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Interactive Home Loan EMI Calculator (Real Practical Utility) -->
-  <section class="calculator-section" id="calculator">
+  <!-- Featured Properties Section -->
+  <section class="section">
     <div class="container">
-      <div class="calc-card">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 32px;">
         <div>
-          <div class="calc-header">
-            <span style="font-size: 0.78rem; font-weight: 800; color: var(--gold); text-transform: uppercase; letter-spacing: 1px;">Banking & Finance</span>
-            <h2>Home Loan EMI Calculator</h2>
-            <p>Plan your budget with Giridih's official bank tie-ups (SBI, HDFC, Bank of India, ICICI).</p>
-          </div>
-
-          <!-- Slider 1: Loan Amount -->
-          <div class="slider-group">
-            <div class="slider-labels">
-              <span>Loan Amount</span>
-              <span id="amountDisplay">₹ 35,00,000</span>
-            </div>
-            <input type="range" min="500000" max="10000000" step="50000" value="3500000" class="range-input" id="loanAmount" oninput="updateEMI()">
-          </div>
-
-          <!-- Slider 2: Interest Rate -->
-          <div class="slider-group">
-            <div class="slider-labels">
-              <span>Interest Rate (p.a)</span>
-              <span id="rateDisplay">8.5 %</span>
-            </div>
-            <input type="range" min="7.0" max="12.0" step="0.1" value="8.5" class="range-input" id="interestRate" oninput="updateEMI()">
-          </div>
-
-          <!-- Slider 3: Tenure -->
-          <div class="slider-group">
-            <div class="slider-labels">
-              <span>Tenure (Years)</span>
-              <span id="tenureDisplay">20 Years</span>
-            </div>
-            <input type="range" min="5" max="30" step="1" value="20" class="range-input" id="loanTenure" oninput="updateEMI()">
-          </div>
+          <div class="section-eyebrow">Verified Inventory</div>
+          <h2 class="section-title">Featured Properties in Prime Giridih Sectors</h2>
+          <p class="section-desc">Handpicked residential plots, luxury flats, and commercial opportunities with clear documentation.</p>
         </div>
+        <a href="properties.html" class="btn btn-outline btn-sm">View All 6 Listings &rarr;</a>
+      </div>
 
-        <!-- Result Box -->
-        <div class="calc-result-box">
-          <p>Estimated Monthly EMI</p>
-          <h3 id="emiMonthly">₹ 30,374</h3>
-          <div class="calc-breakdown">
-            <span>Principal Amount:</span>
-            <strong id="principalTotal">₹ 35,00,000</strong>
+      <div class="properties-grid">
+        <!-- Property 1 -->
+        <article class="property-card">
+          <div class="property-img-wrap">
+            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=700&q=80" alt="Sanskriti Apartment" class="property-img">
+            <span class="property-badge-type">Apartment</span>
+            <span class="property-badge-status">Ready to Move</span>
+            <div class="property-price-bar">
+              <span class="property-price-val">&#8377;46.5 Lakhs</span>
+              <span class="property-price-sub">&#8226; 3 BHK Luxury</span>
+            </div>
           </div>
-          <div class="calc-breakdown">
-            <span>Total Interest:</span>
-            <strong id="interestTotal">₹ 37,89,760</strong>
+          <div class="property-content">
+            <div class="property-loc">
+              <span class="icon icon-stroke"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span>
+              Makatpur / Barganda, Giridih
+            </div>
+            <h3 class="property-name">Sanskriti Apartment &mdash; Luxury High-Rise</h3>
+            <div class="property-specs">
+              <div class="spec-item"><span class="spec-label">Config</span><span class="spec-val">3 BHK</span></div>
+              <div class="spec-item"><span class="spec-label">Area</span><span class="spec-val">1,620 Sq.Ft</span></div>
+              <div class="spec-item"><span class="spec-label">Amenities</span><span class="spec-val">Lift + Backup</span></div>
+            </div>
+            <div class="property-verification">
+              <span class="icon icon-stroke"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+              Clear Title &#8226; Bank Approved (SBI / HDFC)
+            </div>
+            <div class="property-actions">
+              <a href="tel:+916202253290" class="btn btn-outline btn-sm">Call Consultant</a>
+              <a href="https://wa.me/916202253290?text=Enquiry%20regarding%20Sanskriti%20Apartment%203%20BHK%20Makatpur" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm">Enquire WhatsApp</a>
+            </div>
           </div>
-          <div class="calc-breakdown">
-            <span>Total Repayment:</span>
-            <strong id="totalPayable">₹ 72,89,760</strong>
+        </article>
+
+        <!-- Property 2 -->
+        <article class="property-card">
+          <div class="property-img-wrap">
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=700&q=80" alt="Krishna Vihar Residential Colony" class="property-img">
+            <span class="property-badge-type">Residential Plot</span>
+            <span class="property-badge-status">Immediate Registry</span>
+            <div class="property-price-bar">
+              <span class="property-price-val">&#8377;1,350</span>
+              <span class="property-price-sub">/ Sq.Ft</span>
+            </div>
           </div>
-          <a href="https://wa.me/916202253290?text=Namaste%20Vikash%20ji,%20I%20want%20assistance%20with%20SBI/HDFC%20home%20loan%20for%20Giridih%20property" class="btn-loan-help" target="_blank">
-            Get Instant Loan Approval Support →
-          </a>
-        </div>
+          <div class="property-content">
+            <div class="property-loc">
+              <span class="icon icon-stroke"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span>
+              Barmasia / Shastri Nagar Extension, Giridih
+            </div>
+            <h3 class="property-name">Krishna Vihar &mdash; Gated Residential Colony</h3>
+            <div class="property-specs">
+              <div class="spec-item"><span class="spec-label">Plot Sizes</span><span class="spec-val">1200-2400 Sq.Ft</span></div>
+              <div class="spec-item"><span class="spec-label">Front Road</span><span class="spec-val">30 Ft Wide</span></div>
+              <div class="spec-item"><span class="spec-label">Utilities</span><span class="spec-val">Power &amp; Water</span></div>
+            </div>
+            <div class="property-verification">
+              <span class="icon icon-stroke"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+              100% Mutation &amp; Registry Ready
+            </div>
+            <div class="property-actions">
+              <a href="tel:+916202253290" class="btn btn-outline btn-sm">Call Consultant</a>
+              <a href="https://wa.me/916202253290?text=Enquiry%20regarding%20Krishna%20Vihar%20Plots%20Barmasia" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm">Enquire WhatsApp</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Property 3 -->
+        <article class="property-card">
+          <div class="property-img-wrap">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=80" alt="Shastri Enclave" class="property-img">
+            <span class="property-badge-type">Apartment</span>
+            <span class="property-badge-status">Under Construction</span>
+            <div class="property-price-bar">
+              <span class="property-price-val">&#8377;31.5 Lakhs</span>
+              <span class="property-price-sub">&#8226; 2 BHK Smart Home</span>
+            </div>
+          </div>
+          <div class="property-content">
+            <div class="property-loc">
+              <span class="icon icon-stroke"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span>
+              Near Shastri Nagar Park, Giridih
+            </div>
+            <h3 class="property-name">Shastri Enclave &mdash; Modern Family Living</h3>
+            <div class="property-specs">
+              <div class="spec-item"><span class="spec-label">Config</span><span class="spec-val">2 BHK</span></div>
+              <div class="spec-item"><span class="spec-label">Carpet</span><span class="spec-val">1,120 Sq.Ft</span></div>
+              <div class="spec-item"><span class="spec-label">Possession</span><span class="spec-val">Dec 2026</span></div>
+            </div>
+            <div class="property-verification">
+              <span class="icon icon-stroke"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+              Zero Brokerage Direct Booking &#8226; 80% Loan
+            </div>
+            <div class="property-actions">
+              <a href="tel:+916202253290" class="btn btn-outline btn-sm">Call Consultant</a>
+              <a href="https://wa.me/916202253290?text=Enquiry%20regarding%20Shastri%20Enclave%202%20BHK%20Giridih" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm">Enquire WhatsApp</a>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- Giridih Prime Localities Breakdown -->
-  <section class="section-wrap" id="localities">
+  <!-- Four Pillars of Legal Trust -->
+  <section class="section section-alt">
     <div class="container">
-      <div class="section-head">
-        <div class="head-left">
-          <span>Explore Neighborhoods</span>
-          <h2>Key Real Estate Hubs in Giridih</h2>
-        </div>
+      <div class="section-head text-center" style="text-align: center; max-width: 650px; margin: 0 auto 36px;">
+        <div class="section-eyebrow">Institutional Standards</div>
+        <h2 class="section-title">The Four Pillars of Real Estate Diligence</h2>
+        <p class="section-desc" style="margin: 0 auto;">Every property advised through our desk adheres to strict legal and revenue protocols in Jharkhand.</p>
       </div>
 
-      <div class="localities-grid">
-        <div class="locality-box">
-          <h4>Barmasia</h4>
-          <p>Rapidly developing residential sector with top schools and upcoming luxury high-rises.</p>
-          <div class="locality-tag">Plots: ₹1,200 – ₹1,800/sq.ft</div>
+      <div class="trust-grid">
+        <div class="trust-card">
+          <div class="trust-num">01</div>
+          <h3 class="trust-title">100% Registry Verification</h3>
+          <p class="trust-desc">We personally inspect certified deed copies, Khatian lineage, and encumbrance records at the Giridih sub-registrar office before listing.</p>
         </div>
-        <div class="locality-box">
-          <h4>Shastri Nagar</h4>
-          <p>Central town locality with wide roads, peaceful parks, and proven resale value.</p>
-          <div class="locality-tag">Flats: ₹30L – ₹55L</div>
+        <div class="trust-card">
+          <div class="trust-num">02</div>
+          <h3 class="trust-title">Direct Landowner Meetings</h3>
+          <p class="trust-desc">We do not operate through unverified secondary brokers. Buyers negotiate directly with original title holders for complete price transparency.</p>
         </div>
-        <div class="locality-box">
-          <h4>Makatpur / Barganda</h4>
-          <p>Heart of Giridih commercial and high-density residential lifestyle near market centers.</p>
-          <div class="locality-tag">3 BHK: ₹45L – ₹65L</div>
+        <div class="trust-card">
+          <div class="trust-num">03</div>
+          <h3 class="trust-title">Complimentary Site Vehicle</h3>
+          <p class="trust-desc">Our dedicated office vehicle provides door-to-site pickup from Giridih Railway Station or your residence for thorough neighborhood inspections.</p>
         </div>
-        <div class="locality-box">
-          <h4>Isri Dumri Corridor</h4>
-          <p>Direct NH-19 connectivity. High capital appreciation zone for plots and commercial godowns.</p>
-          <div class="locality-tag">Growth: 18% YoY</div>
+        <div class="trust-card">
+          <div class="trust-num">04</div>
+          <h3 class="trust-title">Post-Purchase Revenue Support</h3>
+          <p class="trust-desc">We assist our clients with Dakhil-Kharij (Mutation) formalities, electricity connection transfer, and municipal tax registrations.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- The 15-Year Trust Pillars -->
-  <section class="trust-pillar-section" id="about">
+  <!-- Quick Calculator CTA Banner -->
+  <section class="section">
     <div class="container">
-      <div class="pillars-grid">
-        <div class="pillar-item">
-          <div class="pillar-num">01</div>
-          <h4>100% Registry Verification</h4>
-          <p>We personally cross-verify every Khatiyan, Registry, and Mutation document with local revenue circles.</p>
+      <div style="background: var(--color-primary); color: #ffffff; border-radius: var(--radius-sm); padding: 36px 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px;">
+        <div style="max-width: 600px;">
+          <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--color-bronze-light); font-weight: 700; margin-bottom: 6px;">
+            Financial Planning
+          </div>
+          <h2 style="font-family: var(--font-serif); font-size: 26px; font-weight: 700; margin-bottom: 8px;">
+            Calculate Your Home Loan EMI with Local Bank Rates
+          </h2>
+          <p style="font-size: 14.5px; color: #cbd5e1; line-height: 1.5;">
+            Compare monthly installments across SBI, HDFC, and Bank of India tie-ups in Giridih. Instant interest and principal repayment breakdown.
+          </p>
         </div>
-        <div class="pillar-item">
-          <div class="pillar-num">02</div>
-          <h4>Zero Brokerage Partners</h4>
-          <p>Direct exclusive developer agreements ensure zero commission fees on our premier apartment projects.</p>
-        </div>
-        <div class="pillar-item">
-          <div class="pillar-num">03</div>
-          <h4>Free Site Visit Vehicle</h4>
-          <p>Our dedicated vehicle picks you up from your home or railway station to tour shortlisted properties comfortably.</p>
-        </div>
-        <div class="pillar-item">
-          <div class="pillar-num">04</div>
-          <h4>Post-Purchase Support</h4>
-          <p>Assistance with mutation (Dakhil-Kharij), building plan approvals, and utility connections.</p>
+        <div>
+          <a href="emi-calculator.html" class="btn btn-bronze">Open Full EMI Calculator &rarr;</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Professional Corporate Footer -->
-  <footer>
+  <!-- Footer -->
+  <footer class="main-footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-brand">
-          <h3>Giridih Real Estate</h3>
-          <p>Founded by Vikash Kumar Sinha with 15+ years of trusted advisory in residential plots, commercial spaces, and luxury flats across Giridih, Jharkhand.</p>
+        <div>
+          <div style="font-family: var(--font-serif); font-size: 20px; font-weight: 700; color: #ffffff; margin-bottom: 8px;">
+            Giridih Real Estate
+          </div>
+          <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.8px; color: var(--color-bronze); font-weight: 600; margin-bottom: 14px;">
+            Property Advisory &amp; Development
+          </div>
+          <p style="font-size: 13.5px; color: #94a3b8; line-height: 1.6; margin-bottom: 16px;">
+            Led by founder Vikash Kumar Sinha with 15+ years of verified property advisory in residential plots, commercial complexes, and luxury apartments across Giridih, Jharkhand.
+          </p>
         </div>
-        <div class="footer-col">
-          <h4>Property Types</h4>
-          <ul>
-            <li><a href="#properties">Residential Plots</a></li>
-            <li><a href="#properties">2 & 3 BHK Apartments</a></li>
-            <li><a href="#properties">Independent Villas</a></li>
-            <li><a href="#properties">Commercial Showrooms</a></li>
+
+        <div>
+          <h4 class="footer-col-title">Quick Pages</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="properties.html">Properties For Sale</a></li>
+            <li><a href="locations.html">Giridih Localities Guide</a></li>
+            <li><a href="emi-calculator.html">Home Loan EMI Calculator</a></li>
+            <li><a href="about.html">About Vikash Kumar Sinha</a></li>
+            <li><a href="contact.html">Contact &amp; Site Visit</a></li>
           </ul>
         </div>
-        <div class="footer-col">
-          <h4>Localities</h4>
-          <ul>
-            <li><a href="#localities">Shastri Nagar</a></li>
-            <li><a href="#localities">Barmasia</a></li>
-            <li><a href="#localities">Makatpur</a></li>
-            <li><a href="#localities">Isri Dumri</a></li>
+
+        <div>
+          <h4 class="footer-col-title">Key Localities</h4>
+          <ul class="footer-links">
+            <li><a href="locations.html#shastri-nagar">Shastri Nagar</a></li>
+            <li><a href="locations.html#barmasia">Barmasia Residential Belt</a></li>
+            <li><a href="locations.html#makatpur">Makatpur &amp; Barganda</a></li>
+            <li><a href="locations.html#isri-dumri">Isri Dumri NH-19 Highway</a></li>
+            <li><a href="locations.html#court-road">Main Court Road Commercial</a></li>
           </ul>
         </div>
-        <div class="footer-col">
-          <h4>Direct Office Desk</h4>
-          <p style="margin-bottom: 8px;"><strong>Founder:</strong> Vikash Kumar Sinha</p>
-          <p style="margin-bottom: 8px;">📍 Shastri Nagar / Bada Chowk, Giridih</p>
-          <p style="margin-bottom: 8px;">📞 Call: +91 62022 53290</p>
-          <p>🕒 Mon - Sun: 9:00 AM - 8:30 PM</p>
+
+        <div>
+          <h4 class="footer-col-title">Direct Advisory Desk</h4>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <span class="icon icon-stroke" style="margin-top: 3px;"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span>
+              <div>
+                <strong>Head Office:</strong><br>
+                Shastri Nagar &amp; Bada Chowk, Giridih, Jharkhand 815301
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <span class="icon icon-stroke" style="margin-top: 3px;"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
+              <div>
+                <strong>Direct Phone:</strong><br>
+                +91 62022 53290
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <span class="icon icon-stroke" style="margin-top: 3px;"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></span>
+              <div>
+                <strong>Desk Hours:</strong><br>
+                Monday to Sunday: 9:00 AM &ndash; 8:30 PM
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <div>© 2026 <strong>Giridih Real Estate</strong>. All Rights Reserved. Not affiliated with unregistered brokers.</div>
-        <div>Engineered for Speed, Trust & Legal Transparency</div>
+        <div>
+          &copy; 2026 Giridih Real Estate. All Rights Reserved. Not affiliated with unregistered brokers.
+        </div>
+        <div>
+          Advisory Lead: Vikash Kumar Sinha | Giridih, Jharkhand
+        </div>
       </div>
     </div>
   </footer>
-
-  <!-- Floating WhatsApp Booking Button -->
-  <a href="https://wa.me/916202253290?text=Namaste%20Vikash%20ji,%20I%20am%20enquiring%20about%20properties%20in%20Giridih" class="float-wa-btn" target="_blank">
-    💬 WhatsApp Vikash Sir
-  </a>
-
-  <!-- Simple, Grounded Utility JS (Zero Vibe Coding Fluff) -->
-  <script>
-    // EMI Calculator Logic
-    function updateEMI() {
-      const P = parseFloat(document.getElementById('loanAmount').value);
-      const rAnnual = parseFloat(document.getElementById('interestRate').value);
-      const nYears = parseFloat(document.getElementById('loanTenure').value);
-
-      const r = (rAnnual / 12) / 100;
-      const n = nYears * 12;
-
-      const emi = (P * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
-      const totalPayment = emi * n;
-      const totalInterest = totalPayment - P;
-
-      document.getElementById('amountDisplay').innerText = '₹ ' + P.toLocaleString('en-IN');
-      document.getElementById('rateDisplay').innerText = rAnnual.toFixed(1) + ' %';
-      document.getElementById('tenureDisplay').innerText = nYears + ' Years';
-
-      document.getElementById('emiMonthly').innerText = '₹ ' + Math.round(emi).toLocaleString('en-IN');
-      document.getElementById('principalTotal').innerText = '₹ ' + P.toLocaleString('en-IN');
-      document.getElementById('interestTotal').innerText = '₹ ' + Math.round(totalInterest).toLocaleString('en-IN');
-      document.getElementById('totalPayable').innerText = '₹ ' + Math.round(totalPayment).toLocaleString('en-IN');
-    }
-
-    // Tab Filter Logic
-    let currentTab = 'all';
-    function setTab(btn, type) {
-      document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      currentTab = type;
-      filterListings();
-    }
-
-    // Property Filter Engine
-    function filterListings() {
-      const loc = document.getElementById('filterLocality').value;
-      const budget = document.getElementById('filterBudget').value;
-      const cards = document.querySelectorAll('.listing-card');
-
-      cards.forEach(card => {
-        const cardType = card.getAttribute('data-type');
-        const cardLoc = card.getAttribute('data-loc');
-        const cardBudget = parseFloat(card.getAttribute('data-budget'));
-
-        let typeMatch = (currentTab === 'all' || cardType === currentTab);
-        let locMatch = (loc === 'all' || cardLoc === loc);
-        let budgetMatch = (budget === 'all' || cardBudget <= parseFloat(budget));
-
-        if (typeMatch && locMatch && budgetMatch) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    }
-
-    // Initialize Calculator on load
-    window.addEventListener('DOMContentLoaded', updateEMI);
-  </script>
 
 </body>
 </html>
