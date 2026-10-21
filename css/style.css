@@ -939,8 +939,76 @@ img {
 }
 
 /* ==========================================================================
+   Responsive Grid Helpers
+   ========================================================================== */
+.grid-2-col-hero {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.grid-2-col-sidebar {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.grid-2-col-contact {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.grid-3-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.grid-specs-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .grid-specs-3 {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 992px) {
+  .grid-2-col-hero,
+  .grid-2-col-sidebar,
+  .grid-2-col-contact {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .grid-3-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
    Responsive Media Queries
    ========================================================================== */
+.grid-specs-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .grid-specs-3 {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+
 @media (max-width: 992px) {
   .properties-grid {
     grid-template-columns: repeat(2, 1fr);
