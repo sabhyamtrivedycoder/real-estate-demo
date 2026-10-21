@@ -573,6 +573,10 @@ img {
   .grid-4-col {
     grid-template-columns: 1fr;
   }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
   .header-actions .btn-header-call {
     display: none;
   }
