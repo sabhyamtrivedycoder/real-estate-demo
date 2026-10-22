@@ -1,0 +1,1080 @@
+/* ==========================================================================
+   Goyal Orthodontic & Dental Care Centre
+   Specialist Dental Practice: Dr. Vinod Goyal (BDS, MDS Orthodontics)
+   Shop 87-88, HUDA Market, Sector 15 Part-2, Gurugram
+   Theme: Luxury Golden White • 3D Scroll Depth Perspective
+   Zero Emojis. 100% Vector SVG.
+   ========================================================================== */
+
+:root {
+  --gold-50: #fdfbf7;
+  --gold-100: #fbf5e6;
+  --gold-200: #f4e6c3;
+  --gold-300: #ebd297;
+  --gold-400: #deb865;
+  --gold-500: #c59b27;
+  --gold-600: #aa7c11;
+  --gold-700: #8a6516;
+  --gold-800: #715217;
+  --gold-900: #5c4217;
+
+  --gold-gradient: linear-gradient(135deg, #e8cb76 0%, #c59b27 50%, #8a6516 100%);
+  --gold-gradient-soft: linear-gradient(180deg, #ffffff 0%, #fcf9f2 100%);
+  --gold-border: rgba(197, 155, 39, 0.28);
+  --gold-glow: 0 12px 30px rgba(197, 155, 39, 0.18);
+
+  --white: #ffffff;
+  --pearl: #faf8f5;
+  --stone-900: #1c1917;
+  --stone-800: #292524;
+  --stone-700: #44403c;
+  --stone-600: #57534e;
+  --stone-500: #78716c;
+  --stone-400: #a8a29e;
+  --stone-300: #d6d3d1;
+  --stone-200: #e7e5e4;
+  --stone-100: #f5f5f4;
+
+  --medical-green: #047857;
+  --medical-green-bg: #ecfdf5;
+
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 2px 4px rgba(28, 25, 23, 0.04);
+  --shadow-md: 0 6px 16px rgba(28, 25, 23, 0.06);
+  --shadow-3d: 0 24px 48px -12px rgba(197, 155, 39, 0.2), 0 8px 24px -4px rgba(28, 25, 23, 0.06);
+
+  --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--pearl);
+  color: var(--stone-700);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+h1, h2, h3, h4 {
+  color: var(--stone-900);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.heading-serif {
+  font-family: var(--font-serif);
+}
+
+/* ==========================================================================
+   Layout Containers
+   ========================================================================== */
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.container-narrow {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ==========================================================================
+   Top Clinical Notice Strip
+   ========================================================================== */
+.top-clinic-bar {
+  background: var(--stone-900);
+  color: var(--gold-100);
+  font-size: 0.8125rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--gold-700);
+}
+
+.top-clinic-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.clinic-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.badge-gold {
+  background: var(--gold-gradient);
+  color: #1a1505;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.15rem 0.55rem;
+  border-radius: var(--radius-full);
+}
+
+.top-contact-group {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.top-phone-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--gold-300);
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.top-phone-link:hover {
+  color: var(--white);
+}
+
+/* ==========================================================================
+   Main Navigation Header
+   ========================================================================== */
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--gold-border);
+  transition: var(--transition);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 78px;
+}
+
+.brand-block {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.brand-logo-img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 4px 8px rgba(197, 155, 39, 0.25));
+}
+
+.brand-text h1 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--stone-900);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.brand-text p {
+  font-size: 0.72rem;
+  color: var(--gold-700);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  list-style: none;
+}
+
+.nav-link {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--stone-700);
+  padding: 0.5rem 0.2rem;
+  position: relative;
+  transition: var(--transition);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--gold-700);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--gold-gradient);
+  border-radius: 2px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  padding: 0.7rem 1.4rem;
+  border-radius: var(--radius-md);
+  transition: var(--transition);
+  cursor: pointer;
+  border: 1px solid transparent;
+  line-height: 1;
+}
+
+.btn-gold {
+  background: var(--gold-gradient);
+  color: #1a1403;
+  box-shadow: 0 4px 14px rgba(197, 155, 39, 0.28);
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(197, 155, 39, 0.38);
+}
+
+.btn-outline-gold {
+  background: var(--white);
+  border: 1.5px solid var(--gold-500);
+  color: var(--gold-800);
+}
+
+.btn-outline-gold:hover {
+  background: var(--gold-50);
+  border-color: var(--gold-600);
+  color: var(--gold-900);
+}
+
+.btn-whatsapp {
+  background: #15803d;
+  color: var(--white);
+}
+
+.btn-whatsapp:hover {
+  background: #166534;
+  transform: translateY(-1px);
+}
+
+.btn-sm {
+  padding: 0.5rem 0.95rem;
+  font-size: 0.8125rem;
+}
+
+.btn-lg {
+  padding: 0.95rem 1.85rem;
+  font-size: 1rem;
+}
+
+/* ==========================================================================
+   3D Scroll Perspective Scene Setup
+   ========================================================================== */
+.scene-3d {
+  perspective: 1200px;
+  perspective-origin: 50% 50%;
+}
+
+.card-3d {
+  background: var(--white);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.card-3d:hover {
+  transform: perspective(1000px) rotateX(4deg) rotateY(-3deg) translateY(-8px) translateZ(12px);
+  box-shadow: var(--shadow-3d);
+  border-color: var(--gold-400);
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.hero-section {
+  position: relative;
+  background: linear-gradient(180deg, #ffffff 0%, #faf8f3 100%);
+  padding: 5rem 0 4rem;
+  border-bottom: 1px solid var(--gold-border);
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+}
+
+.hero-pre-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--gold-50);
+  border: 1px solid var(--gold-300);
+  color: var(--gold-800);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-full);
+  align-self: flex-start;
+}
+
+.gold-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--gold-500);
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 0 3px rgba(197, 155, 39, 0.25);
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: 3.15rem;
+  font-weight: 700;
+  color: var(--stone-900);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.hero-title span {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.125rem;
+  color: var(--stone-600);
+  line-height: 1.7;
+}
+
+.hero-stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--gold-border);
+  border-bottom: 1px solid var(--gold-border);
+}
+
+.stat-item h3 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gold-700);
+  line-height: 1;
+}
+
+.stat-item p {
+  font-size: 0.8125rem;
+  color: var(--stone-500);
+  font-weight: 600;
+  margin-top: 0.4rem;
+}
+
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   Hero 3D Interactive Booking Card
+   ========================================================================== */
+.hero-booking-card {
+  background: var(--white);
+  border: 1.5px solid var(--gold-border);
+  border-radius: var(--radius-xl);
+  padding: 2.25rem;
+  box-shadow: var(--shadow-3d);
+  position: relative;
+  transform: perspective(1000px) rotateY(-2deg) rotateX(2deg);
+  transition: transform 0.4s ease;
+}
+
+.hero-booking-card:hover {
+  transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+}
+
+.booking-header {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--gold-100);
+  padding-bottom: 1rem;
+}
+
+.booking-header h3 {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--stone-900);
+  margin-bottom: 0.25rem;
+}
+
+.booking-header p {
+  font-size: 0.85rem;
+  color: var(--stone-500);
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-label {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--stone-800);
+}
+
+.form-select,
+.form-input {
+  width: 100%;
+  padding: 0.75rem 0.95rem;
+  border: 1px solid var(--stone-300);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-family: inherit;
+  color: var(--stone-900);
+  background: var(--white);
+  transition: var(--transition);
+}
+
+.form-select:focus,
+.form-input:focus {
+  outline: none;
+  border-color: var(--gold-500);
+  box-shadow: 0 0 0 3px rgba(197, 155, 39, 0.15);
+}
+
+/* ==========================================================================
+   Trust Strip
+   ========================================================================== */
+.trust-strip {
+  background: var(--white);
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--gold-border);
+}
+
+.trust-strip-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.trust-pill {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.trust-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--gold-50);
+  border: 1px solid var(--gold-300);
+  color: var(--gold-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.trust-info h4 {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--stone-900);
+}
+
+.trust-info p {
+  font-size: 0.75rem;
+  color: var(--stone-500);
+}
+
+/* ==========================================================================
+   Section Headers
+   ========================================================================== */
+.section-padding {
+  padding: 5.5rem 0;
+}
+
+.section-head {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3.5rem;
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gold-800);
+  background: var(--gold-100);
+  border: 1px solid var(--gold-300);
+  padding: 0.3rem 0.85rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 0.85rem;
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--stone-900);
+  margin-bottom: 0.75rem;
+}
+
+.section-desc {
+  font-size: 1.05rem;
+  color: var(--stone-600);
+}
+
+/* ==========================================================================
+   Treatment Cards Grid with 3D Depth
+   ========================================================================== */
+.treatment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.treatment-card {
+  background: var(--white);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 1.85rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.treatment-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gold-gradient);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.treatment-card:hover {
+  transform: perspective(1000px) translateY(-8px) rotateX(3deg);
+  box-shadow: var(--shadow-3d);
+}
+
+.treatment-card:hover::before {
+  opacity: 1;
+}
+
+.treatment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.treatment-badge {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-full);
+  background: var(--gold-50);
+  color: var(--gold-800);
+  border: 1px solid var(--gold-300);
+}
+
+.treatment-icon {
+  width: 44px;
+  height: 44px;
+  background: var(--gold-gradient);
+  color: #1a1403;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.treatment-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--stone-900);
+  margin-bottom: 0.65rem;
+}
+
+.treatment-card p {
+  font-size: 0.9rem;
+  color: var(--stone-600);
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.treatment-highlights {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.75rem;
+  border-top: 1px solid var(--stone-100);
+  padding-top: 1rem;
+}
+
+.treatment-highlights li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  color: var(--stone-800);
+  font-weight: 500;
+}
+
+.treatment-highlights svg {
+  color: var(--gold-600);
+  flex-shrink: 0;
+}
+
+.treatment-footer {
+  margin-top: auto;
+  border-top: 1px solid var(--stone-100);
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ==========================================================================
+   3D Orthodontic Smile Transformation Showcase
+   ========================================================================== */
+.transformation-section {
+  background: var(--stone-900);
+  color: var(--white);
+  border-radius: var(--radius-xl);
+  padding: 4.5rem 3.5rem;
+  margin: 3rem 0;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.transformation-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.transformation-text h2 {
+  font-family: var(--font-serif);
+  font-size: 2.35rem;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.transformation-text p {
+  color: var(--stone-300);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1.75rem;
+}
+
+.comparison-feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.feature-row {
+  display: flex;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1.15rem;
+  border-radius: var(--radius-md);
+}
+
+.feature-row h4 {
+  color: var(--gold-300);
+  font-size: 0.9375rem;
+  margin-bottom: 0.2rem;
+}
+
+.feature-row p {
+  font-size: 0.8125rem;
+  color: var(--stone-400);
+  margin-bottom: 0;
+}
+
+/* 3D Visual Comparator Box */
+.comparator-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1.5px solid var(--gold-500);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  text-align: center;
+  box-shadow: var(--gold-glow);
+  transform: perspective(1000px) rotateY(4deg) rotateX(-2deg);
+}
+
+.comparator-stage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.stage-card {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem 1rem;
+  border-radius: var(--radius-md);
+}
+
+.stage-card h5 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold-400);
+  margin-bottom: 0.5rem;
+}
+
+.stage-card strong {
+  font-size: 1.1rem;
+  color: var(--white);
+  display: block;
+}
+
+/* ==========================================================================
+   Doctor Dossier Section
+   ========================================================================== */
+.doctor-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.doctor-card {
+  background: var(--white);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.doctor-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--gold-100);
+  padding-bottom: 1.5rem;
+}
+
+.doctor-monogram {
+  width: 72px;
+  height: 72px;
+  background: var(--gold-gradient);
+  color: #1a1403;
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 6px 16px rgba(197, 155, 39, 0.25);
+}
+
+.doctor-info h3 {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.doctor-info .degrees {
+  font-size: 0.8125rem;
+  color: var(--gold-700);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.doctor-info .specialty {
+  font-size: 0.875rem;
+  color: var(--stone-500);
+}
+
+.doctor-card p {
+  font-size: 0.9375rem;
+  color: var(--stone-600);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.credentials-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: auto;
+  border-top: 1px solid var(--stone-100);
+  padding-top: 1rem;
+}
+
+.credentials-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  color: var(--stone-700);
+}
+
+/* ==========================================================================
+   Sterilization & Safety 3D Ribbon
+   ========================================================================== */
+.safety-ribbon {
+  background: var(--gold-50);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  margin: 3.5rem 0;
+}
+
+.safety-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.safety-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.safety-icon-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 1.5px solid var(--gold-400);
+  color: var(--gold-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(197, 155, 39, 0.15);
+}
+
+.safety-item h4 {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--stone-900);
+}
+
+.safety-item p {
+  font-size: 0.8125rem;
+  color: var(--stone-500);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.main-footer {
+  background: var(--stone-900);
+  color: var(--stone-400);
+  padding: 4.5rem 0 2rem;
+  border-top: 2px solid var(--gold-600);
+  font-size: 0.875rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  gap: 3rem;
+  margin-bottom: 3.5rem;
+}
+
+.footer-col h4 {
+  font-family: var(--font-serif);
+  color: var(--white);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.footer-links a {
+  color: var(--stone-400);
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: var(--gold-300);
+}
+
+.footer-contact-item {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.8125rem;
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .treatment-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .trust-strip-inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .transformation-grid {
+    grid-template-columns: 1fr;
+  }
+  .doctor-grid {
+    grid-template-columns: 1fr;
+  }
+  .safety-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+  .treatment-grid {
+    grid-template-columns: 1fr;
+  }
+  .trust-strip-inner {
+    grid-template-columns: 1fr;
+  }
+  .safety-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-title {
+    font-size: 2.25rem;
+  }
+  .hero-stats-row {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  .top-clinic-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .transformation-section {
+    padding: 2.5rem 1.5rem;
+  }
+}
