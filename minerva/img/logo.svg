@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d4af37" />
+      <stop offset="50%" stop-color="#aa7c11" />
+      <stop offset="100%" stop-color="#735200" />
+    </linearGradient>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0e2343" />
+      <stop offset="100%" stop-color="#061224" />
+    </linearGradient>
+    <linearGradient id="innerShield" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#16325c" />
+      <stop offset="100%" stop-color="#0a1a33" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Ring with Decorative Notches -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" />
+  <circle cx="100" cy="100" r="91" fill="none" stroke="#d4af37" stroke-width="1" stroke-dasharray="3,3" opacity="0.6" />
+
+  <!-- Laurel Wreath Left -->
+  <g fill="url(#goldGrad)" opacity="0.9">
+    <path d="M 32 100 C 30 75 42 52 58 40 C 56 46 54 54 57 60 C 50 68 45 78 44 90 C 43 96 44 102 47 108 C 42 110 37 106 32 100 Z" />
+    <path d="M 40 120 C 45 132 55 145 68 154 C 63 151 58 145 57 138 C 50 133 44 127 40 120 Z" />
+    <!-- Laurel Wreath Right -->
+    <path d="M 168 100 C 170 75 158 52 142 40 C 144 46 146 54 143 60 C 150 68 155 78 156 90 C 157 96 156 102 153 108 C 158 110 163 106 168 100 Z" />
+    <path d="M 160 120 C 155 132 145 145 132 154 C 137 151 142 145 143 138 C 150 133 156 127 160 120 Z" />
+  </g>
+
+  <!-- Main Heraldic Shield -->
+  <!-- Top flat with subtle notch, curved sides converging to bottom point -->
+  <path d="M 54 48 L 146 48 C 146 48 148 105 100 148 C 52 105 54 48 54 48 Z" fill="url(#shieldGrad)" stroke="url(#goldGrad)" stroke-width="3.5" />
+  
+  <!-- Inner Shield Inset -->
+  <path d="M 60 54 L 140 54 C 140 54 142 102 100 140 C 58 102 60 54 60 54 Z" fill="url(#innerShield)" stroke="#d4af37" stroke-width="1" opacity="0.7" />
+
+  <!-- Shield Quadrant Divider Line -->
+  <line x1="100" y1="56" x2="100" y2="136" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.4" />
+  <line x1="62" y1="92" x2="138" y2="92" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.4" />
+
+  <!-- Upper Left: The Torch of Enlightenment -->
+  <g transform="translate(72, 64) scale(0.65)" stroke="url(#goldGrad)" fill="none" stroke-width="2" stroke-linecap="round">
+    <!-- Flame -->
+    <path d="M 15 2 C 20 8 24 12 21 18 C 19 22 13 22 12 18 C 11 15 13 12 15 2 Z" fill="#d4af37" stroke="none" />
+    <path d="M 15 7 C 17 11 18 13 16 16 C 15 18 13 18 13 16 Z" fill="#fff" stroke="none" opacity="0.8" />
+    <!-- Bowl & Handle -->
+    <path d="M 6 18 L 24 18 L 21 26 L 9 26 Z" fill="#aa7c11" stroke="#d4af37" stroke-width="1.5" />
+    <line x1="15" y1="26" x2="15" y2="40" stroke-width="3" stroke="#d4af37" />
+    <line x1="12" y1="40" x2="18" y2="40" stroke-width="3" stroke="#d4af37" />
+  </g>
+
+  <!-- Upper Right: Scales of Justice (Law / LLB) -->
+  <g transform="translate(112, 64) scale(0.65)" stroke="url(#goldGrad)" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Center Pillar -->
+    <line x1="18" y1="6" x2="18" y2="38" stroke-width="2" />
+    <line x1="12" y1="38" x2="24" y2="38" stroke-width="2.5" />
+    <!-- Crossbar -->
+    <line x1="4" y1="12" x2="32" y2="12" stroke-width="2" />
+    <circle cx="18" cy="6" r="2.5" fill="#d4af37" />
+    <!-- Left Scale Pan -->
+    <line x1="4" y1="12" x2="0" y2="24" stroke-width="1" />
+    <line x1="4" y1="12" x2="8" y2="24" stroke-width="1" />
+    <path d="M -2 24 Q 4 28 10 24 Z" fill="#aa7c11" stroke="#d4af37" stroke-width="1" />
+    <!-- Right Scale Pan -->
+    <line x1="32" y1="12" x2="28" y2="24" stroke-width="1" />
+    <line x1="32" y1="12" x2="36" y2="24" stroke-width="1" />
+    <path d="M 26 24 Q 32 28 38 24 Z" fill="#aa7c11" stroke="#d4af37" stroke-width="1" />
+  </g>
+
+  <!-- Bottom Center: Open Book of Knowledge (Open Schooling / Degrees) -->
+  <g transform="translate(78, 98) scale(0.95)">
+    <!-- Book Pages -->
+    <path d="M 23 20 C 14 16 4 17 0 19 L 0 34 C 5 32 14 31 23 35 C 32 31 41 32 46 34 L 46 19 C 42 17 32 16 23 20 Z" fill="#f8fafc" stroke="url(#goldGrad)" stroke-width="1.5" />
+    <!-- Center Spine -->
+    <line x1="23" y1="20" x2="23" y2="35" stroke="url(#goldGrad)" stroke-width="1.8" />
+    <!-- Text Lines Left Page -->
+    <line x1="5" y1="22" x2="19" y2="23" stroke="#aa7c11" stroke-width="1" opacity="0.6" />
+    <line x1="5" y1="25" x2="19" y2="26" stroke="#aa7c11" stroke-width="1" opacity="0.6" />
+    <line x1="5" y1="28" x2="17" y2="29" stroke="#aa7c11" stroke-width="1" opacity="0.6" />
+    <!-- Text Lines Right Page -->
+    <line x1="27" y1="23" x2="41" y2="22" stroke="#aa7c11" stroke-width="1" opacity="0.6" />
+    <line x1="27" y1="26" x2="41" y2="25" stroke="#aa7c11" stroke-width="1" opacity="0.6" />
+    <line x1="29" y1="29" x2="41" y2="28" stroke="#aa7c11" stroke-width="1" opacity="0.6" />
+  </g>
+
+  <!-- Bottom Scroll / Ribbon -->
+  <g transform="translate(0, 10)">
+    <!-- Ribbon Shadow / Fold Ends -->
+    <path d="M 38 152 L 50 142 L 50 156 Z" fill="#523900" />
+    <path d="M 162 152 L 150 142 L 150 156 Z" fill="#523900" />
+    <!-- Ribbon Tails -->
+    <path d="M 34 162 L 50 144 L 50 164 L 40 158 L 34 162 Z" fill="#aa7c11" />
+    <path d="M 166 162 L 150 144 L 150 164 L 160 158 L 166 162 Z" fill="#aa7c11" />
+    <!-- Ribbon Front Body -->
+    <path d="M 44 144 Q 100 154 156 144 L 152 164 Q 100 174 48 164 Z" fill="url(#goldGrad)" stroke="#735200" stroke-width="1" />
+    <!-- Ribbon Text: ESTD 1982 -->
+    <text x="100" y="160" text-anchor="middle" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="10.5" font-weight="900" fill="#0a1a33" letter-spacing="2">ESTD. 1982</text>
+  </g>
+
+  <!-- Stars of Excellence -->
+  <polygon points="100,24 102,29 107,29 103,32 105,37 100,34 95,37 97,32 93,29 98,29" fill="url(#goldGrad)" />
+  <polygon points="80,29 81,33 85,33 82,35 83,39 80,37 77,39 78,35 75,33 79,33" fill="url(#goldGrad)" opacity="0.8" />
+  <polygon points="120,29 121,33 125,33 122,35 123,39 120,37 117,39 118,35 115,33 119,33" fill="url(#goldGrad)" opacity="0.8" />
+</svg>

@@ -1088,3 +1088,11 @@ img {
     align-items: flex-start;
   }
 }
+
+.brand-logo-img {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 4px 10px rgba(29, 78, 216, 0.25));
+}

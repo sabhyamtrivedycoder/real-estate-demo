@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="modernBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="50%" stop-color="#1d4ed8" />
+      <stop offset="100%" stop-color="#1e3a8a" />
+    </linearGradient>
+    <linearGradient id="cyanAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="shieldBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+
+  <!-- Modern Geometric Circle Ring -->
+  <circle cx="100" cy="100" r="94" fill="none" stroke="url(#modernBlue)" stroke-width="3" />
+  <circle cx="100" cy="100" r="88" fill="none" stroke="url(#cyanAccent)" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.8" />
+
+  <!-- Outer Modern Shield -->
+  <path d="M 54 46 L 146 46 C 146 46 148 106 100 148 C 52 106 54 46 54 46 Z" fill="url(#shieldBg)" stroke="url(#cyanAccent)" stroke-width="3" />
+
+  <!-- Modern Inner Inset -->
+  <path d="M 62 53 L 138 53 C 138 53 140 102 100 138 C 60 102 62 53 62 53 Z" fill="#0b1329" stroke="url(#modernBlue)" stroke-width="1.2" opacity="0.9" />
+
+  <!-- Clean Grid Matrix -->
+  <line x1="100" y1="55" x2="100" y2="136" stroke="url(#cyanAccent)" stroke-width="1" opacity="0.3" />
+  <line x1="64" y1="92" x2="136" y2="92" stroke="url(#cyanAccent)" stroke-width="1" opacity="0.3" />
+
+  <!-- Upper Left: The Torch of Education -->
+  <g transform="translate(73, 64) scale(0.65)" stroke="url(#cyanAccent)" fill="none" stroke-width="2" stroke-linecap="round">
+    <path d="M 15 2 C 20 8 24 12 21 18 C 19 22 13 22 12 18 C 11 15 13 12 15 2 Z" fill="#38bdf8" stroke="none" />
+    <path d="M 15 7 C 17 11 18 13 16 16 C 15 18 13 18 13 16 Z" fill="#fff" stroke="none" opacity="0.9" />
+    <path d="M 6 18 L 24 18 L 21 26 L 9 26 Z" fill="#1d4ed8" stroke="#38bdf8" stroke-width="1.5" />
+    <line x1="15" y1="26" x2="15" y2="40" stroke-width="3" stroke="#38bdf8" />
+  </g>
+
+  <!-- Upper Right: Modern Scales of Justice (Law / LLB) -->
+  <g transform="translate(112, 64) scale(0.65)" stroke="url(#cyanAccent)" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="18" y1="6" x2="18" y2="38" stroke-width="2" />
+    <line x1="12" y1="38" x2="24" y2="38" stroke-width="2.5" />
+    <line x1="4" y1="12" x2="32" y2="12" stroke-width="2" />
+    <circle cx="18" cy="6" r="2.5" fill="#38bdf8" />
+    <line x1="4" y1="12" x2="0" y2="24" stroke-width="1" />
+    <line x1="4" y1="12" x2="8" y2="24" stroke-width="1" />
+    <path d="M -2 24 Q 4 28 10 24 Z" fill="#1d4ed8" stroke="#38bdf8" stroke-width="1" />
+    <line x1="32" y1="12" x2="28" y2="24" stroke-width="1" />
+    <line x1="32" y1="12" x2="36" y2="24" stroke-width="1" />
+    <path d="M 26 24 Q 32 28 38 24 Z" fill="#1d4ed8" stroke="#38bdf8" stroke-width="1" />
+  </g>
+
+  <!-- Lower Quadrant: Open Book of Learning (NIOS & Degrees) -->
+  <g transform="translate(78, 98) scale(0.95)">
+    <path d="M 23 20 C 14 16 4 17 0 19 L 0 34 C 5 32 14 31 23 35 C 32 31 41 32 46 34 L 46 19 C 42 17 32 16 23 20 Z" fill="#ffffff" stroke="url(#cyanAccent)" stroke-width="1.5" />
+    <line x1="23" y1="20" x2="23" y2="35" stroke="url(#modernBlue)" stroke-width="1.8" />
+    <line x1="5" y1="23" x2="19" y2="24" stroke="#0284c7" stroke-width="1" opacity="0.7" />
+    <line x1="5" y1="26" x2="19" y2="27" stroke="#0284c7" stroke-width="1" opacity="0.7" />
+    <line x1="27" y1="24" x2="41" y2="23" stroke="#0284c7" stroke-width="1" opacity="0.7" />
+    <line x1="27" y1="27" x2="41" y2="26" stroke="#0284c7" stroke-width="1" opacity="0.7" />
+  </g>
+
+  <!-- Modern Banner at Bottom: ESTD. 1982 -->
+  <g transform="translate(0, 10)">
+    <path d="M 44 144 Q 100 152 156 144 L 152 164 Q 100 172 48 164 Z" fill="url(#modernBlue)" stroke="#38bdf8" stroke-width="1" />
+    <text x="100" y="159" text-anchor="middle" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="10.5" font-weight="800" fill="#ffffff" letter-spacing="2">ESTD. 1982</text>
+  </g>
+
+  <!-- Top Triple Accent Dots -->
+  <circle cx="100" cy="28" r="3.5" fill="#38bdf8" />
+  <circle cx="84" cy="32" r="2.5" fill="#3b82f6" />
+  <circle cx="116" cy="32" r="2.5" fill="#3b82f6" />
+</svg>
