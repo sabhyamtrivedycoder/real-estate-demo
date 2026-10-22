@@ -1,0 +1,544 @@
+/* ==========================================================================
+   DEMO 4: Giridih Prime Marketplace (Hyperlocal Land, Plots & Properties)
+   Palette: Forest Emerald, Legal Gold & Warm Cream
+   Zero Emojis. Clear Title Verification & Kattha Land Engine.
+   ========================================================================== */
+
+:root {
+  --emerald-900: #064e3b;
+  --emerald-700: #047857;
+  --emerald-600: #059669;
+  --emerald-100: #d1fae5;
+  --emerald-50: #ecfdf5;
+  
+  --amber-gold: #b45309;
+  
+  --dark-slate: #1e293b;
+  --slate-700: #334155;
+  --slate-500: #64748b;
+  --slate-200: #e2e8f0;
+  --slate-100: #f1f5f9;
+  
+  --cream-bg: #fafaf9;
+  --white: #ffffff;
+  
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-full: 9999px;
+  
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-md: 0 8px 24px -4px rgba(6, 78, 59, 0.08);
+  --shadow-card: 0 12px 30px -6px rgba(15, 23, 42, 0.08);
+  
+  --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--cream-bg);
+  color: var(--slate-700);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header */
+.market-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 2px solid var(--emerald-100);
+}
+
+.market-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 76px;
+}
+
+.market-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.market-badge-icon {
+  width: 42px;
+  height: 42px;
+  background: var(--emerald-700);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+.market-name {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--dark-slate);
+  letter-spacing: -0.02em;
+}
+
+.market-name span {
+  color: var(--emerald-700);
+}
+
+.market-links {
+  display: flex;
+  gap: 1.75rem;
+  list-style: none;
+}
+
+.market-link {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--slate-700);
+  transition: var(--transition);
+}
+
+.market-link:hover, .market-link.active {
+  color: var(--emerald-700);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.4rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.btn-emerald {
+  background: var(--emerald-700);
+  color: #fff;
+}
+
+.btn-emerald:hover {
+  background: var(--emerald-900);
+  transform: translateY(-2px);
+}
+
+.btn-outline-emerald {
+  border-color: var(--emerald-700);
+  color: var(--emerald-700);
+  background: transparent;
+}
+
+.btn-outline-emerald:hover {
+  background: var(--emerald-50);
+}
+
+/* Hero */
+.market-hero {
+  background: linear-gradient(135deg, var(--emerald-900) 0%, #064e3b 50%, #022c22 100%);
+  color: #fff;
+  padding: 5rem 0 6rem;
+  position: relative;
+}
+
+.market-hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.legal-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(209, 250, 229, 0.15);
+  border: 1px solid rgba(209, 250, 229, 0.35);
+  color: var(--emerald-100);
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-full);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+.market-hero h1 {
+  font-size: 3.25rem;
+  font-weight: 800;
+  line-height: 1.18;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.market-hero h1 span {
+  color: #6ee7b7;
+}
+
+.market-hero p {
+  font-size: 1.125rem;
+  color: #a7f3d0;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+/* 3D Verification Stamp Box */
+.cert-box-3d {
+  background: #fff;
+  color: var(--dark-slate);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+  border: 2px solid #a7f3d0;
+  transform: perspective(1000px) rotateY(-4deg) rotateX(3deg);
+  transition: transform 0.4s ease;
+}
+
+.cert-box-3d:hover {
+  transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+}
+
+.cert-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--slate-200);
+  padding-bottom: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.cert-badge-official {
+  background: var(--emerald-100);
+  color: var(--emerald-900);
+  font-weight: 800;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+}
+
+.cert-item-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.check-icon {
+  width: 22px;
+  height: 22px;
+  background: var(--emerald-600);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+/* Kattha / Land Unit Converter Widget */
+.converter-wrap {
+  margin-top: -3rem;
+  position: relative;
+  z-index: 20;
+}
+
+.converter-card {
+  background: #fff;
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--slate-200);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) auto;
+  gap: 1.25rem;
+  align-items: flex-end;
+}
+
+.conv-field label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--slate-700);
+  margin-bottom: 0.4rem;
+}
+
+.conv-select, .conv-input {
+  width: 100%;
+  padding: 0.75rem 0.85rem;
+  border: 1.5px solid var(--slate-200);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  color: var(--dark-slate);
+}
+
+.conv-select:focus, .conv-input:focus {
+  outline: none;
+  border-color: var(--emerald-700);
+}
+
+/* Marketplace Listings Grid */
+.market-listings-section {
+  padding: 5.5rem 0;
+}
+
+.market-listings-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3rem;
+}
+
+.market-listings-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.market-card {
+  background: #fff;
+  border: 1px solid var(--slate-200);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.market-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card);
+  border-color: var(--emerald-600);
+}
+
+.market-card-img {
+  position: relative;
+  height: 220px;
+}
+
+.market-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.kattha-pill {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: var(--dark-slate);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+}
+
+.registry-pill {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: var(--emerald-700);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+}
+
+.market-card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.market-price {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--emerald-700);
+  margin-bottom: 0.35rem;
+}
+
+.market-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--dark-slate);
+  margin-bottom: 0.35rem;
+}
+
+.market-card-loc {
+  font-size: 0.8125rem;
+  color: var(--slate-500);
+  margin-bottom: 1.25rem;
+}
+
+.market-specs-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--slate-100);
+  border-bottom: 1px solid var(--slate-100);
+  font-size: 0.8125rem;
+  text-align: center;
+  color: var(--slate-700);
+  margin-top: auto;
+}
+
+.market-actions-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+/* Registry Checklist Section */
+.guide-section {
+  background: #fff;
+  border-top: 1px solid var(--slate-200);
+  border-bottom: 1px solid var(--slate-200);
+  padding: 5rem 0;
+}
+
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.guide-box {
+  background: var(--cream-bg);
+  border: 1px solid var(--slate-200);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+}
+
+.guide-number {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--emerald-700);
+  margin-bottom: 0.5rem;
+}
+
+.guide-box h4 {
+  font-size: 1.1rem;
+  color: var(--dark-slate);
+  margin-bottom: 0.5rem;
+}
+
+.guide-box p {
+  font-size: 0.8125rem;
+  color: var(--slate-500);
+}
+
+/* Footer */
+.market-footer {
+  background: var(--dark-slate);
+  color: var(--slate-400);
+  padding: 4.5rem 0 2rem;
+  font-size: 0.875rem;
+}
+
+.footer-market-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-market-grid h5 {
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+.footer-market-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.footer-market-links a:hover {
+  color: #6ee7b7;
+}
+
+@media (max-width: 1024px) {
+  .market-hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .converter-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .market-listings-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .guide-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-market-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .market-links {
+    display: none;
+  }
+  .market-hero h1 {
+    font-size: 2.35rem;
+  }
+  .converter-card {
+    grid-template-columns: 1fr;
+  }
+  .market-listings-grid {
+    grid-template-columns: 1fr;
+  }
+  .guide-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-market-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura PropTech | Data-Driven Giridih Real Estate Engine</title>
+  <meta name="description" content="Next-generation intelligent real estate platform for Giridih. Live valuation models, legal verification metrics, and instant scheduling.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="proptech-header">
+    <div class="container proptech-nav">
+      <div class="brand-badge">
+        <div class="brand-logo-cube">A</div>
+        <div class="brand-name">Aura<span>PropTech</span> <small style="font-size: 0.75rem; color: var(--slate-400); font-weight: 500;">| Giridih</small></div>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#inventory" class="nav-link active">Properties</a></li>
+        <li><a href="#analytics" class="nav-link">Market Valuation</a></li>
+        <li><a href="#legal" class="nav-link">JHARERA Registry</a></li>
+        <li><a href="../index.html" class="nav-link" style="color: var(--blue-primary); font-weight: 700;">Showcase Hub</a></li>
+      </ul>
+      <div style="display: flex; gap: 0.75rem;">
+        <a href="https://wa.me/919431332549?text=Hello%20Aura%20PropTech,%20I%20want%20to%20schedule%20a%20site%20inspection." target="_blank" class="btn btn-primary">Schedule Visit</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-proptech">
+    <div class="container hero-grid">
+      <div>
+        <div class="badge-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+          Real-Time Giridih Land & Home Registry
+        </div>
+        <h1 class="hero-heading">Intelligent Discovery.<br><span>Verified Properties.</span></h1>
+        <p class="hero-sub">Eliminate guesswork with verified title analytics, transparent square-foot benchmarks, and direct developer pricing across Court Road, Bada Chowk, and Pachamba.</p>
+
+        <!-- Quick Filter Form -->
+        <div class="quick-search-box">
+          <div class="search-input-row">
+            <div class="form-field">
+              <label>Search Keyword</label>
+              <input type="text" id="prop-search-input" class="form-input" placeholder="e.g. Pachamba plot, Villa...">
+            </div>
+            <div class="form-field">
+              <label>Category</label>
+              <select id="prop-type-select" class="form-select">
+                <option value="all">All Types</option>
+                <option value="villa">Luxury Villa</option>
+                <option value="apartment">Modern Flat</option>
+                <option value="plot">Freehold Plot</option>
+                <option value="commercial">Commercial</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label>Locality</label>
+              <select id="prop-loc-select" class="form-select">
+                <option value="all">All Zones</option>
+                <option value="court-road">Court Road</option>
+                <option value="bada-chowk">Bada Chowk</option>
+                <option value="pachamba">Pachamba</option>
+                <option value="mohanpur">Mohanpur</option>
+                <option value="sirsia">Sirsia Bypass</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <select id="prop-price-select" class="form-select">
+                <option value="all">Any Price</option>
+                <option value="under-30">Under 30L</option>
+                <option value="30-60">30L - 60L</option>
+                <option value="60-100">60L - 1 Cr</option>
+                <option value="above-100">> 1 Cr</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="filter-pills-bar">
+            <button class="chip-btn active" data-filter="all">All Listings</button>
+            <button class="chip-btn" data-filter="under-50">Under 50 Lakhs</button>
+            <button class="chip-btn" data-filter="plot">Verified Land Plots</button>
+            <button class="chip-btn" data-filter="commercial">High ROI Commercial</button>
+            <button class="chip-btn" data-filter="ready">Ready Possession</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3D Interactive Telemetry Card -->
+      <div class="hero-mockup-3d">
+        <div class="dashboard-card-3d">
+          <div class="dashboard-top">
+            <span style="font-weight: 700; font-size: 0.875rem;">LIVE MARKET TELEMETRY</span>
+            <div class="status-live">
+              <span class="pulse-dot"></span>
+              24 ACTIVE ASSETS
+            </div>
+          </div>
+          <div class="dashboard-img">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80" alt="Telemetry House">
+          </div>
+          <div class="metrics-floating-grid">
+            <div class="metric-pill-box">
+              <div class="label">Giridih Median</div>
+              <div class="value">INR 3,250/sqft</div>
+            </div>
+            <div class="metric-pill-box">
+              <div class="label">Annual Appreciation</div>
+              <div class="value" style="color: #059669;">+14.2% YoY</div>
+            </div>
+            <div class="metric-pill-box">
+              <div class="label">Legal Title Clearance</div>
+              <div class="value" style="color: #2563eb;">100% Guaranteed</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inventory Grid -->
+  <section class="prop-section container" id="inventory">
+    <div class="section-header-row">
+      <div>
+        <h2 class="section-title">Verified Inventory Pipeline</h2>
+        <p id="active-results-count" style="color: var(--slate-600); font-weight: 600; font-size: 0.9375rem;">6 verified properties matched</p>
+      </div>
+      <div>
+        <select id="prop-sort-select" class="form-select" style="min-width: 180px;">
+          <option value="featured">Sort by Featured</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="prop-card-grid" id="prop-cards-grid">
+
+      <!-- Item 1 -->
+      <div class="proptech-card" data-category="residential" data-type="villa" data-location="court-road" data-price-lakhs="145" data-status="ready">
+        <div class="proptech-card-media">
+          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="Court Road Villa">
+          <span class="prop-badge prop-badge-green">Instant Registry</span>
+          <span class="prop-rate-tag">INR 4,202 / sq.ft</span>
+        </div>
+        <div class="proptech-card-body">
+          <div class="proptech-price">INR 1.45 Cr</div>
+          <h3>Court Road Executive Manor</h3>
+          <div class="proptech-loc">Court Road Vip Enclave, Giridih</div>
+          <div class="proptech-specs-bar">
+            <div><strong>4</strong> Beds</div>
+            <div><strong>4</strong> Baths</div>
+            <div><strong>3,450</strong> Sq.Ft</div>
+          </div>
+          <div class="proptech-card-actions">
+            <span style="font-size: 0.75rem; color: var(--emerald); font-weight: 700;">JHARERA Registered</span>
+            <a href="https://wa.me/919431332549?text=Interested%20in%20Aura%20PropTech%20Item%20145L" target="_blank" class="btn btn-soft">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="proptech-card" data-category="plot" data-type="plot" data-location="pachamba" data-price-lakhs="38" data-status="ready">
+        <div class="proptech-card-media">
+          <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80" alt="Pachamba Plot">
+          <span class="prop-badge">Freehold Land</span>
+          <span class="prop-rate-tag">INR 8.44L / Kattha</span>
+        </div>
+        <div class="proptech-card-body">
+          <div class="proptech-price">INR 38 Lakhs</div>
+          <h3>Pachamba Commercial Corridor Plot</h3>
+          <div class="proptech-loc">Main Road, Pachamba, Giridih</div>
+          <div class="proptech-specs-bar">
+            <div><strong>4.5</strong> Kattha</div>
+            <div><strong>40 Ft</strong> Front</div>
+            <div><strong>East</strong> Facing</div>
+          </div>
+          <div class="proptech-card-actions">
+            <span style="font-size: 0.75rem; color: var(--emerald); font-weight: 700;">Mutation Passed</span>
+            <a href="https://wa.me/919431332549?text=Interested%20in%20Pachamba%20Plot%2038L" target="_blank" class="btn btn-soft">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="proptech-card" data-category="residential" data-type="apartment" data-location="bada-chowk" data-price-lakhs="52" data-status="ready">
+        <div class="proptech-card-media">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Penthouse">
+          <span class="prop-badge prop-badge-green">Ready to Move</span>
+          <span class="prop-rate-tag">INR 2,921 / sq.ft</span>
+        </div>
+        <div class="proptech-card-body">
+          <div class="proptech-price">INR 52 Lakhs</div>
+          <h3>Skyview Regency 3 BHK</h3>
+          <div class="proptech-loc">Near Bada Chowk, Giridih</div>
+          <div class="proptech-specs-bar">
+            <div><strong>3</strong> Beds</div>
+            <div><strong>2</strong> Baths</div>
+            <div><strong>1,780</strong> Sq.Ft</div>
+          </div>
+          <div class="proptech-card-actions">
+            <span style="font-size: 0.75rem; color: var(--emerald); font-weight: 700;">SBI Home Loan Approved</span>
+            <a href="https://wa.me/919431332549?text=Interested%20in%20Skyview%20Regency%2052L" target="_blank" class="btn btn-soft">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="proptech-card" data-category="commercial" data-type="commercial" data-location="court-road" data-price-lakhs="95" data-status="ready">
+        <div class="proptech-card-media">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Commercial Complex">
+          <span class="prop-badge">High ROI 9.1%</span>
+          <span class="prop-rate-tag">INR 3,653 / sq.ft</span>
+        </div>
+        <div class="proptech-card-body">
+          <div class="proptech-price">INR 95 Lakhs</div>
+          <h3>Prime Commercial Plaza Floors</h3>
+          <div class="proptech-loc">Opposite Sessions Court, Giridih</div>
+          <div class="proptech-specs-bar">
+            <div><strong>G+1</strong> Floors</div>
+            <div><strong>2,600</strong> Sq.Ft</div>
+            <div><strong>Bank</strong> Leased</div>
+          </div>
+          <div class="proptech-card-actions">
+            <span style="font-size: 0.75rem; color: var(--emerald); font-weight: 700;">Pre-Leased Commercial</span>
+            <a href="https://wa.me/919431332549?text=Interested%20in%20Commercial%20Plaza%2095L" target="_blank" class="btn btn-soft">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="proptech-card" data-category="residential" data-type="villa" data-location="mohanpur" data-price-lakhs="78" data-status="ready">
+        <div class="proptech-card-media">
+          <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80" alt="Duplex House">
+          <span class="prop-badge prop-badge-green">Gated Enclave</span>
+          <span class="prop-rate-tag">INR 3,250 / sq.ft</span>
+        </div>
+        <div class="proptech-card-body">
+          <div class="proptech-price">INR 78 Lakhs</div>
+          <h3>Mohanpur Greenleaf Villa</h3>
+          <div class="proptech-loc">Mohanpur Residential Colony, Giridih</div>
+          <div class="proptech-specs-bar">
+            <div><strong>4</strong> Beds</div>
+            <div><strong>3</strong> Baths</div>
+            <div><strong>2,400</strong> Sq.Ft</div>
+          </div>
+          <div class="proptech-card-actions">
+            <span style="font-size: 0.75rem; color: var(--emerald); font-weight: 700;">24x7 Security</span>
+            <a href="https://wa.me/919431332549?text=Interested%20in%20Mohanpur%20Greenleaf%2078L" target="_blank" class="btn btn-soft">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="proptech-card" data-category="plot" data-type="plot" data-location="sirsia" data-price-lakhs="24" data-status="ready">
+        <div class="proptech-card-media">
+          <img src="https://images.unsplash.com/photo-1524813686514-a57563d77d66?auto=format&fit=crop&w=800&q=80" alt="Growth Plot">
+          <span class="prop-badge">High Growth</span>
+          <span class="prop-rate-tag">INR 7.5L / Kattha</span>
+        </div>
+        <div class="proptech-card-body">
+          <div class="proptech-price">INR 24 Lakhs</div>
+          <h3>Sirsia Bypass Development Parcel</h3>
+          <div class="proptech-loc">Sirsia Bypass Junction, Giridih</div>
+          <div class="proptech-specs-bar">
+            <div><strong>3.2</strong> Kattha</div>
+            <div><strong>30 Ft</strong> Road</div>
+            <div><strong>Pillar</strong> Bound</div>
+          </div>
+          <div class="proptech-card-actions">
+            <span style="font-size: 0.75rem; color: var(--emerald); font-weight: 700;">Immediate Possession</span>
+            <a href="https://wa.me/919431332549?text=Interested%20in%20Sirsia%20Bypass%2024L" target="_blank" class="btn btn-soft">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Market Valuation & Analytics -->
+  <section class="container" id="analytics">
+    <div class="analytics-section">
+      <div class="analytics-grid">
+        <div>
+          <span style="font-size: 0.8125rem; font-weight: 700; color: #38bdf8; text-transform: uppercase; letter-spacing: 0.05em;">Comparative Growth Model</span>
+          <h2 style="font-size: 2.25rem; font-weight: 800; margin: 0.75rem 0 1rem; color: #fff;">Giridih Micro-Market Appreciation Rates (5-Year Trajectory)</h2>
+          <p style="color: var(--slate-400); margin-bottom: 2rem;">Benchmarked across registered stamp duty records in Giridih district. Pachamba and Sirsia bypass exhibit the steepest growth trajectory.</p>
+          <a href="https://wa.me/919431332549?text=Request%20Giridih%20Real%20Estate%20Valuation%20Report" target="_blank" class="btn btn-primary">Request Full Valuation Report</a>
+        </div>
+
+        <div>
+          <div class="analytics-bar-item">
+            <div class="analytics-bar-label">
+              <span>Court Road (Prime Administrative)</span>
+              <strong>+11.8% / Year</strong>
+            </div>
+            <div class="progress-track"><div class="progress-fill" style="width: 78%;"></div></div>
+          </div>
+
+          <div class="analytics-bar-item">
+            <div class="analytics-bar-label">
+              <span>Bada Chowk (Commercial Central)</span>
+              <strong>+15.4% / Year</strong>
+            </div>
+            <div class="progress-track"><div class="progress-fill" style="width: 92%;"></div></div>
+          </div>
+
+          <div class="analytics-bar-item">
+            <div class="analytics-bar-label">
+              <span>Pachamba (Residential Suburban)</span>
+              <strong>+18.2% / Year</strong>
+            </div>
+            <div class="progress-track"><div class="progress-fill" style="width: 98%;"></div></div>
+          </div>
+
+          <div class="analytics-bar-item">
+            <div class="analytics-bar-label">
+              <span>Mohanpur Enclave</span>
+              <strong>+13.1% / Year</strong>
+            </div>
+            <div class="progress-track"><div class="progress-fill" style="width: 82%;"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="proptech-footer" id="legal">
+    <div class="container">
+      <div class="footer-inner-grid">
+        <div>
+          <div class="brand-badge" style="margin-bottom: 1rem;">
+            <div class="brand-logo-cube">A</div>
+            <div class="brand-name">Aura<span>PropTech</span></div>
+          </div>
+          <p style="color: var(--slate-600); font-size: 0.875rem; line-height: 1.7;">Intelligent real estate engine powering transparent transactions across Giridih, Jharkhand. Supported by JHARERA certified title vetting.</p>
+        </div>
+
+        <div>
+          <h5>Analytics Tools</h5>
+          <ul class="footer-list">
+            <li><a href="#inventory">Live Property Index</a></li>
+            <li><a href="#analytics">Micro-Market Price Trends</a></li>
+            <li><a href="#inventory">Square Foot Comparator</a></li>
+            <li><a href="../demo1-luxury/index.html">The Grand Estate Demo</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5>Prime Sectors</h5>
+          <ul class="footer-list">
+            <li><a href="#inventory">Court Road VIP</a></li>
+            <li><a href="#inventory">Bada Chowk Commercial</a></li>
+            <li><a href="#inventory">Pachamba Township</a></li>
+            <li><a href="#inventory">Sirsia Highway Corridor</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5>Direct Office</h5>
+          <p style="color: var(--dark-slate); font-weight: 700; margin-bottom: 0.5rem;">Giridih Real Estate Hub</p>
+          <p style="color: var(--slate-600); margin-bottom: 0.5rem;">Court Road, Giridih 815301</p>
+          <p style="color: var(--slate-600); margin-bottom: 1rem;">Direct: +91 94313 32549</p>
+          <a href="https://wa.me/919431332549" target="_blank" class="btn btn-primary" style="font-size: 0.8125rem; padding: 0.6rem 1.2rem;">WhatsApp Desk</a>
+        </div>
+      </div>
+
+      <div class="footer-sub-bottom">
+        <div>&copy; 2026 Giridih Real Estate | Aura PropTech Engine.</div>
+        <div>Theme Demo 2: Silicon Valley PropTech Edition</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

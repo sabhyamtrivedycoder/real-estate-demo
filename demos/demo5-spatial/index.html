@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexus Living | Next-Gen Spatial 3D Real Estate Architecture</title>
+  <meta name="description" content="Experience Giridih properties in immersive spatial 3D. Interactive room simulations, high-yield commercial assets, and legal transparency.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="nexus-nav">
+    <div class="container nav-row">
+      <div class="nexus-logo-group">
+        <div class="nexus-gem">N</div>
+        <div>
+          <div class="nexus-brand-text">Nexus<span>Living</span></div>
+          <div style="font-size: 0.7rem; color: var(--neon-cyan); letter-spacing: 0.1em; text-transform: uppercase;">Spatial 3D Real Estate</div>
+        </div>
+      </div>
+      <ul class="nexus-menu">
+        <li><a href="#properties" class="nexus-menu-link active">Properties</a></li>
+        <li><a href="#virtual-tour" class="nexus-menu-link">Virtual Simulator</a></li>
+        <li><a href="#spatial-specs" class="nexus-menu-link">Architecture Tech</a></li>
+        <li><a href="../index.html" class="nexus-menu-link" style="color: var(--neon-cyan); font-weight: 700;">Showcase Hub</a></li>
+      </ul>
+      <div>
+        <a href="https://wa.me/919431332549?text=Hello%20Nexus%20Living,%20I%20want%20to%20experience%20the%203D%20property%20walkthrough." target="_blank" class="btn btn-cyan">Experience 3D Walkthrough</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="spatial-hero">
+    <div class="container spatial-grid">
+      <div>
+        <div class="spatial-tag">Spatial 3D Architectural Engine v4.2</div>
+        <h1>Immersion Beyond Flat Pixels.<br><span>Living In True 3D.</span></h1>
+        <p>Step inside Giridih's most prestigious residences and commercial landmarks before groundbreaking. Experience real-time lighting physics, acoustic layouts, and verified cadastral boundaries.</p>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="#virtual-tour" class="btn btn-cyan">Launch Interactive Tour</a>
+          <a href="#properties" class="btn btn-ghost-space">Explore 3D Assets</a>
+        </div>
+      </div>
+
+      <!-- Holo 3D Card -->
+      <div class="holo-3d-wrap">
+        <div class="holo-card">
+          <div class="holo-img">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1000&q=80" alt="Nexus Manor">
+            <span class="holo-badge-neon">Spatial VR Ready</span>
+          </div>
+          <div class="holo-card-body">
+            <h3>Nexus Apex Penthouse & Sky Deck</h3>
+            <div style="font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 1rem;">Court Road Extension, Giridih</div>
+            <div class="holo-specs">
+              <div class="holo-spec-box">
+                <span>Configuration</span>
+                <strong>4 BHK + Deck</strong>
+              </div>
+              <div class="holo-spec-box">
+                <span>Spatial Area</span>
+                <strong>3,450 Sq.Ft</strong>
+              </div>
+              <div class="holo-spec-box">
+                <span>Valuation</span>
+                <strong>INR 1.45 Cr</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive 360-Degree Virtual Simulator -->
+  <section class="tour-section" id="virtual-tour">
+    <div class="container">
+      <div class="tour-head">
+        <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--neon-cyan); font-weight: 700;">Spatial Simulator</span>
+        <h2>Interactive Room Dimension Walkthrough</h2>
+        <p>Switch panoramic views and test circadian solar lighting atmospheres in real-time.</p>
+      </div>
+
+      <div class="tour-viewer-frame">
+        <img id="tour-main-img" class="tour-viewer-img" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="Virtual Tour Scene">
+
+        <!-- Lighting Modes -->
+        <div class="lighting-modes-bar">
+          <button class="light-btn active" data-mode="daylight">Solar Noon</button>
+          <button class="light-btn" data-mode="sunset">Sunset Amber</button>
+          <button class="light-btn" data-mode="night">Cyber Glow</button>
+        </div>
+
+        <!-- Room Selector Bar -->
+        <div class="tour-controls-bar">
+          <button class="tour-btn active" data-scene="living">Living Gallery</button>
+          <button class="tour-btn" data-scene="master">Master Suite</button>
+          <button class="tour-btn" data-scene="terrace">Sky Garden</button>
+          <button class="tour-btn" data-scene="pool">Infinity Deck</button>
+        </div>
+      </div>
+
+      <div style="margin-top: 1.5rem; text-align: center;">
+        <h4 id="scene-title" style="font-size: 1.25rem; color: var(--text-primary); margin-bottom: 0.35rem;">Double-Height Living Gallery</h4>
+        <p id="scene-desc" style="font-size: 0.875rem; color: var(--text-muted);">32-foot floor-to-ceiling double-glazed acoustic glass overlooking Giridih valley.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Properties Grid -->
+  <section class="spatial-cards-section container" id="properties">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem;">
+      <div>
+        <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--neon-cyan); font-weight: 700;">Curated Deployments</span>
+        <h2 style="font-size: 2.25rem; font-weight: 800; color: var(--text-primary);">Signature Spatial Inventory</h2>
+      </div>
+      <a href="https://wa.me/919431332549" target="_blank" class="btn btn-ghost-space">Request Private Viewing</a>
+    </div>
+
+    <div class="spatial-cards-grid">
+
+      <!-- Card 1 -->
+      <div class="spatial-card">
+        <div class="spatial-card-media">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Villa">
+        </div>
+        <div class="spatial-card-body">
+          <div class="spatial-price">INR 1.45 Cr</div>
+          <h3>Court Road Executive Sanctuary</h3>
+          <div class="spatial-loc">Court Road VIP Enclave, Giridih</div>
+          <div class="spatial-footer-row">
+            <span style="font-size: 0.8125rem; color: var(--neon-cyan);">4 BHK | 3,450 sq.ft</span>
+            <a href="https://wa.me/919431332549?text=Interested%20in%20Nexus%20Item%20145L" target="_blank" class="btn btn-cyan" style="padding: 0.4rem 0.9rem; font-size: 0.75rem;">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="spatial-card">
+        <div class="spatial-card-media">
+          <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80" alt="Plot">
+        </div>
+        <div class="spatial-card-body">
+          <div class="spatial-price">INR 38 Lakhs</div>
+          <h3>Pachamba Highway Commercial Acreage</h3>
+          <div class="spatial-loc">Main Corridor, Pachamba, Giridih</div>
+          <div class="spatial-footer-row">
+            <span style="font-size: 0.8125rem; color: var(--neon-cyan);">4.5 Kattha | 40ft Front</span>
+            <a href="https://wa.me/919431332549?text=Interested%20in%20Pachamba%20Plot%2038L" target="_blank" class="btn btn-cyan" style="padding: 0.4rem 0.9rem; font-size: 0.75rem;">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="spatial-card">
+        <div class="spatial-card-media">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Penthouse">
+        </div>
+        <div class="spatial-card-body">
+          <div class="spatial-price">INR 52 Lakhs</div>
+          <h3>Skyview Urban 3 BHK Penthouse</h3>
+          <div class="spatial-loc">Near Bada Chowk Center, Giridih</div>
+          <div class="spatial-footer-row">
+            <span style="font-size: 0.8125rem; color: var(--neon-cyan);">3 BHK | 1,780 sq.ft</span>
+            <a href="https://wa.me/919431332549?text=Interested%20in%20Skyview%20Penthouse%2052L" target="_blank" class="btn btn-cyan" style="padding: 0.4rem 0.9rem; font-size: 0.75rem;">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="spatial-card">
+        <div class="spatial-card-media">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Commercial">
+        </div>
+        <div class="spatial-card-body">
+          <div class="spatial-price">INR 95 Lakhs</div>
+          <h3>Central Commercial Business Floors</h3>
+          <div class="spatial-loc">Opposite Sessions Court, Giridih</div>
+          <div class="spatial-footer-row">
+            <span style="font-size: 0.8125rem; color: var(--neon-cyan);">2,600 sq.ft | 9% ROI</span>
+            <a href="https://wa.me/919431332549?text=Interested%20in%20Commercial%20Floors%2095L" target="_blank" class="btn btn-cyan" style="padding: 0.4rem 0.9rem; font-size: 0.75rem;">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="spatial-card">
+        <div class="spatial-card-media">
+          <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80" alt="Duplex">
+        </div>
+        <div class="spatial-card-body">
+          <div class="spatial-price">INR 78 Lakhs</div>
+          <h3>The Greenleaf Smart Duplex</h3>
+          <div class="spatial-loc">Mohanpur Residential Colony, Giridih</div>
+          <div class="spatial-footer-row">
+            <span style="font-size: 0.8125rem; color: var(--neon-cyan);">4 BHK | 2,400 sq.ft</span>
+            <a href="https://wa.me/919431332549?text=Interested%20in%20Greenleaf%20Duplex%2078L" target="_blank" class="btn btn-cyan" style="padding: 0.4rem 0.9rem; font-size: 0.75rem;">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="spatial-card">
+        <div class="spatial-card-media">
+          <img src="https://images.unsplash.com/photo-1524813686514-a57563d77d66?auto=format&fit=crop&w=800&q=80" alt="Sirsia Parcel">
+        </div>
+        <div class="spatial-card-body">
+          <div class="spatial-price">INR 24 Lakhs</div>
+          <h3>Sirsia Growth Corridor Land</h3>
+          <div class="spatial-loc">Sirsia Ring Road Junction, Giridih</div>
+          <div class="spatial-footer-row">
+            <span style="font-size: 0.8125rem; color: var(--neon-cyan);">3.2 Kattha | 30ft Road</span>
+            <a href="https://wa.me/919431332549?text=Interested%20in%20Sirsia%20Growth%20Land%2024L" target="_blank" class="btn btn-cyan" style="padding: 0.4rem 0.9rem; font-size: 0.75rem;">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="nexus-footer">
+    <div class="container">
+      <div class="nexus-footer-grid">
+        <div>
+          <div class="nexus-logo-group" style="margin-bottom: 1rem;">
+            <div class="nexus-gem">N</div>
+            <div class="nexus-brand-text">Nexus<span>Living</span></div>
+          </div>
+          <p style="font-size: 0.875rem; line-height: 1.7; color: var(--text-muted);">Future-ready spatial real estate advisory for Giridih, Jharkhand. Real-time VR property exploration with institutional title guarantee.</p>
+        </div>
+
+        <div>
+          <h5>Spatial Tech</h5>
+          <ul class="nexus-footer-links">
+            <li><a href="#virtual-tour">Virtual Simulator</a></li>
+            <li><a href="#virtual-tour">Solar Noon Modeling</a></li>
+            <li><a href="#properties">Interactive 3D Cards</a></li>
+            <li><a href="../demo1-luxury/index.html">The Grand Estate Demo</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5>Key Locations</h5>
+          <ul class="nexus-footer-links">
+            <li><a href="#properties">Court Road VIP</a></li>
+            <li><a href="#properties">Pachamba Sector</a></li>
+            <li><a href="#properties">Bada Chowk</a></li>
+            <li><a href="#properties">Sirsia Highway</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5>Direct Contact</h5>
+          <p style="color: var(--text-primary); font-weight: 700; margin-bottom: 0.4rem;">Giridih Real Estate Hub</p>
+          <p style="margin-bottom: 0.4rem;">Court Road, Giridih 815301</p>
+          <p style="margin-bottom: 1rem;">Phone: +91 94313 32549</p>
+          <a href="https://wa.me/919431332549" target="_blank" class="btn btn-cyan" style="font-size: 0.8125rem; padding: 0.6rem 1.25rem;">Direct WhatsApp</a>
+        </div>
+      </div>
+
+      <div style="border-top: 1px solid var(--space-border); padding-top: 1.5rem; display: flex; justify-content: space-between; font-size: 0.8125rem;">
+        <div>&copy; 2026 Giridih Real Estate | Nexus Living Spatial Engine.</div>
+        <div>Theme Demo 5: Next-Gen Spatial 3D Edition</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

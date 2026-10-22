@@ -1,0 +1,547 @@
+/* ==========================================================================
+   DEMO 5: Nexus Living (Next-Gen Spatial 3D Architecture & VR Experience)
+   Palette: Deep Space Obsidian, Neon Cyan & Electric Violet
+   Zero Emojis. Interactive 360 Panoramic Simulator & 3D Spatial Physics.
+   ========================================================================== */
+
+:root {
+  --space-black: #09090b;
+  --space-surface: #121217;
+  --space-card: #181820;
+  --space-border: rgba(255, 255, 255, 0.08);
+  
+  --neon-cyan: #06b6d4;
+  --neon-cyan-glow: rgba(6, 182, 212, 0.35);
+  
+  --neon-violet: #8b5cf6;
+  --neon-violet-glow: rgba(139, 92, 246, 0.35);
+  
+  --neon-emerald: #10b981;
+  
+  --text-primary: #f8fafc;
+  --text-muted: #94a3b8;
+  
+  --font-display: 'Space Grotesk', -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  
+  --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-display);
+  background: var(--space-black);
+  color: var(--text-muted);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Nav */
+.nexus-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(9, 9, 11, 0.88);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--space-border);
+}
+
+.nav-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.nexus-logo-group {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.nexus-gem {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--neon-cyan), var(--neon-violet));
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.25rem;
+  box-shadow: 0 0 20px var(--neon-cyan-glow);
+}
+
+.nexus-brand-text {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.nexus-brand-text span {
+  background: linear-gradient(135deg, var(--neon-cyan), var(--neon-violet));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nexus-menu {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nexus-menu-link {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+.nexus-menu-link:hover, .nexus-menu-link.active {
+  color: var(--neon-cyan);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.6rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.btn-cyan {
+  background: linear-gradient(135deg, var(--neon-cyan), #0891b2);
+  color: #000;
+  font-weight: 800;
+  box-shadow: 0 0 25px var(--neon-cyan-glow);
+}
+
+.btn-cyan:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 35px rgba(6, 182, 212, 0.6);
+}
+
+.btn-ghost-space {
+  border-color: var(--space-border);
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.btn-ghost-space:hover {
+  border-color: var(--neon-cyan);
+  color: var(--neon-cyan);
+}
+
+/* Spatial Hero */
+.spatial-hero {
+  position: relative;
+  min-height: 85vh;
+  padding: 6rem 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: radial-gradient(circle at 70% 30%, rgba(139, 92, 246, 0.15) 0%, transparent 60%),
+              radial-gradient(circle at 20% 70%, rgba(6, 182, 212, 0.12) 0%, transparent 50%);
+}
+
+.spatial-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.spatial-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(6, 182, 212, 0.1);
+  border: 1px solid var(--neon-cyan);
+  color: var(--neon-cyan);
+  padding: 0.35rem 0.95rem;
+  border-radius: var(--radius-full);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.spatial-hero h1 {
+  font-size: 3.65rem;
+  font-weight: 800;
+  line-height: 1.12;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.03em;
+}
+
+.spatial-hero h1 span {
+  background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.spatial-hero p {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+/* 3D Holo-Card Hero Showcase */
+.holo-3d-wrap {
+  perspective: 1200px;
+}
+
+.holo-card {
+  background: var(--space-card);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 30px rgba(6, 182, 212, 0.15);
+  transform: rotateY(-8deg) rotateX(4deg);
+  transition: transform 0.4s ease;
+}
+
+.holo-card:hover {
+  transform: rotateY(0deg) rotateX(0deg);
+}
+
+.holo-img {
+  height: 280px;
+  position: relative;
+}
+
+.holo-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.holo-badge-neon {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(9, 9, 11, 0.85);
+  backdrop-filter: blur(8px);
+  color: var(--neon-cyan);
+  border: 1px solid var(--neon-cyan);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-sm);
+}
+
+.holo-card-body {
+  padding: 1.75rem;
+}
+
+.holo-card-body h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.holo-specs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--space-border);
+}
+
+.holo-spec-box {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 0.6rem;
+  border-radius: var(--radius-sm);
+  text-align: center;
+}
+
+.holo-spec-box span {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  display: block;
+}
+
+.holo-spec-box strong {
+  font-size: 0.9375rem;
+  color: var(--neon-cyan);
+}
+
+/* 360-Degree Virtual Simulator Section */
+.tour-section {
+  padding: 6rem 0;
+  background: var(--space-surface);
+  border-top: 1px solid var(--space-border);
+  border-bottom: 1px solid var(--space-border);
+}
+
+.tour-head {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+}
+
+.tour-head h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.tour-viewer-frame {
+  background: #000;
+  border: 1px solid var(--space-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+  min-height: 480px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7);
+}
+
+.tour-viewer-img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  transition: filter 0.5s ease;
+}
+
+.tour-controls-bar {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(9, 9, 11, 0.88);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--space-border);
+  border-radius: var(--radius-full);
+  padding: 0.5rem 1rem;
+  display: flex;
+  gap: 0.75rem;
+  z-index: 10;
+}
+
+.tour-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  padding: 0.5rem 1.1rem;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.tour-btn.active, .tour-btn:hover {
+  background: var(--neon-cyan);
+  color: #000;
+}
+
+.lighting-modes-bar {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: rgba(9, 9, 11, 0.88);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--space-border);
+  border-radius: var(--radius-sm);
+  padding: 0.4rem;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.light-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.light-btn.active {
+  background: var(--neon-violet);
+  color: #fff;
+}
+
+/* Spatial Properties Grid */
+.spatial-cards-section {
+  padding: 6rem 0;
+}
+
+.spatial-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.spatial-card {
+  background: var(--space-card);
+  border: 1px solid var(--space-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.spatial-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--neon-cyan);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(6, 182, 212, 0.12);
+}
+
+.spatial-card-media {
+  height: 220px;
+  position: relative;
+}
+
+.spatial-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.spatial-card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.spatial-price {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--neon-cyan);
+  margin-bottom: 0.35rem;
+}
+
+.spatial-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+}
+
+.spatial-loc {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.spatial-footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid var(--space-border);
+  margin-top: auto;
+}
+
+/* Footer */
+.nexus-footer {
+  background: var(--space-surface);
+  border-top: 1px solid var(--space-border);
+  padding: 4.5rem 0 2rem;
+  font-size: 0.875rem;
+}
+
+.nexus-footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.nexus-footer-grid h5 {
+  font-size: 1rem;
+  color: var(--text-primary);
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+.nexus-footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.nexus-footer-links a:hover {
+  color: var(--neon-cyan);
+}
+
+@media (max-width: 1024px) {
+  .spatial-grid {
+    grid-template-columns: 1fr;
+  }
+  .spatial-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .nexus-footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .nexus-menu {
+    display: none;
+  }
+  .spatial-hero h1 {
+    font-size: 2.5rem;
+  }
+  .spatial-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .tour-controls-bar {
+    width: 90%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .nexus-footer-grid {
+    grid-template-columns: 1fr;
+  }
+}

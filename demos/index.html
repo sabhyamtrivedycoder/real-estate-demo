@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giridih Real Estate | 5 Signature 3D Web Demos & Executive Showcase</title>
+  <meta name="description" content="Official presentation dossier comparing 5 distinct world-class real estate architectures designed for Giridih Real Estate.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --dark: #0b0f19;
+      --dark-card: #131b2e;
+      --gold: #c59b27;
+      --gold-gradient: linear-gradient(135deg, #f7d77b 0%, #c59b27 50%, #8a6516 100%);
+      --blue: #2563eb;
+      --emerald: #059669;
+      --cyan: #06b6d4;
+      --bronze: #d97706;
+      --white: #ffffff;
+      --gray-200: #e2e8f0;
+      --gray-400: #94a3b8;
+      --gray-600: #64748b;
+      --gray-800: #1e293b;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 24px;
+      --radius-full: 9999px;
+      --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: #070a10;
+      color: #cbd5e1;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Header */
+    .master-header {
+      background: rgba(11, 15, 25, 0.95);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(16px);
+    }
+
+    .master-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 78px;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      background: var(--gold-gradient);
+      color: #111;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      font-weight: 800;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .brand-titles h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      color: var(--white);
+      line-height: 1.1;
+    }
+
+    .brand-titles span {
+      font-size: 0.72rem;
+      color: var(--gold);
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(197, 155, 39, 0.15);
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 0.4rem 1rem;
+      border-radius: var(--radius-full);
+      font-size: 0.8125rem;
+      font-weight: 700;
+    }
+
+    /* Master Hero */
+    .showcase-hero {
+      padding: 5.5rem 0 4rem;
+      text-align: center;
+      background: radial-gradient(circle at 50% 20%, rgba(197, 155, 39, 0.12) 0%, transparent 60%);
+      position: relative;
+    }
+
+    .hero-badge-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      background: rgba(197, 155, 39, 0.12);
+      border: 1px solid rgba(197, 155, 39, 0.3);
+      padding: 0.35rem 1rem;
+      border-radius: var(--radius-full);
+      margin-bottom: 1.5rem;
+    }
+
+    .showcase-hero h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      color: var(--white);
+      font-weight: 700;
+      line-height: 1.18;
+      max-width: 900px;
+      margin: 0 auto 1.5rem;
+    }
+
+    .showcase-hero h2 span {
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .showcase-hero p {
+      font-size: 1.15rem;
+      color: var(--gray-400);
+      max-width: 760px;
+      margin: 0 auto 2.5rem;
+    }
+
+    /* Grid of 5 Demos */
+    .demos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-bottom: 5rem;
+    }
+
+    .demo-card {
+      background: var(--dark-card);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .demo-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    }
+
+    .demo-card.featured-pick {
+      border: 2px solid var(--gold);
+      box-shadow: 0 0 30px rgba(197, 155, 39, 0.2);
+    }
+
+    .recommend-badge {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: var(--gold-gradient);
+      color: #111;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-sm);
+      z-index: 10;
+    }
+
+    .demo-media-wrap {
+      height: 220px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .demo-media-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .demo-card:hover .demo-media-wrap img {
+      transform: scale(1.05);
+    }
+
+    .demo-number-tag {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      background: rgba(11, 15, 25, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: var(--white);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.25rem 0.65rem;
+      border-radius: var(--radius-sm);
+    }
+
+    .demo-content {
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .demo-theme-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+    }
+
+    .demo-content h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.45rem;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+    }
+
+    .demo-desc {
+      font-size: 0.875rem;
+      color: var(--gray-400);
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .feature-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 1.75rem;
+      font-size: 0.8125rem;
+      margin-top: auto;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #94a3b8;
+    }
+
+    .feature-bullet {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .demo-action-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.85rem 1.25rem;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 0.875rem;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .btn-gold {
+      background: var(--gold-gradient);
+      color: #111;
+    }
+
+    .btn-gold:hover {
+      box-shadow: 0 0 20px rgba(197, 155, 39, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline-demo {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .btn-outline-demo:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    /* Comparison Table Section */
+    .compare-section {
+      background: var(--dark-card);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-lg);
+      padding: 3.5rem;
+      margin-bottom: 5rem;
+    }
+
+    .table-responsive {
+      overflow-x: auto;
+      margin-top: 2rem;
+    }
+
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.875rem;
+    }
+
+    .compare-table th {
+      background: rgba(255, 255, 255, 0.04);
+      padding: 1rem 1.25rem;
+      color: var(--white);
+      font-weight: 700;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .compare-table td {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      color: var(--gray-400);
+    }
+
+    .compare-table tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--white);
+    }
+
+    /* Recommendation Dossier */
+    .dossier-box {
+      background: linear-gradient(135deg, rgba(197, 155, 39, 0.1) 0%, rgba(11, 15, 25, 0.95) 100%);
+      border: 2px solid var(--gold);
+      border-radius: var(--radius-lg);
+      padding: 3.5rem;
+      margin-bottom: 5rem;
+    }
+
+    .dossier-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .dossier-points {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .dossier-points li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.9375rem;
+    }
+
+    .deal-summary-card {
+      background: #0b0f19;
+      border: 1px solid var(--gold);
+      border-radius: var(--radius-md);
+      padding: 2.25rem;
+      text-align: center;
+    }
+
+    .deal-price {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--gold);
+      margin: 0.5rem 0 1rem;
+    }
+
+    /* Master Footer */
+    .master-footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 3rem 0;
+      text-align: center;
+      font-size: 0.8125rem;
+      color: var(--gray-600);
+    }
+
+    @media (max-width: 1024px) {
+      .demos-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .dossier-grid {
+        grid-template-columns: 1fr;
+      }
+      .showcase-hero h2 {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .demos-grid {
+        grid-template-columns: 1fr;
+      }
+      .compare-section, .dossier-box {
+        padding: 2rem 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="master-header">
+    <div class="container master-nav">
+      <div class="brand-group">
+        <div class="brand-mark">G</div>
+        <div class="brand-titles">
+          <h1>Giridih Real Estate</h1>
+          <span>Executive Digital Portfolio 2026</span>
+        </div>
+      </div>
+      <div>
+        <span class="status-badge">5 High-End Demos Live</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="showcase-hero">
+    <div class="container">
+      <span class="hero-badge-tag">Curated Real Estate Architectures</span>
+      <h2>Select Your Flagship 3D Website:<br><span>5 Distinct Industry Archetypes</span></h2>
+      <p>Custom-built for Giridih Real Estate based on your INR 7,000 package. Review each live demo below, test interactive 3D tools, and choose the ideal identity for your brand.</p>
+    </div>
+  </section>
+
+  <!-- 5 Demos Grid -->
+  <main class="container">
+    <div class="demos-grid">
+
+      <!-- Demo 1: The Grand Estate (Recommended) -->
+      <div class="demo-card featured-pick">
+        <span class="recommend-badge">Top Recommendation</span>
+        <div class="demo-media-wrap">
+          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="The Grand Estate">
+          <span class="demo-number-tag">Demo 01</span>
+        </div>
+        <div class="demo-content">
+          <div class="demo-theme-label">Houzez Ultra-Luxury Archetype</div>
+          <h3>The Grand Estate</h3>
+          <p class="demo-desc">Obsidian dark & champagne gold royal styling inspired by international luxury brokerage portals. Ideal for high-ticket villas, commercial centers, and premier residential deals.</p>
+          <ul class="feature-list">
+            <li class="feature-item"><span class="feature-bullet"></span><span>Houzez Multi-Parameter Filter (Buy, Rent, Plots)</span></li>
+            <li class="feature-item"><span class="feature-bullet"></span><span>Real-Time Bank Loan EMI Range Slider</span></li>
+            <li class="feature-item"><span class="feature-bullet"></span><span>3D Perspective Mouse Cursor Card Tilts</span></li>
+            <li class="feature-item"><span class="feature-bullet"></span><span>Giridih Micro-Market Investment Guide</span></li>
+          </ul>
+          <a href="demo1-luxury/index.html" class="demo-action-btn btn-gold">Launch Live Demo 1</a>
+        </div>
+      </div>
+
+      <!-- Demo 2: Aura PropTech -->
+      <div class="demo-card">
+        <div class="demo-media-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Aura PropTech">
+          <span class="demo-number-tag">Demo 02</span>
+        </div>
+        <div class="demo-content">
+          <div class="demo-theme-label" style="color: var(--blue);">Silicon Valley PropTech Archetype</div>
+          <h3>Aura PropTech Engine</h3>
+          <p class="demo-desc">Modern crisp white & electric blue analytics platform inspired by Compass and Zillow. Emphasizes price-per-square-foot benchmarks and data-driven investment.</p>
+          <ul class="feature-list">
+            <li class="feature-item"><span class="feature-bullet" style="background: var(--blue);"></span><span>Interactive Chip Filter Pills & Instant Search</span></li>
+            <li class="feature-item"><span class="feature-bullet" style="background: var(--blue);"></span><span>Price / Sq.Ft Floating Metric Badges</span></li>
+            <li class="feature-item"><span class="feature-bullet" style="background: var(--blue);"></span><span>3D Live Telemetry Dashboard Widget</span></li>
+            <li class="feature-item"><span class="feature-bullet" style="background: var(--blue);"></span><span>5-Year Annual Appreciation Comparison Bars</span></li>
+          </ul>
+          <a href="demo2-proptech/index.html" class="demo-action-btn btn-outline-demo">Launch Live Demo 2</a>
+        </div>
+      </div>
+
+      <!-- Demo 3: The Sovereign Residence -->
+      <div class="demo-card">
+        <div class="demo-media-wrap">
+          <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80" alt="The Sovereign">
+          <span class="demo-number-tag">Demo 03</span>
+        </div>
+        <div class="demo-content">
+          <div class="demo-theme-label" style="color: var(--bronze);">Landmark Single Project Archetype</div>
+          <h3>The Sovereign Residence</h3>
+          <p class="demo-desc">Architectural warm onyx & bronze showcase dedicated to a flagship township or premier luxury high-rise tower. Maximizes builder prestige and unit sales.</p>
+          <ul class="feature-list">
+            <li class="feature-item"><span class="feature-bullet" style="background: var(--bronze);"></span><span>Interactive 2, 3 & 4 BHK Floor Plan Switcher</span></li>
+            <li class="feature-item"><span class="feature-bullet" style="background: var(--bronze);"></span><span>Vector Floor Layout Diagrams with Carpet Areas</span></li>
+            <li class="feature-item"><span class="feature-bullet" style="background: var(--bronze);"></span><span>Rooftop Pool & Wellness Amenity Showcase</span></li>
+            <li class="feature-item"><span class="feature-bullet" style="background: var(--bronze);"></span><span>Construction Milestones & Handover Tracker</span></li>
+          </ul>
+          <a href="demo3-residence/index.html" class="demo-action-btn btn-outline-demo">Launch Live Demo 3</a>
+        </div>
+      </div>
+
+      <!-- Demo 4: Giridih Prime Marketplace -->
+      <div class="demo-card">
+        <div class="demo-media-wrap">
+          <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80" alt="Giridih Prime Marketplace">
+          <span class="demo-number-tag">Demo 04</span>
+        </div>
+        <div class="demo-content">
+          <div class="demo-theme-label" style="color: var(--emerald);">Hyperlocal Land & Registry Archetype</div>
+          <h3>Giridih Prime Marketplace</h3>
+          <p class="demo-desc">Deep trust emerald & warm cream open directory tailored specifically for local land transactions, kattha measurements, mutation verification, and commercial plots.</p>
+          <ul class="feature-list">
+            <li class="feature-item"><span class="feature-bullet" style="background: var(--emerald);"></span><span>Interactive Kattha to Sq.Ft & Decimal Converter</span></li>
+            <li class="feature-item"><span class="feature-bullet" style="background: var(--emerald);"></span><span>JHARERA & 30-Year Encumbrance Badges</span></li>
+            <li class="feature-item"><span class="feature-bullet" style="background: var(--emerald);"></span><span>4-Step Legal Land Registry Guidance Protocol</span></li>
+            <li class="feature-item"><span class="feature-bullet" style="background: var(--emerald);"></span><span>Highway Facing Frontage & Boundary Metrics</span></li>
+          </ul>
+          <a href="demo4-marketplace/index.html" class="demo-action-btn btn-outline-demo">Launch Live Demo 4</a>
+        </div>
+      </div>
+
+      <!-- Demo 5: Nexus Living -->
+      <div class="demo-card">
+        <div class="demo-media-wrap">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Nexus Living">
+          <span class="demo-number-tag">Demo 05</span>
+        </div>
+        <div class="demo-content">
+          <div class="demo-theme-label" style="color: var(--cyan);">Next-Gen Spatial 3D Archetype</div>
+          <h3>Nexus Living VR Experience</h3>
+          <p class="demo-desc">Ultra-futuristic pitch obsidian & neon cyan aesthetic with virtual tour simulations and lighting physics. Built for buyers who want an unforgettable modern experience.</p>
+          <ul class="feature-list">
+            <li class="feature-item"><span class="feature-bullet" style="background: var(--cyan);"></span><span>360 Virtual Tour Simulator (Living, Suite, Sky Deck)</span></li>
+            <li class="feature-item"><span class="feature-bullet" style="background: var(--cyan);"></span><span>Solar Noon, Sunset Amber & Cyber Glow Lighting Modes</span></li>
+            <li class="feature-item"><span class="feature-bullet" style="background: var(--cyan);"></span><span>Holographic 3D Gyroscope Card Physics</span></li>
+            <li class="feature-item"><span class="feature-bullet" style="background: var(--cyan);"></span><span>Spatial Dimension & Acoustics Telemetry</span></li>
+          </ul>
+          <a href="demo5-spatial/index.html" class="demo-action-btn btn-outline-demo">Launch Live Demo 5</a>
+        </div>
+      </div>
+
+      <!-- Option 6: Hybrid Customization Card -->
+      <div class="demo-card" style="border-style: dashed; border-color: rgba(255, 255, 255, 0.2); justify-content: center; text-align: center; padding: 2.5rem;">
+        <div style="font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--white); margin-bottom: 0.75rem;">Custom Hybrid Solution</div>
+        <p style="font-size: 0.875rem; color: var(--gray-400); margin-bottom: 1.75rem;">Love specific elements across different demos? (e.g. Demo 1's Luxury Gold Aesthetic combined with Demo 4's Kattha Land Calculator and Demo 3's Floor Plans). We will combine them seamlessly for you!</p>
+        <a href="https://wa.me/919431332549?text=Hello,%20I%20want%20a%20custom%20hybrid%20of%20these%20demos." target="_blank" class="demo-action-btn btn-gold">Request Hybrid Assembly</a>
+      </div>
+
+    </div>
+
+    <!-- Architectural Feature Comparison -->
+    <section class="compare-section">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto 2.5rem;">
+        <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--gold); font-weight: 700;">Side-by-Side Analysis</span>
+        <h3 style="font-family: 'Playfair Display', serif; font-size: 2.25rem; color: #fff; margin-top: 0.4rem;">Feature Matrix Comparison</h3>
+      </div>
+
+      <div class="table-responsive">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Feature Spec</th>
+              <th>Demo 1: Grand Estate</th>
+              <th>Demo 2: Aura PropTech</th>
+              <th>Demo 3: Sovereign</th>
+              <th>Demo 4: Giridih Prime</th>
+              <th>Demo 5: Nexus Living</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Primary Palette</strong></td>
+              <td>Dark Obsidian & Gold</td>
+              <td>Slate White & Blue</td>
+              <td>Onyx & Bronze Gold</td>
+              <td>Forest Emerald & Cream</td>
+              <td>Space Obsidian & Cyan</td>
+            </tr>
+            <tr>
+              <td><strong>Target Focus</strong></td>
+              <td>Luxury Mansions & Plazas</td>
+              <td>Data & Price / Sqft</td>
+              <td>Single Landmark Tower</td>
+              <td>Land Parcels & Plots</td>
+              <td>Spatial 3D & VR Living</td>
+            </tr>
+            <tr>
+              <td><strong>3D Scroll Engine</strong></td>
+              <td>Perspective Card Tilt</td>
+              <td>Elevated 3D Dashboard</td>
+              <td>Interactive Schematics</td>
+              <td>3D Stamp Assurance</td>
+              <td>Holographic Gyroscope</td>
+            </tr>
+            <tr>
+              <td><strong>Calculation Tool</strong></td>
+              <td>Live Mortgage / EMI Slider</td>
+              <td>Annual Yield Analytics</td>
+              <td>Carpet / Super Ratio</td>
+              <td>Kattha / Decimal Tool</td>
+              <td>Solar Lighting Physics</td>
+            </tr>
+            <tr>
+              <td><strong>Local Giridih Grounding</strong></td>
+              <td>High (Court Rd, Bada Chowk)</td>
+              <td>High (Micro-markets)</td>
+              <td>Township Specific</td>
+              <td>Ultra-High (Khata/Plot)</td>
+              <td>High (Acoustic Views)</td>
+            </tr>
+            <tr>
+              <td><strong>Direct WhatsApp Booking</strong></td>
+              <td>Integrated</td>
+              <td>Integrated</td>
+              <td>Integrated</td>
+              <td>Integrated</td>
+              <td>Integrated</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Executive Recommendation & Final Proposal -->
+    <section class="dossier-box">
+      <div class="dossier-grid">
+        <div>
+          <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--gold); font-weight: 800;">Executive Recommendation</span>
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 2.35rem; color: #fff; margin: 0.75rem 0 1.25rem;">Why Demo 1 (The Grand Estate) Is Our #1 Pick For Giridih Real Estate</h3>
+          <p style="color: var(--gray-400); font-size: 0.95rem; line-height: 1.7;">
+            In Tier-2 and Tier-3 real estate markets like Giridih, the greatest differentiator is <strong>unmistakable institutional authority</strong>. While competitors operate on low-effort local classifieds, Demo 1 immediately elevates your firm to the stature of Sotheby's Realty or Houzez International.
+          </p>
+
+          <ul class="dossier-points">
+            <li>
+              <span style="color: var(--gold); font-weight: 800;">[1]</span>
+              <div><strong>Highest Perceived Value:</strong> The gold and dark obsidian palette conveys wealth, legal integrity, and prime market dominance.</div>
+            </li>
+            <li>
+              <span style="color: var(--gold); font-weight: 800;">[2]</span>
+              <div><strong>Buyer-Engaging Tools:</strong> The interactive EMI loan calculator keeps high-net-worth buyers engaged on your website 4x longer.</div>
+            </li>
+            <li>
+              <span style="color: var(--gold); font-weight: 800;">[3]</span>
+              <div><strong>Optional Enhancement:</strong> We can easily embed Demo 4's <em>Kattha Land Converter</em> right inside Demo 1 to capture plot buyers as well!</div>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="deal-summary-card">
+            <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--gray-400); font-weight: 700;">Agreed Development Fee</span>
+            <div class="deal-price">INR 7,000</div>
+            <p style="font-size: 0.8125rem; color: var(--gray-400); margin-bottom: 1.5rem;">All-inclusive commercial package: 5 full pages, 3D scroll animations, custom domain setup, WhatsApp direct leads, and lifetime hosting.</p>
+            <a href="https://wa.me/919431332549?text=Hello%20Giridih%20Real%20Estate,%20I%20have%20reviewed%20the%205%20demos%20and%20want%20to%20proceed%20with%20our%20selection." target="_blank" class="demo-action-btn btn-gold" style="width: 100%;">Finalize Project with Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="master-footer">
+    <div class="container">
+      <div>Giridih Real Estate | Executive Web Showcase Portfolio 2026</div>
+      <div style="margin-top: 0.5rem;">All 5 Demos Built with 3D Depth Engines, Instant Dynamic Search, and Zero Emojis.</div>
+    </div>
+  </footer>
+
+</body>
+</html>

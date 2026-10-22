@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giridih Prime Marketplace | Land, Plots & Verified Properties</title>
+  <meta name="description" content="Giridih's official open marketplace for verified freehold land plots, commercial showrooms, and clear-title residential developments.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="market-header">
+    <div class="container market-nav">
+      <div class="market-logo">
+        <div class="market-badge-icon">P</div>
+        <div>
+          <div class="market-name">Giridih<span>Prime</span></div>
+          <div style="font-size: 0.7rem; color: var(--emerald-700); font-weight: 700; text-transform: uppercase;">Verified Land & Real Estate</div>
+        </div>
+      </div>
+      <ul class="market-links">
+        <li><a href="#listings" class="market-link active">Properties & Plots</a></li>
+        <li><a href="#converter" class="market-link">Kattha Calculator</a></li>
+        <li><a href="#registry-guide" class="market-link">Registry Guide</a></li>
+        <li><a href="../index.html" class="market-link" style="color: var(--emerald-700); font-weight: 700;">Showcase Hub</a></li>
+      </ul>
+      <div>
+        <a href="https://wa.me/919431332549?text=Hello%20Giridih%20Prime,%20I%20want%20to%20verify%20a%20land%20parcel%20or%20plot." target="_blank" class="btn btn-emerald">Direct Plot Inquiry</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="market-hero">
+    <div class="container market-hero-grid">
+      <div>
+        <div class="legal-pill">Clear Title Deeds & Guaranteed Mutation</div>
+        <h1>Giridih's Hyperlocal<br><span>Land & Property Marketplace</span></h1>
+        <p>Buy, sell, or invest in verified freehold plots, commercial centers, and residential homes in Giridih. Every listing is pre-vetted against district registry records.</p>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="#listings" class="btn btn-emerald" style="padding: 1rem 2rem; background: #10b981;">Browse Available Plots</a>
+          <a href="#converter" class="btn btn-outline-emerald" style="color: #fff; border-color: rgba(255,255,255,0.4); padding: 1rem 1.75rem;">Kattha to Sq.Ft Tool</a>
+        </div>
+      </div>
+
+      <!-- 3D Legal Title Assurance Box -->
+      <div>
+        <div class="cert-box-3d">
+          <div class="cert-head">
+            <div>
+              <strong style="font-size: 1.15rem; color: var(--dark-slate);">100% Legal Clearance</strong>
+              <div style="font-size: 0.75rem; color: var(--slate-500);">Giridih District Land Registry Protocol</div>
+            </div>
+            <span class="cert-badge-official">Govt Verified</span>
+          </div>
+
+          <div class="cert-item-row">
+            <span class="check-icon">&#10003;</span>
+            <div><strong>Khata & Plot Number Validated:</strong> Zero ancestral disputes.</div>
+          </div>
+          <div class="cert-item-row">
+            <span class="check-icon">&#10003;</span>
+            <div><strong>Up-to-Date Lagan (Revenue) Receipts:</strong> Cleared online dues.</div>
+          </div>
+          <div class="cert-item-row">
+            <span class="check-icon">&#10003;</span>
+            <div><strong>Clear 30-Year Encumbrance History:</strong> Bank loan ready.</div>
+          </div>
+          <div class="cert-item-row">
+            <span class="check-icon">&#10003;</span>
+            <div><strong>Immediate Boundary Demarcation:</strong> Physical stone pillars.</div>
+          </div>
+
+          <div style="margin-top: 1.5rem; text-align: center;">
+            <a href="https://wa.me/919431332549?text=I%20need%20land%20registry%20verification%20service" target="_blank" class="btn btn-emerald" style="width: 100%;">Verify Any Giridih Plot With Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Kattha Converter -->
+  <section class="container converter-wrap" id="converter">
+    <div class="converter-card">
+      <div class="conv-field">
+        <label>Enter Land in Kattha</label>
+        <input type="number" id="conv-kattha" class="conv-input" value="4.5" step="0.5" min="0.5">
+      </div>
+      <div class="conv-field">
+        <label>Standard Sq.Ft Equivalent</label>
+        <div id="conv-sqft-out" style="padding: 0.75rem 0; font-size: 1.25rem; font-weight: 800; color: var(--emerald-700);">3,240 Sq.Ft</div>
+      </div>
+      <div class="conv-field">
+        <label>Decimal Equivalent</label>
+        <div id="conv-decimal-out" style="padding: 0.75rem 0; font-size: 1.25rem; font-weight: 800; color: var(--dark-slate);">7.43 Decimals</div>
+      </div>
+      <div class="conv-field">
+        <label>Giridih Baseline Rate</label>
+        <div style="padding: 0.75rem 0; font-size: 1.1rem; font-weight: 700; color: var(--slate-700);">INR 6.5L - 12L / Kattha</div>
+      </div>
+      <div>
+        <a href="https://wa.me/919431332549?text=I%20want%20to%20inquire%20about%20land%20measurement%20in%20Giridih" target="_blank" class="btn btn-emerald" style="height: 44px;">Check Local Rate</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Property & Land Listings -->
+  <section class="market-listings-section container" id="listings">
+    <div class="market-listings-head">
+      <div>
+        <span style="font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--emerald-700); font-weight: 700;">Curated Directory</span>
+        <h2 style="font-size: 2.35rem; font-weight: 800; color: var(--dark-slate);">Available Land & Property Registry</h2>
+        <p id="market-count-badge" style="color: var(--slate-500); font-weight: 600;">6 Verified Parcels & Properties in Giridih</p>
+      </div>
+
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+        <select id="market-cat-select" class="conv-select" style="min-width: 170px;">
+          <option value="all">All Asset Classes</option>
+          <option value="plot">Freehold Plots</option>
+          <option value="villa">Residential Villas</option>
+          <option value="commercial">Commercial Plazas</option>
+          <option value="apartment">Modern Flats</option>
+        </select>
+        <select id="market-loc-select" class="conv-select" style="min-width: 170px;">
+          <option value="all">All Localities</option>
+          <option value="court-road">Court Road</option>
+          <option value="pachamba">Pachamba</option>
+          <option value="bada-chowk">Bada Chowk</option>
+          <option value="mohanpur">Mohanpur</option>
+          <option value="sirsia">Sirsia Bypass</option>
+        </select>
+        <select id="market-budget-select" class="conv-select" style="min-width: 160px;">
+          <option value="all">Any Budget</option>
+          <option value="under-30">Under 30 Lakhs</option>
+          <option value="30-60">30 - 60 Lakhs</option>
+          <option value="above-60">Above 60 Lakhs</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="market-listings-grid">
+
+      <!-- Card 1 -->
+      <div class="market-card" data-category="plot" data-location="pachamba" data-price-lakhs="38">
+        <div class="market-card-img">
+          <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80" alt="Pachamba Plot">
+          <span class="kattha-pill">4.5 Kattha</span>
+          <span class="registry-pill">Clear Mutation</span>
+        </div>
+        <div class="market-card-content">
+          <div class="market-price">INR 38 Lakhs</div>
+          <h3>Pachamba Main Road Highway Land</h3>
+          <div class="market-card-loc">Pachamba Commercial Corridor, Giridih</div>
+          <div class="market-specs-row">
+            <div><strong>40 Ft</strong> Road</div>
+            <div><strong>East</strong> Facing</div>
+            <div><strong>Direct</strong> Registry</div>
+          </div>
+          <div class="market-actions-row">
+            <span style="font-size: 0.75rem; color: var(--emerald-700); font-weight: 700;">Khata #44 / Plot #102</span>
+            <a href="https://wa.me/919431332549?text=Interested%20in%20Pachamba%20Plot%2038L" target="_blank" class="btn btn-outline-emerald" style="padding: 0.45rem 0.9rem; font-size: 0.8125rem;">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="market-card" data-category="villa" data-location="court-road" data-price-lakhs="145">
+        <div class="market-card-img">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Court Road Kothi">
+          <span class="kattha-pill">6.2 Kattha Campus</span>
+          <span class="registry-pill">VIP Bungalow</span>
+        </div>
+        <div class="market-card-content">
+          <div class="market-price">INR 1.45 Cr</div>
+          <h3>Court Road Executive Independent Kothi</h3>
+          <div class="market-card-loc">Officers Colony, Court Road, Giridih</div>
+          <div class="market-specs-row">
+            <div><strong>4</strong> Beds</div>
+            <div><strong>4</strong> Baths</div>
+            <div><strong>3,450</strong> Sq.Ft</div>
+          </div>
+          <div class="market-actions-row">
+            <span style="font-size: 0.75rem; color: var(--emerald-700); font-weight: 700;">Immediate Possession</span>
+            <a href="https://wa.me/919431332549?text=Interested%20in%20Court%20Road%20Kothi%20145L" target="_blank" class="btn btn-outline-emerald" style="padding: 0.45rem 0.9rem; font-size: 0.8125rem;">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="market-card" data-category="plot" data-location="sirsia" data-price-lakhs="24">
+        <div class="market-card-img">
+          <img src="https://images.unsplash.com/photo-1524813686514-a57563d77d66?auto=format&fit=crop&w=800&q=80" alt="Sirsia Land">
+          <span class="kattha-pill">3.2 Kattha</span>
+          <span class="registry-pill">Pillar Demarcated</span>
+        </div>
+        <div class="market-card-content">
+          <div class="market-price">INR 24 Lakhs</div>
+          <h3>Sirsia Growth Corridor Residential Plot</h3>
+          <div class="market-card-loc">Sirsia Ring Road Junction, Giridih</div>
+          <div class="market-specs-row">
+            <div><strong>30 Ft</strong> Front</div>
+            <div><strong>Level</strong> Land</div>
+            <div><strong>Bank</strong> Loan OK</div>
+          </div>
+          <div class="market-actions-row">
+            <span style="font-size: 0.75rem; color: var(--emerald-700); font-weight: 700;">Khata #18 / Plot #67</span>
+            <a href="https://wa.me/919431332549?text=Interested%20in%20Sirsia%20Plot%2024L" target="_blank" class="btn btn-outline-emerald" style="padding: 0.45rem 0.9rem; font-size: 0.8125rem;">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="market-card" data-category="commercial" data-location="bada-chowk" data-price-lakhs="95">
+        <div class="market-card-img">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Commercial Retail">
+          <span class="kattha-pill">G+1 Building</span>
+          <span class="registry-pill">Commercial</span>
+        </div>
+        <div class="market-card-content">
+          <div class="market-price">INR 95 Lakhs</div>
+          <h3>Bada Chowk Retail Market Showroom</h3>
+          <div class="market-card-loc">Main Market, Bada Chowk, Giridih</div>
+          <div class="market-specs-row">
+            <div><strong>2,600</strong> Sq.Ft</div>
+            <div><strong>Pre-leased</strong></div>
+            <div><strong>High</strong> Footfall</div>
+          </div>
+          <div class="market-actions-row">
+            <span style="font-size: 0.75rem; color: var(--emerald-700); font-weight: 700;">Rental Yield: 9%</span>
+            <a href="https://wa.me/919431332549?text=Interested%20in%20Bada%20Chowk%20Commercial%2095L" target="_blank" class="btn btn-outline-emerald" style="padding: 0.45rem 0.9rem; font-size: 0.8125rem;">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="market-card" data-category="apartment" data-location="bada-chowk" data-price-lakhs="52">
+        <div class="market-card-img">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Apartment 3 BHK">
+          <span class="kattha-pill">1,780 Sq.Ft</span>
+          <span class="registry-pill">Ready to Move</span>
+        </div>
+        <div class="market-card-content">
+          <div class="market-price">INR 52 Lakhs</div>
+          <h3>Shanti Tower 3 BHK Family Apartment</h3>
+          <div class="market-card-loc">Near Bada Chowk, Giridih</div>
+          <div class="market-specs-row">
+            <div><strong>3</strong> Beds</div>
+            <div><strong>2</strong> Baths</div>
+            <div><strong>Car</strong> Parking</div>
+          </div>
+          <div class="market-actions-row">
+            <span style="font-size: 0.75rem; color: var(--emerald-700); font-weight: 700;">Lift + Generator</span>
+            <a href="https://wa.me/919431332549?text=Interested%20in%20Shanti%20Tower%2052L" target="_blank" class="btn btn-outline-emerald" style="padding: 0.45rem 0.9rem; font-size: 0.8125rem;">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="market-card" data-category="villa" data-location="mohanpur" data-price-lakhs="78">
+        <div class="market-card-img">
+          <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80" alt="Mohanpur Villa">
+          <span class="kattha-pill">3.8 Kattha</span>
+          <span class="registry-pill">Independent</span>
+        </div>
+        <div class="market-card-content">
+          <div class="market-price">INR 78 Lakhs</div>
+          <h3>Mohanpur Greenview Duplex Kothi</h3>
+          <div class="market-card-loc">Mohanpur Enclave, Giridih</div>
+          <div class="market-specs-row">
+            <div><strong>4</strong> Beds</div>
+            <div><strong>3</strong> Baths</div>
+            <div><strong>2,400</strong> Sq.Ft</div>
+          </div>
+          <div class="market-actions-row">
+            <span style="font-size: 0.75rem; color: var(--emerald-700); font-weight: 700;">Boundary Wall + Gate</span>
+            <a href="https://wa.me/919431332549?text=Interested%20in%20Mohanpur%20Duplex%2078L" target="_blank" class="btn btn-outline-emerald" style="padding: 0.45rem 0.9rem; font-size: 0.8125rem;">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Legal Registry Guide -->
+  <section class="guide-section" id="registry-guide">
+    <div class="container">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto 3.5rem;">
+        <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--emerald-700); font-weight: 700;">Buyer Safety Protocol</span>
+        <h2 style="font-size: 2.25rem; font-weight: 800; color: var(--dark-slate); margin-top: 0.5rem;">4-Step Giridih Land Purchase Checklist</h2>
+        <p style="color: var(--slate-500);">Follow our legal workflow to ensure 100% dispute-free land ownership in Jharkhand.</p>
+      </div>
+
+      <div class="guide-grid">
+        <div class="guide-box">
+          <div class="guide-number">01</div>
+          <h4>Khatiyan & Title Search</h4>
+          <p>Inspect Khatiyan register (CS/RS) and verify genealogy (Vanshavali) with Giridih Anchal Office.</p>
+        </div>
+
+        <div class="guide-box">
+          <div class="guide-number">02</div>
+          <h4>Online Lagan Verification</h4>
+          <p>Check Jharbhoomi portal to confirm mutation status, current rent receipt, and owner name match.</p>
+        </div>
+
+        <div class="guide-box">
+          <div class="guide-number">03</div>
+          <h4>Physical Demarcation</h4>
+          <p>Amin measurement with boundary pillar installation to eliminate neighbor border disputes.</p>
+        </div>
+
+        <div class="guide-box">
+          <div class="guide-number">04</div>
+          <h4>District Registry & Dakhil-Kharij</h4>
+          <p>Execute Deed Registry at Giridih Registry Office followed by prompt Anchal mutation filing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="market-footer">
+    <div class="container">
+      <div class="footer-market-grid">
+        <div>
+          <div class="market-logo" style="margin-bottom: 1rem;">
+            <div class="market-badge-icon">P</div>
+            <div class="market-name" style="color: #fff;">Giridih<span>Prime</span></div>
+          </div>
+          <p style="font-size: 0.875rem; line-height: 1.7;">Giridih's premier open property marketplace. Eliminating fraudulent land deals through verified government title vetting and transparent kattha valuations.</p>
+        </div>
+
+        <div>
+          <h5>Categories</h5>
+          <ul class="footer-market-links">
+            <li><a href="#listings">Freehold Plots</a></li>
+            <li><a href="#listings">Residential Mansions</a></li>
+            <li><a href="#listings">Commercial Plazas</a></li>
+            <li><a href="#converter">Kattha Converter</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5>Prime Zones</h5>
+          <ul class="footer-market-links">
+            <li><a href="#listings">Court Road</a></li>
+            <li><a href="#listings">Pachamba Sector</a></li>
+            <li><a href="#listings">Bada Chowk</a></li>
+            <li><a href="#listings">Sirsia Ring Road</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5>Helpdesk</h5>
+          <p style="color: #fff; font-weight: 700; margin-bottom: 0.4rem;">Giridih Real Estate Advisory</p>
+          <p style="margin-bottom: 0.4rem;">Court Road, Giridih 815301</p>
+          <p style="margin-bottom: 1rem;">Phone: +91 94313 32549</p>
+          <a href="https://wa.me/919431332549" target="_blank" class="btn btn-emerald" style="padding: 0.6rem 1.25rem;">WhatsApp Land Desk</a>
+        </div>
+      </div>
+
+      <div style="border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 1.5rem; display: flex; justify-content: space-between; font-size: 0.8125rem;">
+        <div>&copy; 2026 Giridih Prime Real Estate Marketplace. JHARERA Verified.</div>
+        <div>Theme Demo 4: Hyperlocal Land & Plots Edition</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
