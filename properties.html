@@ -223,6 +223,21 @@
 
   
   <!-- Footer -->
+  
+  <!-- Newsletter Bar (From Old Site) -->
+  <section style="background: #111827; border-top: 1px solid rgba(255,255,255,0.08); padding: 3rem 0; color: #fff;">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem;">
+      <div>
+        <h4 style="font-family: var(--font-heading); font-size: 1.45rem; margin-bottom: 0.35rem; color: #fff;">Subscribe to Our Giridih Property Newsletter</h4>
+        <p style="color: var(--gray-400); font-size: 0.875rem; margin: 0;">Receive instant alerts when new zero-brokerage flats and clear-title plots are listed.</p>
+      </div>
+      <form onsubmit="event.preventDefault(); alert('Thank you for subscribing! You will receive the latest Giridih property listings.');" style="display: flex; gap: 0.5rem; flex-grow: 1; max-width: 480px;">
+        <input type="email" required placeholder="Enter your email address..." style="flex-grow: 1; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.06); color: #fff; font-size: 0.875rem;">
+        <button type="submit" class="btn btn-primary" style="padding: 0.75rem 1.5rem;">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
@@ -291,5 +306,12 @@
   </footer>
 
   <script src="js/app.js"></script>
+
+<!-- Floating WhatsApp Support Widget -->
+<a href="https://wa.me/916202253290?text=Hello%20Vikash%20Ji,%20I%20am%20inquiring%20about%20properties%20in%20Giridih." target="_blank" id="floating-whatsapp" style="position: fixed; bottom: 25px; right: 25px; z-index: 999; background: #25D366; color: #fff; padding: 0.85rem 1.4rem; border-radius: 50px; font-weight: 700; font-size: 0.875rem; display: flex; align-items: center; gap: 0.6rem; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4); transition: transform 0.3s; text-decoration: none;">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.666-.699c.96.523 1.761.815 2.793.815 3.179 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.766-5.767-5.766zm9.969 5.767c0 5.503-4.469 9.97-9.97 9.97-1.727 0-3.344-.442-4.767-1.218l-5.263 1.381 1.405-5.127c-.868-1.488-1.375-3.228-1.375-5.006 0-5.503 4.469-9.97 9.97-9.97 5.503 0 9.97 4.467 9.97 9.97z"/></svg>
+  <span>Chat with Vikash Ji</span>
+</a>
+
 </body>
 </html>

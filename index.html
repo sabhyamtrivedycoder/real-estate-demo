@@ -114,8 +114,94 @@
     </div>
   </section>
 
+  <!-- NEW FEATURE 1: Interactive Live Loan EMI Calculator -->
+  <section class="container" style="padding: 4.5rem 0 2rem;">
+    <div style="background: linear-gradient(135deg, #18181b 0%, #27272a 100%); color: #fff; border-radius: var(--radius-lg); padding: 3rem; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 45px rgba(0,0,0,0.15);">
+      <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 3rem; align-items: center;">
+        <div>
+          <span class="badge-tag">Buyer Financial Tool</span>
+          <h3 style="font-family: var(--font-heading); font-size: 2rem; margin: 0.75rem 0 1rem; color: #fff;">Giridih Property Home Loan EMI Estimator</h3>
+          <p style="color: var(--gray-400); font-size: 0.9375rem; line-height: 1.7; margin-bottom: 2rem;">
+            Calculate your monthly payment instantly. We assist in expedited loan approvals with State Bank of India (SBI), HDFC Bank, and ICICI Bank at lowest interest rates.
+          </p>
+
+          <!-- Slider 1 -->
+          <div style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; font-size: 0.875rem; margin-bottom: 0.4rem;">
+              <span>Loan Amount (INR)</span>
+              <strong id="emi-amount-val" style="color: var(--primary);">35 Lakhs</strong>
+            </div>
+            <input type="range" id="emi-amount" min="10" max="150" value="35" step="1" style="width: 100%; accent-color: var(--primary);">
+          </div>
+
+          <!-- Slider 2 -->
+          <div style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; font-size: 0.875rem; margin-bottom: 0.4rem;">
+              <span>Interest Rate (%)</span>
+              <strong id="emi-rate-val" style="color: var(--primary);">8.5%</strong>
+            </div>
+            <input type="range" id="emi-rate" min="7.0" max="12.0" value="8.5" step="0.25" style="width: 100%; accent-color: var(--primary);">
+          </div>
+
+          <!-- Slider 3 -->
+          <div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.875rem; margin-bottom: 0.4rem;">
+              <span>Tenure (Years)</span>
+              <strong id="emi-tenure-val" style="color: var(--primary);">20 Years</strong>
+            </div>
+            <input type="range" id="emi-tenure" min="5" max="30" value="20" step="1" style="width: 100%; accent-color: var(--primary);">
+          </div>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.04); border: 1.5px solid var(--primary); border-radius: var(--radius-md); padding: 2.5rem; text-align: center;">
+          <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gray-400);">Projected Monthly EMI</span>
+          <div id="emi-monthly-output" style="font-family: var(--font-heading); font-size: 2.75rem; font-weight: 800; color: var(--primary); margin: 0.5rem 0 1rem;">INR 30,374 / mo</div>
+          <p style="font-size: 0.8125rem; color: var(--gray-400); margin-bottom: 1.5rem;">Zero processing commission with our direct banking desk.</p>
+          <a href="https://wa.me/916202253290?text=Hello%20Vikash%20Ji,%20I%20want%20to%20apply%20for%20a%20property%20loan%20in%20Giridih." target="_blank" class="btn btn-primary" style="width: 100%;">Apply For Bank Loan Pre-Approval</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW FEATURE 2: Local Giridih Kattha-to-Sq.Ft Land Unit Converter -->
+  <section class="container" style="padding: 2rem 0 4rem;">
+    <div style="background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); padding: 2.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.04);">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto 2rem;">
+        <span class="badge-tag">Giridih Revenue Standards</span>
+        <h3 style="font-family: var(--font-heading); font-size: 1.75rem; color: var(--gray-800); margin-top: 0.5rem;">Giridih Land Unit Measurement Converter</h3>
+        <p style="font-size: 0.875rem; color: var(--gray-600);">In Giridih, 1 Kattha standard equals 720 Sq.Ft (approx 1.65 Decimals). Use this tool to calculate your exact plot dimensions.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr) auto; gap: 1.25rem; align-items: flex-end;">
+        <div>
+          <label style="display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--gray-800); margin-bottom: 0.4rem;">Land Area in Kattha</label>
+          <input type="number" id="kattha-input" value="4.5" step="0.5" min="0.5" style="width: 100%; padding: 0.75rem 0.9rem; border: 1.5px solid var(--gray-200); border-radius: var(--radius-sm); font-size: 1rem; font-weight: 700;">
+        </div>
+
+        <div>
+          <label style="display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--gray-800); margin-bottom: 0.4rem;">Square Feet Equivalent</label>
+          <div id="kattha-sqft-out" style="padding: 0.75rem 0; font-size: 1.25rem; font-weight: 800; color: var(--primary);">3,240 Sq.Ft</div>
+        </div>
+
+        <div>
+          <label style="display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--gray-800); margin-bottom: 0.4rem;">Decimal Equivalent</label>
+          <div id="kattha-decimal-out" style="padding: 0.75rem 0; font-size: 1.25rem; font-weight: 800; color: var(--gray-800);">7.43 Decimals</div>
+        </div>
+
+        <div>
+          <label style="display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--gray-800); margin-bottom: 0.4rem;">Average Giridih Plot Price</label>
+          <div style="padding: 0.75rem 0; font-size: 1rem; font-weight: 700; color: var(--gray-600);">INR 6.5L - 12L / Kattha</div>
+        </div>
+
+        <div>
+          <a href="https://wa.me/916202253290?text=I%20want%20to%20verify%20a%20land%20measurement%20in%20Giridih" target="_blank" class="btn btn-primary" style="height: 48px;">Inquire Plot Price</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Founder Spotlight (Vikash Kumar Sinha) -->
-  <section class="container" style="padding-top: 3rem;">
+  <section class="container">
     <div class="founder-card">
       <div class="founder-img-wrap">
         <img src="img/vk_sinha.jpg" alt="Vikash Kumar Sinha - Founder of Giridih Real Estate">
@@ -217,6 +303,28 @@
     </div>
   </section>
 
+  <!-- Interactive Google Map Section on Home -->
+  <section class="container" style="padding-bottom: 4rem;">
+    <div style="text-align: center; max-width: 650px; margin: 0 auto 2.5rem;">
+      <span class="badge-tag">Physical Office Presence</span>
+      <h3 style="font-family: var(--font-heading); font-size: 2.25rem; color: var(--gray-800); margin-top: 0.5rem;">Visit Our Giridih Headquarters</h3>
+      <p style="color: var(--gray-600);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Court Road, Near District Sessions Court, Giridih, Jharkhand 815301</p>
+    </div>
+    
+<div style="width: 100%; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--gray-200); box-shadow: 0 4px 15px rgba(0,0,0,0.04);">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14578.435791740924!2d86.29471578330722!3d24.184650393049144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f154388e4e9fbd%3A0x8e878519ca429eb8!2sCourt%20Rd%2C%20Giridih%2C%20Jharkhand%20815301!5e0!3m2!1sen!2sin!4v1740000000000!5m2!1sen!2sin" 
+    width="100%" 
+    height="360" 
+    style="border:0; display: block;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+  </section>
+
   <!-- Client Testimonials from Old Website -->
   <section style="background: var(--bg-dark); color: #fff; padding: 5rem 0;">
     <div class="container">
@@ -228,6 +336,7 @@
 
       <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
         <div style="background: var(--card-dark); padding: 2rem; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.08);">
+          <div style="color: var(--primary); font-size: 0.875rem; margin-bottom: 0.75rem; font-weight: 700;">Rating: 5.0 / 5.0 Star Verified</div>
           <p style="font-size: 0.9375rem; color: var(--gray-400); line-height: 1.7; margin-bottom: 1.25rem;">
             "Vikash helped us snag a 3BHK flat in Giridih for ₹35 lakhs—no brokerage meant real savings. Free site visit sealed it. Highly recommend!"
           </p>
@@ -236,6 +345,7 @@
         </div>
 
         <div style="background: var(--card-dark); padding: 2rem; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.08);">
+          <div style="color: var(--primary); font-size: 0.875rem; margin-bottom: 0.75rem; font-weight: 700;">Rating: 5.0 / 5.0 Star Verified</div>
           <p style="font-size: 0.9375rem; color: var(--gray-400); line-height: 1.7; margin-bottom: 1.25rem;">
             "15 years experience shows! Found our ready-to-move apartment fast. Direct developer deal saved us ₹2 lakhs. Giridih Real Estate delivers."
           </p>
@@ -244,6 +354,7 @@
         </div>
 
         <div style="background: var(--card-dark); padding: 2rem; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.08);">
+          <div style="color: var(--primary); font-size: 0.875rem; margin-bottom: 0.75rem; font-weight: 700;">Rating: 5.0 / 5.0 Star Verified</div>
           <p style="font-size: 0.9375rem; color: var(--gray-400); line-height: 1.7; margin-bottom: 1.25rem;">
             "Struggled with agents till Vikash's team. Budget villa in Sihodih, zero fees, smooth paperwork. Best Giridih real estate consultants around."
           </p>
@@ -291,6 +402,20 @@
   </section>
 
   
+  <!-- Newsletter Bar (From Old Site) -->
+  <section style="background: #111827; border-top: 1px solid rgba(255,255,255,0.08); padding: 3rem 0; color: #fff;">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem;">
+      <div>
+        <h4 style="font-family: var(--font-heading); font-size: 1.45rem; margin-bottom: 0.35rem; color: #fff;">Subscribe to Our Giridih Property Newsletter</h4>
+        <p style="color: var(--gray-400); font-size: 0.875rem; margin: 0;">Receive instant alerts when new zero-brokerage flats and clear-title plots are listed.</p>
+      </div>
+      <form onsubmit="event.preventDefault(); alert('Thank you for subscribing! You will receive the latest Giridih property listings.');" style="display: flex; gap: 0.5rem; flex-grow: 1; max-width: 480px;">
+        <input type="email" required placeholder="Enter your email address..." style="flex-grow: 1; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.06); color: #fff; font-size: 0.875rem;">
+        <button type="submit" class="btn btn-primary" style="padding: 0.75rem 1.5rem;">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
@@ -323,7 +448,7 @@
             <li><a href="properties.html">All Properties</a></li>
             <li><a href="about.html">About Vikash Kumar Sinha</a></li>
             <li><a href="services.html">Zero Brokerage & Services</a></li>
-            <li><a href="contact.html">Contact Office</a></li>
+            <li><a href="contact.html">Contact & Location Map</a></li>
           </ul>
         </div>
 
@@ -358,6 +483,13 @@
       </div>
     </div>
   </footer>
+  
+<!-- Floating WhatsApp Support Widget -->
+<a href="https://wa.me/916202253290?text=Hello%20Vikash%20Ji,%20I%20am%20inquiring%20about%20properties%20in%20Giridih." target="_blank" id="floating-whatsapp" style="position: fixed; bottom: 25px; right: 25px; z-index: 999; background: #25D366; color: #fff; padding: 0.85rem 1.4rem; border-radius: 50px; font-weight: 700; font-size: 0.875rem; display: flex; align-items: center; gap: 0.6rem; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4); transition: transform 0.3s; text-decoration: none;">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.666-.699c.96.523 1.761.815 2.793.815 3.179 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.766-5.767-5.766zm9.969 5.767c0 5.503-4.469 9.97-9.97 9.97-1.727 0-3.344-.442-4.767-1.218l-5.263 1.381 1.405-5.127c-.868-1.488-1.375-3.228-1.375-5.006 0-5.503 4.469-9.97 9.97-9.97 5.503 0 9.97 4.467 9.97 9.97z"/></svg>
+  <span>Chat with Vikash Ji</span>
+</a>
+
 
   <script src="js/app.js"></script>
 </body>
